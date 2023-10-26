@@ -7,6 +7,191 @@ Stylesheet for new FAO redesign
 
 
 
+/* Set the navigation container to a relative position */
+.navigation {
+    position: sticky; 
+    margin-top:2%;
+
+}
+  
+/* Position the top div's content to display side by side and to the far right of the page*/
+.top{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    /*remoce space between the top and bottom divs */
+    padding: 0%;
+    /* give space between each link */
+    padding-right: 2%;
+    gap:10px;
+    
+}
+
+/* Position the bottom div's content to display right below the top div's content */
+
+.bottom{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    /* position to the far right of the page */
+    position: absolute;
+    gap: 15px;
+    right: .5%;
+    padding: 0%;
+    /*remove space between the top and bottom divs */
+    margin-top: -.4%;
+    width: 100%;
+}
+
+.logo{
+    position: absolute;
+    left: 7%;
+    padding-top: .8%;
+}
+
+.main-menu-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 20.25px;
+    gap: 15px;
+}
+.main-menu-links a{
+    /* strip the underline from the links */
+    text-decoration: none;
+    color: #3890FF;
+    /* add space between the links */
+    padding: 10px;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact a{
+    justify-content: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 15px;
+    color: #3890FF;
+    /* add space between the links */
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.mpp-portal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #3890FF;
+    /*Make the div's height bigger*/
+    height: 40px;
+    width: 7%;
+}
+
+.mpp-portal a{
+    color: white;
+    text-decoration: none;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    /*position the text in the middle of the div */
+
+}
+
+
+.search{
+    /* position the button and the input box side by side */
+    display: flex;
+    justify-content: flex-end;
+    /* add space between the links */
+    padding-right: 10px;
+}
+
+.search button{
+    /* the search button is an image so we need to remove the border */
+    border: none;
+    background: none;
+    /* add space between the links */
+    padding-right: 15px;
+}
+
+.search input{
+    /*strip the border from the input box */
+    border: none;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 19.5px;
+    color: #B2B2B2;
+    text-align: right;
+    /*position the input box alligned with main-menu-links */
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* add space between the links */
+}
+
+.socials a{
+    /* add space between the links */
+    padding-right: 15px;
+}
+
+.socials img{
+    /*align all the images */
+    vertical-align: middle;
+}
+
+.fr{
+    /* add space between the links */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 15px;
+    color: #707070;
+}
+
+.fr a{
+    text-decoration: none;
+}
+
+.home{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.triangle{
+  display: inline-flex;
+  margin-left: 10px;
+  margin-bottom: 2%;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #3890FF;
+}
+
+
+
+
+  
+
+
+
+
+
 
 
 
