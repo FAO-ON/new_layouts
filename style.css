@@ -104,7 +104,11 @@ body > footer {
 
 
 
-/* expenditure monitor 2022-23 Q4 */
+/* EBO Spring 2023 */
+
+
+
+
 
 
 :is(.report-table,.report-chart) .title span{
@@ -168,6 +172,31 @@ table.report-table :is(th,td).header {
 ul ul {
   margin-top: 5px;
 }
+
+
+.bg-alt-blue, 
+  tr.bg-alt-blue > *{
+    background-color: #D4E4FC;
+  }
+
+col{
+  font-size:clamp(9px,1.7vw,15px);
+}
+
+div.report-table-container{
+  overflow-x: auto;
+}
+
+.sidebyside .heading-0,
+.sidebyside .heading-1,
+.sidebyside .heading-2,
+.sidebyside .heading-3,
+.sidebyside .heading-4,
+.sidebyside .heading-5 {
+  margin-top:0;
+}
+
+
 
 
  
