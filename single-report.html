@@ -11,8 +11,16 @@
   <title>Economic and Budget Outlook, Spring 2023</title>
 </head>
 <body>
-  <header></header>
+
+  <!-- TODO: site-header + site-nav -->
+  <header class="site-header"></header>
+
+
+
+  <!-- MAIN for non site-layout / all content -->
   <main class="single-report">
+
+    <!-- HEADER for report meta-info -->
     <header>
       <h1>Economic and Budget Outlook, Spring 2023</h1>
       <div class="topic-links cluster">
@@ -26,24 +34,31 @@
       </div>
       <div class="cluster">
         <span class="report-date">June 13, 2023</span>
-        <span class="report-issn" style="margin-left:auto;">ISSN 2562-9883</span>
+        <span class="report-issn">ISSN 2562-9883</span>
       </div>
       <div class="cluster">
         <span class="report-links">
-          <span>PDF</span>
-          <span>Media Release</span>
-          <span>Program Spending</span>
-          <span>Briefing Deck</span>
+          <span><a href="#">PDF</a></span>
+          <span><a href="#">Media Release</a></span>
+          <span><a href="#">Program Spending</a></span>
+          <span><a href="#">Briefing Deck</a></span>
           <span>Cite</span>
           <span>Related Reports</span>
+          <span class="report-socials">Share: X in IG</span>
         </span>
-        <span class="report-socials" style="margin-left:auto;">Share: X in IG</span>
       </div>
     </header>
     
+
+
+    <!-- TODO: replace with VIDEO / PICTURE -->
     <div class="report-cover"></div>
+
+
     
-    
+    <!-- ASIDE for sidebar -->
+    <!-- MAYBE: just NAV? -->
+    <!-- TODO: look into aria roles for toc/secondary nav -->
     <aside>
       <nav class="table-of-contents">
         <h2>Table of Contents</h2>
@@ -65,7 +80,7 @@
     
     
     
-    
+    <!-- ARTICLE for report content -->
     <article>
       
       <h2 class="heading-1" id="summary">1. Summary</h2>
@@ -2710,8 +2725,12 @@
 
       
     </article>
+
+    <!-- MAYBE: move footnotes to MAIN > FOOTER? -->
   </main>
 
+
+  <!-- TODO: site-footer -->
   <footer></footer>
 </body>
 </html>

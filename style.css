@@ -7,7 +7,7 @@ Stylesheet for new FAO redesign
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/*  */
+/* global variables */
 
 :root {
   /* layout variables */
@@ -27,10 +27,9 @@ Stylesheet for new FAO redesign
 
 
 
-html {
-  position: relative;
-  font-family: 'Open Sans', sans-serif;
-}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* global layout */
 
 body > header {
   height: 100px;
@@ -47,6 +46,10 @@ body > footer {
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* global styles */
 
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1,h2,h3,h4,h5 {
   font-family: 'Gabarito', sans-serif;
 }
@@ -60,42 +63,100 @@ h1,h2,h3,h4,h5 {
 .single-report {
   display: grid;
   grid-template-columns:  70ch 30ch;
-  gap: 1rem;
+  gap: 2rem;
   /* max-width: var(--page-width-max); */
   width: max-content;
   margin-inline: auto;
-
-  /* background: pink; */
 }
 
-/* .single-report > * {
-  outline: 2px dashed pink;
-} */
+/* main grid positioning */
+.single-report header        { grid-area: 1 / 1 / 2 / 2; }
+.single-report .report-cover { grid-area: 1 / 2 / 2 / 3; }
+.single-report aside         { grid-area: 2 / 2 / 3 / 3; }
+.single-report article       { grid-area: 2 / 1 / 3 / 2; }
+
+
 
 .single-report header {
-  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
+
+.cluster{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.single-report .topic-links {
+  /* outline: 1px dashed hotpink; */
+}
+
+.single-report .topic-links a {
+  font-size: 0.75rem;
+  color: var(--fao_blue);
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+.single-report .topic-links a + a::before {
+  content: '•';
+  position: absolute;
+  left: -0.75em;
+  top: 0;
+}
+
+.single-report header .summary {
+  border-bottom: 1px solid black;
+  padding-block-end: 1em;
+}
+
+
+
+.single-report header .report-date{
+  font-size: 0.75rem;
+}
+
+.single-report header .report-issn{
+  font-size: 0.75rem;
+  /* force to right side */
+  margin-inline-start: auto;
+}
+
+.single-report .report-links,
+.single-report .report-links a {
+  color: var(--fao_blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
 .single-report .report-cover {
-  grid-area: 1 / 2 / 2 / 3;
+  border: 1px solid var(--fao_blue);
+  border-radius: 1rem;
+  aspect-ratio: 1/1;
 }
 
 .single-report aside {
-  position: relative;
-  grid-area: 2 / 2 / 3 / 3;
-  /* background: var(--fao_light_blue_3); */
+  /* position: relative; */
 }
 
 .single-report article {
-  grid-area: 2 / 1 / 3 / 2;
 }
 
 
-.single-report h1 {
-   
-  font-size: 32px;
-  line-height: 40px; 
+.single-report h1 {   
+  font-size: 3.5rem;
+  line-height: 1; 
+  font-weight: 500;
 }
+
+
+
 
 .single-report .table-of-contents {
   position: sticky;
