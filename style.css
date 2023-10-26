@@ -40,19 +40,38 @@ body > footer {
   height: 200px;
 }
 
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* global styles */
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Gabarito', sans-serif;
+}
+
+
+
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* single-report.html */
 
 .single-report {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns:  70ch 30ch;
   gap: 1rem;
-  max-width: var(--page-width-max);
+  /* max-width: var(--page-width-max); */
+  width: max-content;
   margin-inline: auto;
+
+  /* background: pink; */
 }
-.single-report > * {
+
+/* .single-report > * {
   outline: 2px dashed pink;
-}
+} */
+
 .single-report header {
   grid-area: 1 / 1 / 2 / 2;
 }
@@ -64,7 +83,7 @@ body > footer {
 .single-report aside {
   position: relative;
   grid-area: 2 / 2 / 3 / 3;
-  background: var(--fao_light_blue_3);
+  /* background: var(--fao_light_blue_3); */
 }
 
 .single-report article {
@@ -73,19 +92,42 @@ body > footer {
 
 
 .single-report h1 {
-  font-weight: 700; 
+   
   font-size: 32px;
   line-height: 40px; 
 }
 
 .single-report .table-of-contents {
   position: sticky;
-  top:0;
+  top: 1rem;
+  background: var(--fao_light_blue_3);
+  border-radius: 0.5rem;
+  padding-block: 1rem;
 }
 
+.single-report .table-of-contents h2{
+  padding-inline: 1em;
+  margin-block-end: 0.5em;
+  font-weight: bold;
+} 
 
+.single-report .table-of-contents :is(ol,ul) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-
+.single-report .table-of-contents a{
+  display:block;
+  color: var(--fao_blue);
+  padding-inline: 1rem;
+  text-decoration: none;
+} 
+.single-report .table-of-contents a:hover{
+  background: var(--fao_blue);
+  color: var(--fao_white);
+  padding-inline: 1rem;
+} 
 
 
 
@@ -127,27 +169,27 @@ div.report-table-container{
 
 /* heading styles separated from H# elements */
 .heading-1{ 
-  font-weight: 700; 
+   
   font-size: 32px;
   line-height: 40px; 
 }
 .heading-2{ 
-  font-weight: 700; 
+   
   font-size: 26px;
   line-height: 32px; 
 }
 .heading-3{ 
-  font-weight: 700; 
+   
   font-size: 22px;
   line-height: 24px; 
 }
 .heading-4{ 
-  font-weight: 700; 
+   
   font-size: 20px;
   line-height: 28px; 
 }
 .heading-5{ 
-  font-weight: 700; 
+   
   font-size: 20px;
   line-height: 28px; 
 }
