@@ -6,8 +6,168 @@ Stylesheet for new FAO redesign
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*  */
+
+:root {
+  /* layout variables */
+  --page-width-max: 900px;
+
+  /* theme colours */
+  --fao_blue: #0f60d5;
+  --fao_white: #ffffff;
+  --fao_dark_blue: #1a2b4a;
+  --fao_light_blue_1: #9ec2f5;
+  --fao_light_blue_2: #bad1f6;
+  --fao_light_blue_3: #d7e4fa;
+  --fao_light_blue_4: #f1f6fd;
+  --fao_green: #b2d235;
+  --fao_pink: #e23e94;
+}
 
 
+
+html {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body > header {
+  height: 100px;
+}
+
+body > footer {
+  height: 200px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* single-report.html */
+
+.single-report {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  max-width: var(--page-width-max);
+  margin-inline: auto;
+}
+.single-report > * {
+  outline: 2px dashed pink;
+}
+.single-report header {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.single-report .report-cover {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.single-report aside {
+  position: relative;
+  grid-area: 2 / 2 / 3 / 3;
+  background: var(--fao_light_blue_3);
+}
+
+.single-report article {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+
+.single-report h1 {
+  font-weight: 700; 
+  font-size: 32px;
+  line-height: 40px; 
+}
+
+.single-report .table-of-contents {
+  position: sticky;
+  top:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* expenditure monitor 2022-23 Q4 */
+
+
+:is(.report-table,.report-chart) .title span{
+  display:block;
+  color: var(--fao-blue);
+  margin-bottom: 5px;
+}
+
+col{
+  font-size:clamp(9px,1.7vw,15px);
+}
+
+div.report-table-container{
+  overflow-x: auto;
+}
+
+/* heading styles separated from H# elements */
+.heading-1{ 
+  font-weight: 700; 
+  font-size: 32px;
+  line-height: 40px; 
+}
+.heading-2{ 
+  font-weight: 700; 
+  font-size: 26px;
+  line-height: 32px; 
+}
+.heading-3{ 
+  font-weight: 700; 
+  font-size: 22px;
+  line-height: 24px; 
+}
+.heading-4{ 
+  font-weight: 700; 
+  font-size: 20px;
+  line-height: 28px; 
+}
+.heading-5{ 
+  font-weight: 700; 
+  font-size: 20px;
+  line-height: 28px; 
+}
+
+/* add spacing between heading and previous content */
+article > * + :is(h1,h2,h3,h4,h5) {
+  margin-top: 3     rem;
+}
+/* if a heading follows a heading, remove the extra spacing */
+:is(.heading-1,.heading-2,.heading-3,.heading-4,.heading-5) + :is(.heading-1,.heading-2,.heading-3,.heading-4,.heading-5){
+  margin-top:0;
+}
+
+table.report-table :is(th,td).header {
+  background-color: var(--fao_dark_blue);
+  /* --fao-dark-blue-rgb */
+  color: white;
+  font-weight: bold;
+}
+
+/* 10px is too much spacing for sub-lists */
+ul ul {
+  margin-top: 5px;
+}
 
 
  
