@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script defer src="toc.js"></script>
   <title>Economic and Budget Outlook, Spring 2023</title>
 </head>
 <body>
@@ -23,12 +24,12 @@
     <!-- HEADER for report meta-info -->
     <header>
       <h1>Economic and Budget Outlook, Spring 2023</h1>
-      <div class="topic-links cluster">
-        <a href="#">Budgets</a>
-        <a href="#">Economy</a>
-        <a href="#">Government Spending</a>
-        <a href="#">Taxes and Other Revenue</a>
-      </div>
+      <ul class="topic-links cluster">
+        <li><a href="#">Budgets</a></li>
+        <li><a href="#">Economy</a></li>
+        <li><a href="#">Government Spending</a></li>
+        <li><a href="#">Taxes and Other Revenue</a></li>
+      </ul>
       <div class="summary">
         <p>This Economic and Budget Outlook report provides the FAO’s projection of the Ontario government’s fiscal position over the 2022-23 to 2027-28 period based on information available up to May 19, 2023.</p>
       </div>
@@ -36,16 +37,14 @@
         <span class="report-date">June 13, 2023</span>
         <span class="report-issn">ISSN 2562-9883</span>
       </div>
-      <div class="cluster">
-        <span class="report-links">
-          <span><a href="#">PDF</a></span>
-          <span><a href="#">Media Release</a></span>
-          <span><a href="#">Program Spending</a></span>
-          <span><a href="#">Briefing Deck</a></span>
-          <span>Cite</span>
-          <span>Related Reports</span>
-          <span class="report-socials">Share: X in IG</span>
-        </span>
+      <div class="report-links cluster">
+        <span><a href="#">PDF</a></span>
+        <span><a href="#">Media Release</a></span>
+        <span><a href="#">Program Spending</a></span>
+        <span><a href="#">Briefing Deck</a></span>
+        <span>Cite</span>
+        <!-- <span>Related Reports</span> -->
+        <span class="report-socials">Share: X in IG</span>
       </div>
     </header>
     
@@ -59,35 +58,51 @@
     <!-- ASIDE for sidebar -->
     <!-- MAYBE: just NAV? -->
     <!-- TODO: look into aria roles for toc/secondary nav -->
-    <aside>
+    
+    
+    <aside>      
       <nav class="table-of-contents">
-        <h2>Table of Contents</h2>
-        <ol>
-          <li><a href="#">1. Summary</a></li>
-          <li><a href="#">2. Budget and Debt Outlook</a></li>
-          <li><a href="#">3. Revenue Outlook</a></li>
-          <li><a href="#">4. Program Spending Outlook</a></li>
-          <li><a href="#">5. Economic Outlook</a></li>
-          <li><a href="#">6. Risks to the Economic and Budget Outlook</a></li>
-          <li><a href="#">7. Appendix</a></li>
-          <li><a href="#">About this document</a></li>
-        </ol>
+        <details open>
+          <summary>
+            <h2>Table of Contents</h2>
+          </summary>
+          <ol>
+            <li><a href="#summary">1. Summary</a></li>
+            <li><a href="#debt">2. Budget and Debt Outlook</a></li>
+            <li><a href="#revenue">3. Revenue Outlook</a></li>
+            <li><a href="#spending">4. Program Spending Outlook</a></li>
+            <li><a href="#economic">5. Economic Outlook</a></li>
+            <li><a href="#risks">6. Risks to the Economic and Budget Outlook</a></li>
+            <li><a href="#appendix">7. Appendix</a></li>
+            <li><a href="#about">About this document</a></li>
+          </ol>
+        </details>
       </nav>
     </aside>
     
     
-    
-    
-    
-    
     <!-- ARTICLE for report content -->
     <article>
+
+      <!-- <div class="updated-report-notice">
+        <p>An update of this report is available <a href="#">here</a>.</p>
+        <a href="#"><img src="https://fao-on.org/web/default/files/publications/EBO%20Spring%202023/EBO-SP2023-cover-EN.svg" alt=""></a>
+      </div>
+
+      <div class="updated-report-notice-2">
+        <p>An update of this report is available  <a href="#">here</a>.</p>
+        <a href="#"><img src="https://fao-on.org/web/default/files/publications/EBO%20Spring%202023/EBO-SP2023-cover-EN.svg" alt=""></a>
+      </div>
+
+      <div class="updated-report-notice-3">
+        <p>An update of this report is available  <a href="#">here</a>.</p>
+      </div> -->
       
-      <h2 class="heading-1" id="summary">1. Summary</h2>
-      
-      <p>This Economic and Budget Outlook report provides the FAO&rsquo;s projection of the Ontario government&rsquo;s fiscal position over the 2022-23 to 2027-28 period. The report also compares the FAO&rsquo;s budget outlook to the government&rsquo;s plan presented in the 2023 Ontario Budget from 2022-23 to 2025-26 and describes the FAO&rsquo;s updated economic outlook. The FAO&rsquo;s revenue and program spending projections are based on current and announced government policies.</p>
-      
-      <h4 class="heading-4">Ontario&rsquo;s economic growth to slow</h4>
+<h2 class="heading-1" id="summary">1. Summary</h2>
+
+<p>This Economic and Budget Outlook report provides the FAO&rsquo;s projection of the Ontario government&rsquo;s fiscal position over the 2022-23 to 2027-28 period. The report also compares the FAO&rsquo;s budget outlook to the government&rsquo;s plan presented in the 2023 Ontario Budget from 2022-23 to 2025-26 and describes the FAO&rsquo;s updated economic outlook. The FAO&rsquo;s revenue and program spending projections are based on current and announced government policies.</p>
+
+<h4 class="heading-4">Ontario&rsquo;s economic growth to slow</h4>
 
 <p>Ontario&rsquo;s economy rebounded rapidly from the pandemic, with real GDP rising by 5.2 per cent in 2021 and 3.7 per cent in 2022. Elevated inflation, high interest rates and a weaker global environment are expected to slow Ontario&rsquo;s economic growth to 0.8 per cent in 2023, before recovering to average annual growth of 2.0 per cent over the rest of the outlook.</p>
 
