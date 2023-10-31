@@ -50,11 +50,11 @@ Stylesheet for new FAO redesign
 .logo{
     position: absolute;
     left: 7%;
-    padding-top: .8%;
+    padding-top: 1%;
 }
 
 .logo img{
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
@@ -64,7 +64,7 @@ Stylesheet for new FAO redesign
     align-items: center;
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
     gap: 1vh;
 }
 .main-menu-links a{
@@ -121,7 +121,7 @@ Stylesheet for new FAO redesign
     color: white;
     text-decoration: none;
     font-family: "Open Sans";
-    font-size: 15px;
+    font-size: 2vh;
     font-weight: bold;
     text-align: center;
     /*position the text in the middle of the div */
@@ -138,7 +138,7 @@ Stylesheet for new FAO redesign
     display: flex;
     justify-content: flex-end;
     /* add space between the links */
-    padding-right: 10px;
+    padding-right: 1%;
 }
 
 .search button{
@@ -152,14 +152,17 @@ Stylesheet for new FAO redesign
 .search input{
     /*strip the border from the input box */
     border: none;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 3vh;
     color: #B2B2B2;
     text-align: right;
-    width: 12vh;
+    width: 10vh;
     /*add animation to expand the input box */
     transition: width 0.4s ease-in-out;
+}
+
+.search input[type="text"]{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 2.5vh;
 }
 
 .search input:focus{
@@ -195,7 +198,7 @@ Stylesheet for new FAO redesign
     padding-left: 10px;
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 15px;
+    font-size: 2vh;
     color: #707070;
 }
 
@@ -250,6 +253,11 @@ Stylesheet for new FAO redesign
     vertical-align: baseline;
 }
 
+.FAO-Title h1{
+    /*bring the title up */
+    margin-top: -10%;
+}
+
 /*
 .hero-img {
     max-width: 40%; /* Adjust the maximum width as needed to ensure it doesn't block the title 
@@ -262,7 +270,7 @@ Stylesheet for new FAO redesign
   
 .FAO-is p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 2vh;
+    font-size: 1vw;
     font-weight: lighter;
 }
 
@@ -275,17 +283,19 @@ Stylesheet for new FAO redesign
     font-size: 2vh;
 }
   
-.meet-the-text p{
+.meet-the-text a{
     float:left;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2vh;
+    text-decoration: none;
+    font-size: 1vw;
 }
 
-.meet-the a img{
+.meet-the-img img{
     float: left;
-    max-width: 60%;
+    max-width: 90%;
     height: auto;
-
+    /*move the image to the middle of the text */
+    margin-top: -10px;
 }
 
 /* media queries */
@@ -308,8 +318,13 @@ Stylesheet for new FAO redesign
         margin-bottom: 8%;
     }
 
+    .FAO-Title{
+        /*add some margin to the top */
+        margin-top: 8%;
+    }
+
     .FAO-Title h1{
-        font-size: 10vw;
+        font-size: 8vw;
         /*center the text */
         text-align: center;
     }
@@ -320,7 +335,7 @@ Stylesheet for new FAO redesign
         text-align: center;
     }
 
-    .meet-the-text p{  
+    .meet-the-text a{  
         font-size: 2vw;
         text-align: center;
     }
@@ -339,10 +354,12 @@ Stylesheet for new FAO redesign
     .logo{
         /*position the logo on the top left of the screen */
         position: relative;
-        left: 1%;
+        left: 4%;
         max-width: 50%;
         width: auto;
         height: auto;
+        margin-top: 2%;
+        margin-bottom: 3%;
 
     }
 
@@ -354,14 +371,40 @@ Stylesheet for new FAO redesign
     .hamburger{
         /*position the hamburger menu on the middle of the screen*/
         position: absolute;
-        right: 1%;
-        top: 1%;
+        right: 2%;
+        top: 2%;
         visibility: visible;
     }
     .hamburger button{
         /*remove the border from the hamburger menu */
         border: none;
         background: none;
+
+    }
+
+    .hamburger button img{
+        /*make the hamburger menu responsive to screen size */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hp-reports h1{
+        font-size: 6vw;
+    }
+
+    .topics h2{
+        font-size: 6vw;
+    }
+
+    .topic-image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .topic-image img{
+        display: flex;
+        max-width: 70%;
+        height: auto;
     }
 }
 
@@ -371,8 +414,8 @@ Stylesheet for new FAO redesign
     position: relative; 
     left: -5%;
     transform: translate(-70%, -10%);
-    height: 100px; 
-    width: 200px; 
+    width: 10%;
+    height: 10%;
     border-radius: 100px 100px 0 0; 
     background-color: #EBF4FF; 
     rotate: 90deg;
@@ -383,9 +426,9 @@ Stylesheet for new FAO redesign
     flex-direction: column;
     align-items: center;
     /*give space between the divs */
-    gap: 10px;
+    gap: 10px;  
     /*pull the div up */
-    margin-top: -5%;
+    margin-top: -3%;
 }
 
 .hp-reports h2{
@@ -395,8 +438,16 @@ Stylesheet for new FAO redesign
 }
 
 .latest-reports{
-    display: flex;
+    display: flex;  
+    justify-content: center;
     gap: 10px;
+}
+
+.latest-reports img{
+    /*make the image smaller */
+    max-width: 90%;
+    height: auto;
+    /*align the image to the center */
 }
 
 .meet-the{
@@ -409,9 +460,9 @@ Stylesheet for new FAO redesign
 }
 
 
-.meet-the img{
-    /*move the image down */
-    margin-top: -15px;
+.meet-the-img{
+    /*move the image up */
+    margin-top: -10px;
     /*move the image to the right */
     margin-left: 20px;
 }
