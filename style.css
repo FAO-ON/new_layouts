@@ -358,6 +358,11 @@ Stylesheet for new FAO redesign
         top: 1%;
         visibility: visible;
     }
+    .hamburger button{
+        /*remove the border from the hamburger menu */
+        border: none;
+        background: none;
+    }
 }
 
 
