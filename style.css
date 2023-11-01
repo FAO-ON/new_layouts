@@ -34,6 +34,9 @@ Stylesheet for new FAO redesign
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* global layout */
 
+
+
+
 body > header {
   height: 100px;
 }
@@ -42,6 +45,16 @@ body > footer {
   height: 200px;
 }
 
+
+
+
+
+/* test colors */
+body.test {background: rgb(196, 206, 196);}
+body.test header { background:rgb(192, 94, 94);}
+body.test nav { background:rgb(214, 139, 139);}
+body.test main { background:rgb(137, 194, 203);}
+body.test footer { background:rgb(120, 188, 159);}
 
 
 
@@ -66,6 +79,7 @@ h1,h2,h3,h4,h5 {
 .single-report {
   display: grid;
   grid-template-columns:  70ch 30ch;
+  grid-template-columns:  55ch 30ch;
   gap: 2rem;
   /* max-width: var(--page-width-max); */
   width: max-content;
@@ -238,7 +252,8 @@ summary h2 {
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 1rem;
-  background: hsl(55, 100%, 90%);
+  background: #fffbcc;
+  background-image: linear-gradient(#fffbcc, #f5ec8e);
   font-weight: bold;
   padding: 1rem;
   margin-block-end: 3rem;
