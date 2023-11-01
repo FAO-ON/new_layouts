@@ -8,6 +8,596 @@ Stylesheet for new FAO redesign
 
 
 
+.navigation {
+    position: sticky; 
+    margin-top:2%;
+
+}
+
+.hamburger{
+    visibility: hidden;
+}
+  
+/* Position the top div's content to display side by side and to the far right of the page*/
+.top{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    /*remoce space between the top and bottom divs */
+    padding: 0%;
+    /* give space between each link */
+    padding-right: 2%;
+    gap:10px;
+    
+}
+
+/* Position the bottom div's content to display right below the top div's content */
+
+.bottom{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    /* position to the far right of the page */
+    position: absolute;
+    gap: 15px;
+    right: .5%;
+    padding: 0%;
+    /*remove space between the top and bottom divs */
+    margin-top: -.4%;
+    width: 100%;
+}
+
+.logo{
+    position: absolute;
+    left: 7%;
+    padding-top: 1%;
+}
+
+.logo img{
+    max-width: 70%;
+    height: auto;
+}
+
+.main-menu-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 2.5vh;
+    gap: 1vh;
+}
+.main-menu-links a{
+    /* strip the underline from the links */
+    text-decoration: none;
+    color: #3890FF;
+    /* add space between the links */
+    padding: 10px;
+}
+
+.main-menu-links a:hover{
+    /* add underline to the links when hovered */
+    color: #65a7f7;
+}
+
+.main-menu-links a:hover .triangle{
+    border-top: 10px solid #65a7f7;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact a{
+    justify-content: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 2vh;
+    color: #3890FF;
+    /* add space between the links */
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.contact a:hover{
+    color: #65a7f7;
+}
+
+.mpp-portal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #3890FF;
+    /*Make the div's height bigger*/
+    height: 5vh;
+    width: 7%;
+}
+
+
+.mpp-portal a{
+    color: white;
+    text-decoration: none;
+    font-family: "Open Sans";
+    font-size: 2vh;
+    font-weight: bold;
+    text-align: center;
+    /*position the text in the middle of the div */
+
+}
+
+.mpp-portal a:hover{
+    color: #ffffffe7;
+}
+
+
+.search{
+    /* position the button and the input box side by side */
+    display: flex;
+    justify-content: flex-end;
+    /* add space between the links */
+    padding-right: 1%;
+}
+
+.search button{
+    /* the search button is an image so we need to remove the border */
+    border: none;
+    background: none;
+    /* add space between the links */
+    padding-right: 1vh;
+}
+
+.search input{
+    /*strip the border from the input box */
+    border: none;
+    color: #B2B2B2;
+    text-align: right;
+    width: 10vh;
+    /*add animation to expand the input box */
+    transition: width 0.4s ease-in-out;
+}
+
+.search input[type="text"]{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+
+.search input:focus{
+    /*make the input box bigger when clicked */
+    width: 200px;
+    outline: none;
+    /*position the input box alligned with main-menu-links */
+}
+
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* add space between the links */
+}
+
+.socials a{
+    /* add space between the links */
+    padding-right: 15px;
+}
+
+.socials img{
+    /*align all the images */
+    vertical-align: middle;
+}
+
+.fr{
+    /* add space between the links */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 2vh;
+    color: #707070;
+}
+
+.fr a{
+    text-decoration: none;
+}
+
+.triangle{
+    display: inline-flex;
+    margin-left: 10px;
+    margin-bottom: 2%;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #3890FF;
+}
+
+
+.hp-fao-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    position: relative;
+
+}
+
+
+  
+.FAO-Title {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 3vw;
+    color: #3890FF;
+    font-weight: 100;
+    display: flex; /* Display the title and image side by side */
+    align-items: center; /* Vertically center the title and image */
+}
+
+
+
+
+.FAO-Title img {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+    right: 1%;
+    vertical-align: baseline;
+}
+
+.FAO-Title h1{
+    /*bring the title up */
+    margin-top: -10%;
+}
+
+/*
+.hero-img {
+    max-width: 40%; /* Adjust the maximum width as needed to ensure it doesn't block the title 
+    height: auto;
+    position: absolute;
+    right: 1%;
+    top: 0;
+}
+*/
+  
+.FAO-is p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: lighter;
+}
+
+.meet-the{
+    display: flex;
+    /*move down the text */
+    vertical-align: middle;
+    color: #3890FF;
+    font-weight: bold;
+    font-size: 2vh;
+}
+  
+.meet-the-text a{
+    float:left;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+.meet-the-img img{
+    float: left;
+    max-width: 90%;
+    height: auto;
+    /*move the image to the middle of the text */
+    margin-top: -10px;
+}
+
+.semi-circle{
+    position: relative; 
+    left: -5%;
+    transform: translate(-70%, -10%);
+    width: 10%;
+    height: 10%;
+    border-radius: 100px 100px 0 0; 
+    background-color: #EBF4FF; 
+    rotate: 90deg;
+}
+
+.hp-reports{
+}
+
+.hp-reports h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22.5px;
+    /*center text */
+    text-align: center;
+}
+
+.latest-reports{
+    display: flex;  
+    justify-content: center;
+}
+
+.latest-reports ol{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.latest-reports li{
+    aspect-ratio: 0.8;
+}
+
+.latest-reports img{
+    /*make the image smaller */
+    max-width: 90%;
+    height: auto;
+    /*align the image to the center */
+}
+
+.meet-the{
+    display:flex;
+    /*move down the text */
+    margin-top: 2%;
+    color: #3890FF;
+    font-weight: bold;
+    font-size: 22.5px;
+}
+
+
+.meet-the-img{
+    /*move the image up */
+    margin-top: -10px;
+    /*move the image to the right */
+    margin-left: 20px;
+}
+
+
+.topics{
+    background-color: #EBF4FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:2%;
+    padding-bottom: 5%;
+}
+
+.topics h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22.5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.subscribe{
+    background-color: #3890FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.subscribe h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.subscribe p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 1vw;
+    color: white;
+}
+
+.subscribe-bar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+.subscribe-bar input{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50vh;
+    height: 5vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 19.5px;
+    color: #B2B2B2;
+}
+
+.subscribe-bar button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+    background-color: #E0EDFF;
+    color: #064068;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    padding-bottom: 1%;
+}
+
+.footer h3, p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13.5px;
+}
+
+
+/* media queries */
+@media (max-width: 1100px) {
+    /*delete the image when the screen is smaller than 768px */
+    .FAO-Title img{
+        display: none;
+    }
+
+    .semi-circle{
+        display: none;
+    }
+
+    .hp-fao-desc{
+        /*center the text */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 4%;
+        margin-bottom: 8%;
+    }
+
+    .FAO-Title{
+        /*add some margin to the top */
+        margin-top: 8%;
+    }
+
+    .FAO-Title h1{
+        font-size: 8vw;
+        /*center the text */
+        text-align: center;
+    }
+
+    .FAO-is p{
+        font-size: 2.5vw;
+        /*center the text */
+        text-align: center;
+    }
+
+    .meet-the-text a{  
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .meet-the img{
+        display: none;
+    }
+
+    .semi-circle{
+        display: none;
+    }
+    .navigation{
+        /*replace with the hamburger menu */
+        display:none;
+    }
+    .logo{
+        /*position the logo on the top left of the screen */
+        position: relative;
+        left: 4%;
+        max-width: 50%;
+        width: auto;
+        height: auto;
+        margin-top: 2%;
+        margin-bottom: 3%;
+
+    }
+
+    .logo img{
+        /*make the logo bigger */
+        width: 60%;
+        height: auto;
+    }
+    .hamburger{
+        /*position the hamburger menu on the middle of the screen*/
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        visibility: visible;
+    }
+    .hamburger button{
+        /*remove the border from the hamburger menu */
+        border: none;
+        background: none;
+
+    }
+
+    .hamburger button img{
+        /*make the hamburger menu responsive to screen size */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hp-reports h1{
+        font-size: 6vw;
+    }
+
+    .topics h2{
+        font-size: 4vw;
+    }
+
+    .topic-image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .topic-image img{
+        display: flex;
+        max-width: 70%;
+        height: auto;
+    }
+
+    .subscribe h2{
+        font-size: 4vw;
+    }
+
+    .subscribe p{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .subscribe-bar input{
+        width: 80%;
+        height: 3vh;
+        font-size: 2vw;
+    }
+
+    .subscribe-bar button{
+        width: 30%;
+        height: 50%;
+        font-size: 1vw;
+        text-align: center;
+    }
+
+    .footer h3, p{
+        font-size: 1.5vw;
+    }
+}
+
+
+/*home page ends */
+
+
+
+
+
+
+
+
+
 
 
  
