@@ -298,6 +298,153 @@ Stylesheet for new FAO redesign
     margin-top: -10px;
 }
 
+.semi-circle{
+    position: relative; 
+    left: -5%;
+    transform: translate(-70%, -10%);
+    width: 10%;
+    height: 10%;
+    border-radius: 100px 100px 0 0; 
+    background-color: #EBF4FF; 
+    rotate: 90deg;
+}
+
+.hp-reports{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*give space between the divs */
+    gap: 10px;  
+    /*pull the div up */
+    margin-top: -3%;
+}
+
+.hp-reports h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22.5px;
+}
+
+.latest-reports{
+    display: flex;  
+    justify-content: center;
+    gap: 10px;
+}
+
+.latest-reports img{
+    /*make the image smaller */
+    max-width: 90%;
+    height: auto;
+    /*align the image to the center */
+}
+
+.meet-the{
+    display:flex;
+    /*move down the text */
+    margin-top: 2%;
+    color: #3890FF;
+    font-weight: bold;
+    font-size: 22.5px;
+}
+
+
+.meet-the-img{
+    /*move the image up */
+    margin-top: -10px;
+    /*move the image to the right */
+    margin-left: 20px;
+}
+
+
+.topics{
+    background-color: #EBF4FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:2%;
+    padding-bottom: 2%;
+}
+
+.topics h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22.5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.subscribe{
+    background-color: #3890FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.subscribe h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.subscribe p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 1vw;
+    color: white;
+}
+
+.subscribe-bar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+.subscribe-bar input{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50vh;
+    height: 5vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 19.5px;
+    color: #B2B2B2;
+}
+
+.subscribe-bar button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+    background-color: #E0EDFF;
+    color: #064068;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    padding-bottom: 1%;
+}
+
+.footer h3, p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13.5px;
+}
+
+
 /* media queries */
 @media (max-width: 1100px) {
     /*delete the image when the screen is smaller than 768px */
@@ -393,7 +540,7 @@ Stylesheet for new FAO redesign
     }
 
     .topics h2{
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     .topic-image{
@@ -406,155 +553,34 @@ Stylesheet for new FAO redesign
         max-width: 70%;
         height: auto;
     }
+
+    .subscribe h2{
+        font-size: 4vw;
+    }
+
+    .subscribe p{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .subscribe-bar input{
+        width: 80%;
+        font-size: 2vw;
+    }
+
+    .subscribe-bar button{
+        width: 30%;
+        font-size: 1vw;
+        text-align: center;
+    }
+
+    .footer h3, p{
+        font-size: 1.5vw;
+    }
 }
 
 
 /*home page ends */
-.semi-circle{
-    position: relative; 
-    left: -5%;
-    transform: translate(-70%, -10%);
-    width: 10%;
-    height: 10%;
-    border-radius: 100px 100px 0 0; 
-    background-color: #EBF4FF; 
-    rotate: 90deg;
-}
-
-.hp-reports{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*give space between the divs */
-    gap: 10px;  
-    /*pull the div up */
-    margin-top: -3%;
-}
-
-.hp-reports h2{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 22.5px;
-}
-
-.latest-reports{
-    display: flex;  
-    justify-content: center;
-    gap: 10px;
-}
-
-.latest-reports img{
-    /*make the image smaller */
-    max-width: 90%;
-    height: auto;
-    /*align the image to the center */
-}
-
-.meet-the{
-    display:flex;
-    /*move down the text */
-    margin-top: 2%;
-    color: #3890FF;
-    font-weight: bold;
-    font-size: 22.5px;
-}
-
-
-.meet-the-img{
-    /*move the image up */
-    margin-top: -10px;
-    /*move the image to the right */
-    margin-left: 20px;
-}
-
-
-.topics{
-    background-color: #EBF4FF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top:2%;
-    padding-bottom: 2%;
-}
-
-.topics h2{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 22.5px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.subscribe{
-    background-color: #3890FF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2%;
-}
-
-.subscribe h2{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 22.5px;
-    color: white;
-    margin-top: 2%;
-    margin-bottom: 1%;
-}
-
-.subscribe p{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-size: 19.5px;
-    color: white;
-}
-
-.subscribe-bar{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 1%;
-}
-
-.subscribe-bar input{
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    width: 50vh;
-    height: 5vh;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-size: 19.5px;
-    color: #B2B2B2;
-}
-
-.subscribe-bar button{
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    width: 20%;
-    background-color: #E0EDFF;
-    color: #064068;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 19.5px;
-}
-
-.footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1%;
-    padding-bottom: 1%;
-}
-
-.footer h3, p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13.5px;
-}
 
 
 
