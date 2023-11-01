@@ -310,25 +310,31 @@ Stylesheet for new FAO redesign
 }
 
 .hp-reports{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*give space between the divs */
-    gap: 10px;  
-    /*pull the div up */
-    margin-top: -3%;
 }
 
 .hp-reports h2{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 22.5px;
+    /*center text */
+    text-align: center;
 }
 
 .latest-reports{
     display: flex;  
     justify-content: center;
+}
+
+.latest-reports ol{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    align-items: center;
     gap: 10px;
+}
+
+.latest-reports li{
+    aspect-ratio: 0.8;
 }
 
 .latest-reports img{
