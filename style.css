@@ -544,10 +544,11 @@ div.report-table-container{
   margin-top:0;
 }
 
+/*******HOMEPAGE STYLING STARTS********/
 
 .navigation {
     position: sticky; 
-    margin-top:2%;
+    margin-top: 2%;
 
 }
 
@@ -569,6 +570,17 @@ div.report-table-container{
 }
 
 /* Position the bottom div's content to display right below the top div's content */
+
+
+/*
+.navigation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+*/
+
 
 .bottom{
     display: flex;
@@ -601,7 +613,7 @@ div.report-table-container{
     align-items: center;
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 2.5vh;
+    font-size: 1.2em;
     gap: 1vh;
 }
 .main-menu-links a{
@@ -631,7 +643,7 @@ div.report-table-container{
     justify-content: center;
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 1em;
     color: #3890FF;
     /* add space between the links */
     padding-right: 15px;
@@ -649,7 +661,7 @@ div.report-table-container{
     border-radius: 8px;
     background-color: #3890FF;
     /*Make the div's height bigger*/
-    height: 5vh;
+    height: 2.2em;
     width: 7%;
 }
 
@@ -658,7 +670,7 @@ div.report-table-container{
     color: white;
     text-decoration: none;
     font-family: "Open Sans";
-    font-size: 2vh;
+    font-size: 1em;
     font-weight: bold;
     text-align: center;
     /*position the text in the middle of the div */
@@ -683,7 +695,6 @@ div.report-table-container{
     border: none;
     background: none;
     /* add space between the links */
-    padding-right: 1vh;
 }
 
 .search input{
@@ -699,7 +710,7 @@ div.report-table-container{
 .search input[type="text"]{
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 2.5vh;
+    font-size: 1.2em;
 }
 
 .search input:focus{
@@ -772,7 +783,7 @@ div.report-table-container{
     display: flex;
     align-items: flex-start;
     font-family: 'Gabarito', sans-serif;
-    font-size: 3vw;
+    font-size: 5em;
     color: #3890FF;
     font-weight: 100;
     display: flex; /* Display the title and image side by side */
@@ -783,16 +794,20 @@ div.report-table-container{
 
 
 .FAO-Title img {
-    max-width: 40%;
+    max-width: 38%;
     height: auto;
     position: absolute;
-    right: 1%;
+    right: 5%;
+    margin-top: 2%;
     vertical-align: baseline;
 }
 
 .FAO-Title h1{
     /*bring the title up */
-    margin-top: -10%;
+    margin-top: -15%;
+    /*reduce the line spacing */
+    line-height: 1.1;
+    padding-bottom: 2%;
 }
 
 /*
@@ -807,7 +822,7 @@ div.report-table-container{
   
 .FAO-is p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1vw;
+    font-size: 1.2em;
     font-weight: lighter;
 }
 
@@ -824,7 +839,7 @@ div.report-table-container{
     float:left;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: .8em;
 }
 
 .meet-the-img img{
@@ -1010,7 +1025,7 @@ div.report-table-container{
 
     .FAO-Title{
         /*add some margin to the top */
-        margin-top: 8%;
+        margin-top: 10%;
     }
 
     .FAO-Title h1{
@@ -1059,10 +1074,10 @@ div.report-table-container{
         height: auto;
     }
     .hamburger{
-        /*position the hamburger menu on the middle of the screen*/
-        position: absolute;
-        right: 2%;
-        top: 2%;
+        /*far right of the screen */
+        float: right;
+        position: relative;
+        margin-top: -10%;
         visibility: visible;
     }
     .hamburger button{
@@ -1078,8 +1093,47 @@ div.report-table-container{
         height: auto;
     }
 
-    .hp-reports h1{
-        font-size: 6vw;
+    #myLinks a{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        /*stack each link on top of each other */
+        flex-direction: column;
+        border: red dashed;
+    }
+
+    .latest-reports{
+        margin:0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 1rem;
+        padding-inline: 0.5rem;
+    }
+
+    .latest-reports ol{
+        /*center the list */
+        display: flex;
+        justify-content: center;
+    }
+
+    .latest-reports li{
+        /*keep the image height fixed and create a scroll bar for the width */
+        aspect-ratio: 0.8;
+        flex: 0 0 200px;
+    }
+
+    .latest-reports li img{
+        /*make the image responsive to screen size */
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .hp-reports h2{
+        font-size: 4vw;
+        text-align: center;
     }
 
     .topics h2{
