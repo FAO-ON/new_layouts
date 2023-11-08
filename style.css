@@ -1065,7 +1065,7 @@ div.report-table-container{
     }
 
     .FAO-Title h1{
-        font-size: clamp(.5rem, 5vw + 1.3rem, 5rem);
+        font-size: clamp(.5rem, 6vw + 1.3rem, 6rem);
         /*center the text */
         text-align: center;
     }
@@ -1175,7 +1175,7 @@ div.report-table-container{
         display: flex;
         justify-content: left;
         /*shift the list to the right */
-        margin-left: calc(12% - 1rem);
+        margin-left: calc(10% - 1rem);
     }
 
     .latest-reports li{
