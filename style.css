@@ -1056,7 +1056,7 @@ div.report-table-container{
         padding: 0;
         margin: 0;
         margin-top: 12%;
-        margin-bottom: 8%;
+        margin-bottom: 10%;
     }
 
     .FAO-Title{
@@ -1125,9 +1125,10 @@ div.report-table-container{
     }
 
     .hamburger-logo img{
-        /*make the logo responsive to screen size */
-        width: 150px;
+        /*make the logo åresponsive to screen size */
+        width: 130px;
         height: auto;
+        padding-left: 5%;
         
     }
     .hamburger-button{
