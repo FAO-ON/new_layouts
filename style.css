@@ -544,10 +544,23 @@ div.report-table-container{
   margin-top:0;
 }
 
+/*******HOMEPAGE STYLING STARTS********/
+
+.header{
+    display: grid;
+    /*create a grid with 2 columns with one column being the width of the logo img */
+    grid-template-columns: [first] 380px [second] 1fr;
+    /*give  a max width to the grid */
+    max-width: 85rem;
+    /*center the content */
+    margin: auto;
+
+}
 
 .navigation {
-    position: sticky; 
-    margin-top:2%;
+    margin-top: 2%;
+    margin-right: 3%;
+    grid-column-start: second;
 
 }
 
@@ -559,23 +572,18 @@ div.report-table-container{
 .top{
     display: flex;
     justify-content: flex-end;
-    margin: 10px;
     /*remoce space between the top and bottom divs */
     padding: 0%;
     /* give space between each link */
-    padding-right: 2%;
     gap:10px;
     
 }
-
-/* Position the bottom div's content to display right below the top div's content */
 
 .bottom{
     display: flex;
     justify-content: flex-end;
     margin: 10px;
     /* position to the far right of the page */
-    position: absolute;
     gap: 15px;
     right: .5%;
     padding: 0%;
@@ -585,14 +593,18 @@ div.report-table-container{
 }
 
 .logo{
-    position: absolute;
-    left: 7%;
-    padding-top: 1%;
+    display: flex;
+    /*move the logo to the left */
+    justify-content: flex-start;
+    grid-column-start: first;
+    padding-top: 8%;
+    padding-left: 10%;
 }
 
 .logo img{
-    max-width: 70%;
+    max-width: 65%;
     height: auto;
+
 }
 
 .main-menu-links{
@@ -601,7 +613,7 @@ div.report-table-container{
     align-items: center;
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 2.5vh;
+    font-size: 1.2em;
     gap: 1vh;
 }
 .main-menu-links a{
@@ -631,7 +643,7 @@ div.report-table-container{
     justify-content: center;
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 2vh;
+    font-size: .8em;
     color: #3890FF;
     /* add space between the links */
     padding-right: 15px;
@@ -649,8 +661,8 @@ div.report-table-container{
     border-radius: 8px;
     background-color: #3890FF;
     /*Make the div's height bigger*/
-    height: 5vh;
-    width: 7%;
+    height: 2em;
+    width: 6rem;
 }
 
 
@@ -658,7 +670,7 @@ div.report-table-container{
     color: white;
     text-decoration: none;
     font-family: "Open Sans";
-    font-size: 2vh;
+    font-size: .8em;
     font-weight: bold;
     text-align: center;
     /*position the text in the middle of the div */
@@ -683,7 +695,6 @@ div.report-table-container{
     border: none;
     background: none;
     /* add space between the links */
-    padding-right: 1vh;
 }
 
 .search input{
@@ -694,19 +705,21 @@ div.report-table-container{
     width: 10vh;
     /*add animation to expand the input box */
     transition: width 0.4s ease-in-out;
+    /*make the input have rounded corners */
+    border-radius: 20px;
 }
 
 .search input[type="text"]{
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 2.5vh;
+    font-size: 1.2em;
 }
 
 .search input:focus{
     /*make the input box bigger when clicked */
-    width: 200px;
-    outline: none;
-    /*position the input box alligned with main-menu-links */
+    width: 30rem;
+    border: #1a2b4a;
+    /*make the main menu links disappear when the input box is clicked */
 }
 
 
@@ -735,7 +748,7 @@ div.report-table-container{
     padding-left: 10px;
     font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 2vh;
+    font-size: .8em;
     color: #707070;
 }
 
@@ -754,65 +767,62 @@ div.report-table-container{
     border-top: 10px solid #3890FF;
 }
 
+.homepage-content{
+    display: grid;
+    max-width: 85rem;
+    grid-template-columns: [first] 1fr [second]1fr;
+    /*give some space between the columns */
+    /*center the content */
+    margin: auto;
+    /*move the content up */
+    margin-top: -1%;
+}
+
 
 .hp-fao-desc {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: 10%;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 30%;
+    margin-left: 5%;
     margin-bottom: 5%;
-    margin-left: 10%;
     position: relative;
 
 }
 
 
-  
 .FAO-Title {
     display: flex;
-    align-items: flex-start;
     font-family: 'Gabarito', sans-serif;
-    font-size: 3vw;
+    font-size: 5em;
     color: #3890FF;
     font-weight: 100;
     display: flex; /* Display the title and image side by side */
-    align-items: center; /* Vertically center the title and image */
+    align-items: left; /* Vertically center the title and image */
 }
 
 
-
-
-.FAO-Title img {
-    max-width: 40%;
-    height: auto;
-    position: absolute;
-    right: 1%;
-    vertical-align: baseline;
-}
 
 .FAO-Title h1{
     /*bring the title up */
-    margin-top: -10%;
+    margin-top: -25%;
+    /*reduce the line spacing */
+    line-height: 1.1;
+    padding-bottom: 2%;
 }
 
-/*
-.hero-img {
-    max-width: 40%; /* Adjust the maximum width as needed to ensure it doesn't block the title 
-    height: auto;
-    position: absolute;
-    right: 1%;
-    top: 0;
+.FAO-is{
 }
-*/
   
 .FAO-is p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1vw;
+    font-size: 1.2em;
     font-weight: lighter;
 }
 
 .meet-the{
-    display: flex;
+    display: grid;
+    grid-template-columns: [first] 1fr [second] 1fr;
     /*move down the text */
     vertical-align: middle;
     color: #3890FF;
@@ -821,18 +831,35 @@ div.report-table-container{
 }
   
 .meet-the-text a{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    grid-column-start: first;
     float:left;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: .8em;
 }
 
 .meet-the-img img{
+    grid-column-start: second;
     float: left;
-    max-width: 90%;
     height: auto;
     /*move the image to the middle of the text */
-    margin-top: -10px;
+}
+
+.hero-img{
+    display: flex;
+    justify-content: right;
+    margin-right: -3%;
+    margin-top: -5%;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.hero-img img{
+    /*make it fit the grid */
+    max-width: 90%;
+    height: 90%;
 }
 
 .semi-circle{
@@ -847,6 +874,8 @@ div.report-table-container{
 }
 
 .hp-reports{
+    /*bring up the text */
+    margin-top: -6%;
 }
 
 .hp-reports h2{
@@ -858,13 +887,17 @@ div.report-table-container{
 }
 
 .latest-reports{
-    display: flex;  
-    justify-content: center;
+    display: flex;
+    max-width: 85rem;
+    /*center the content */
+    margin: auto;
+
+
 }
 
 .latest-reports ol{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     list-style: none;
     align-items: center;
     gap: 10px;
@@ -875,10 +908,8 @@ div.report-table-container{
 }
 
 .latest-reports img{
-    /*make the image smaller */
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
-    /*align the image to the center */
 }
 
 .meet-the{
@@ -982,14 +1013,30 @@ div.report-table-container{
     padding-bottom: 1%;
 }
 
-.footer h3, p{
+.footer:is(h3, p){
     font-family: 'Open Sans', sans-serif;
     font-size: 13.5px;
 }
 
+@media (min-width: 1000px) and (max-width: 1250px) {
+
+    .hero-img img{
+        max-height: 80%;
+        /*move the image down */
+        margin-top: 5%;
+
+    }
+
+    .hp-reports{
+        /*push down the text */
+        margin-top: 2%;
+    }
+    
+}
+
 
 /* media queries */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     /*delete the image when the screen is smaller than 768px */
     .FAO-Title img{
         display: none;
@@ -999,39 +1046,58 @@ div.report-table-container{
         display: none;
     }
 
+    .homepage-content{
+        display: flex;
+        flex-direction: column;
+
+    }
+
     .hp-fao-desc{
         /*center the text */
         align-items: center;
         padding: 0;
         margin: 0;
-        margin-top: 4%;
-        margin-bottom: 8%;
+        margin-top: 5.5rem;
+        margin-bottom: calc(5vw + 1.5rem);
     }
 
     .FAO-Title{
         /*add some margin to the top */
-        margin-top: 8%;
+        margin-top: 15%;
     }
 
     .FAO-Title h1{
-        font-size: 8vw;
+        font-size: clamp(.5rem, 6vw + 1.3rem, 6rem);
         /*center the text */
         text-align: center;
+    }
+
+    .hero-img{
+        display: none;
     }
 
     .FAO-is p{
-        font-size: 2.5vw;
+        font-size: clamp(.25rem, 1vw + .5rem, 2rem);
         /*center the text */
         text-align: center;
     }
 
+    .meet-the{
+        margin-top: 2%;
+        margin-bottom: 4%;
+        margin-left: 10%;
+    }
+
+
     .meet-the-text a{  
-        font-size: 2vw;
+        font-size: clamp(.25rem, 1vw + .5rem, 2rem);
         text-align: center;
     }
 
     .meet-the img{
-        display: none;
+        max-width: 60%;
+        height: auto;
+        margin-top: 8%;
     }
 
     .semi-circle{
@@ -1042,44 +1108,97 @@ div.report-table-container{
         display:none;
     }
     .logo{
-        /*position the logo on the top left of the screen */
-        position: relative;
-        left: 4%;
-        max-width: 50%;
-        width: auto;
-        height: auto;
-        margin-top: 2%;
-        margin-bottom: 3%;
+        display: none;
 
-    }
-
-    .logo img{
-        /*make the logo bigger */
-        width: 60%;
-        height: auto;
     }
     .hamburger{
-        /*position the hamburger menu on the middle of the screen*/
-        position: absolute;
-        right: 2%;
-        top: 2%;
+        display: grid;
+        grid-template-columns: [first] 1fr [second] 1fr;
+        align-items: center;
         visibility: visible;
+        margin: auto;
+        margin-top: 2%;
     }
-    .hamburger button{
-        /*remove the border from the hamburger menu */
+    .hamburger-logo{
+        display: flex;
+        grid-column-start: first;
+        padding-left: 5%;
+        margin-top: 5px;
+    }
+
+    .hamburger-logo img{
+        /*make the logo responsive to screen size */
+        width: 60%;
+        height: auto;
+        padding-left: 5%;
+        
+    }
+    .hamburger-button{
+        display: flex;
+        justify-content: flex-end;
+        grid-column-start: second;
+    }
+    .hamburger-button button{
+        /*remove the border from the button */
         border: none;
         background: none;
-
     }
 
     .hamburger button img{
         /*make the hamburger menu responsive to screen size */
-        max-width: 100%;
+        width:30px;
         height: auto;
     }
 
-    .hp-reports h1{
-        font-size: 6vw;
+    #myLinks a{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        /*stack each link on top of each other */
+        flex-direction: column;
+        border: 1px solid black;
+        text-decoration: none;
+        color: black;
+        background-color: #9ec2f5;
+    }
+
+    .latest-reports {
+
+    }
+
+    .latest-reports{
+        margin:0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        overflow-x: auto;
+        gap: calc(4vw + .5rem);
+    }
+
+    .latest-reports ol{
+        /*center the list */
+        display: flex;
+        justify-content: left;
+        /*shift the list to the right */
+        margin-left: calc(10% - 1rem);
+    }
+
+    .latest-reports li{
+        /*keep the image height fixed and create a scroll bar for the width */
+        aspect-ratio: 1;
+        flex: 0 0 calc(100% / 1.2);
+    }
+
+    .latest-reports li img{
+        /*make the image responsive to screen size */
+        width: 100%;
+        height: auto;
+        
+    }
+    .hp-reports h2{
+        font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+        text-align: center;
     }
 
     .topics h2{
@@ -1093,7 +1212,7 @@ div.report-table-container{
     }
     .topic-image img{
         display: flex;
-        max-width: 70%;
+        max-width: 100%;
         height: auto;
     }
 
@@ -1107,25 +1226,22 @@ div.report-table-container{
     }
 
     .subscribe-bar input{
-        width: 80%;
-        height: 3vh;
+        height: 2vw;
+        width: 40vh;
         font-size: 2vw;
     }
 
     .subscribe-bar button{
-        width: 30%;
-        height: 50%;
-        font-size: 1vw;
-        text-align: center;
+        width: 20%;
+        font-size: 2vw;
     }
 
-    .footer h3, p{
-        font-size: 1.5vw;
+    .footer:is(h3, p){
+        font-size: clamp(6.6px, 1vw + .5rem, .8rem);
     }
 }
 
 
-/*home page ends */
 
 
 
