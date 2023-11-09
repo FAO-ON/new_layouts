@@ -9,23 +9,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="ebo.css">
+	<script defer src="index.js"></script>
   <script defer src="toc.js"></script>
   <title>Economic and Budget Outlook, Spring 2023</title>
 </head>
 <body>
 
-	<!-- <div style="background:red; padding-block:2px; text-align:right; max-width:30ch;">30ch</div>
-		<div style="background:pink; padding-block:2px; text-align:right; max-width:20rem;">20rem</div>
-		<div style="background:red; padding-block:2px; text-align:right; max-width:40ch;">40ch</div>
-		<div style="background:pink; padding-block:2px; text-align:right; max-width:30rem;">30rem</div>
-		<div style="background:pink; padding-block:2px; text-align:right; max-width:40rem;">40rem</div>
-		<div style="background:red; padding-block:2px; text-align:right; max-width:70ch;">70ch</div>
-		<div style="background:pink; padding-block:2px; text-align:right; max-width:50rem;">50rem</div>
-		<div style="background:pink; padding-block:2px; text-align:right; max-width:60rem;">60rem</div>
-		<div style="background:pink; padding-block:2px; text-align:right; max-width:70rem;">70rem</div> -->
-		
-		<!-- TODO: site-header + site-nav -->
-		<header class="site-header"></header>
+
+	<div class="header">
+    <div class="logo">
+      <a href="homepage.html"><img src="imgs/FAO-Logo.png" alt="FAO" width = "346.25"
+        height="74.47"></a>
+    </div>
+    <nav class="navigation">
+      <div class="top">
+        <div class="contact">
+          <a href="about.html">Contact</a>
+        </div>
+        <div class="mpp-portal">
+          <a href="mpp-portal.html">MPP Portal</button>
+        </div>
+        <div class="socials">
+          <a href="https://x.com/InfoFAOO"><img src="imgs/X.png" alt="X" width="22" height="21"></a>
+          <a href="https://www.linkedin.com/company/financial-accountability-office-of-ontario/"><img src="imgs/Linkedin.png" alt="linkedin" width="24" height="24"></a>
+          <a href="https://www.instagram.com/infofao/"><img src="imgs/Instagram.png" alt="instagram" width="24" height="24"></a>
+          <a href="https://www.youtube.com/channel/UCZQXQY7t6t8Z1Q8Z4XZ6Y7Q"><img src="imgs/Youtube.png" alt="Youtube" width="27" height="20"></a>
+        </div>
+        <div class="fr">
+          <a href="">Français</a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="main-menu-links">
+          <a href="about.html" class="about">About<div class="triangle"></div></a>
+          <a href="reports.html" class="reports">Publications<div class="triangle"></div></a>
+          <a href="media.html" class="media">Media<div class="triangle"></div></a>
+        </div>
+        <div class="search">
+          <input onfocus="removeMainMenuLinks()" onblur="addMainMenuLinks()" type="text" placeholder="Search" size="5">
+          <button type="reset"><img src="imgs/magnifying.png" alt="Search" width="25"></button>
+        </div>
+      </div>
+    </nav>  
+  </div>
+  <div class="hamburger">
+    <div class="hamburger-logo">
+      <a href="homepage.html"><img src="imgs/FAO-Logo.png" alt="FAO" width = "0"
+        height="0"></a>
+    </div>
+    <div class="hamburger-button">
+      <button onclick="toggleMenu()"><img src="imgs/Hamburger-Menu.png" alt="hamburger" width="30" height="30"></button>
+    </div>
+  </div>
+  <div id="myLinks" style="display: none;">
+    <a href="about.html">About</a>
+    <a href="reports.html">Publications</a>
+    <a href="media.html">Media</a>
+  </div>
+
+
+
+
+
 
   <!-- MAIN for non site-layout / all content -->
   <main class="single-report">
@@ -100,7 +145,13 @@
   </main>
 
 
+
+	
   <!-- TODO: site-footer -->
-  <footer></footer>
+	<div class="footer">
+    <h3>Financial Accountability Office of Ontario © 2023</h3>
+    <p>Established by the <i>Financial Accountability Officer Act, 2013.</i></p>
+  </div>
+
 </body>
 </html>
