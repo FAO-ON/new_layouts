@@ -5,25 +5,52 @@
 
 
 
-
-
 // close TOC details on click
-let closeTOCOnClick = false;
 const tocElement = document.querySelector('.table-of-contents');
 const tocLinks = document.querySelectorAll('.table-of-contents li a');
-console.log(tocElement);
 tocLinks.forEach(e => {
   //todo: add more event types
   e.addEventListener('click', (event) => {
-    closeTOCOnClick = getComputedStyle(tocElement).getPropertyValue('--close-toc-on-click');
-    console.log(closeTOCOnClick);
-    if(closeTOCOnClick){
-    const detailsElement = tocElement.querySelector('details');
+    if(isTOCMobile()){
+      const detailsElement = tocElement.querySelector('details');
       detailsElement.removeAttribute('open');
       console.log('close TOC')  ;
     }
   });
 });
+
+// open/close TOC on desktop/mobile
+let prevWindowWidth = window.innerWidth;
+window.addEventListener('resize', (event) => {
+  //if resize was only vertical, do nothing
+  newWindowWidth = event.target.innerWidth;
+  if(newWindowWidth == prevWindowWidth) return;
+
+  prevWindowWidth = newWindowWidth;
+  if(isTOCMobile()){
+    //if TOC is in mobile mode, close it
+    console.log('mobile');
+    const detailsElement = tocElement.querySelector('details');
+    detailsElement.removeAttribute('open');
+  }else{
+    //if TOC is in dektop mode, open it
+    console.log('desktop');
+    const detailsElement = tocElement.querySelector('details');
+    detailsElement.setAttribute('open','true');
+  }
+});
+
+
+//check if TOC is in desktop or mobile mode
+function isTOCMobile(){
+  const tocElement = document.querySelector('.table-of-contents');
+  const closeTOCOnClick = getComputedStyle(tocElement).getPropertyValue('--close-toc-on-click');
+  if(closeTOCOnClick == 1) return true;
+  return false;
+}
+
+
+
 //set scroll-padding to height of summary element
 const summaryElement = tocElement.querySelector('summary');
 const htmlElement = document.querySelector('html');
@@ -68,3 +95,6 @@ window.addEventListener('scroll', (event) => {
     });
   }
 });
+
+
+

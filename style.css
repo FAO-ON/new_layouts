@@ -284,6 +284,7 @@ h1,h2,h3,h4,h5 {
 .table-of-contents details summary {
   background: var(--fao_light_blue_3);
   list-style: none;
+  pointer-events: none;
 }
 
 
@@ -337,6 +338,7 @@ summary h2 {
 
   .table-of-contents details summary{
     position: relative;
+    pointer-events: auto;
   }
 
   .table-of-contents details summary::after {
@@ -1055,6 +1057,7 @@ summary h2 {
       font-size: 1vw;
       text-align: center;
   }
+
 
 .footer :is(h3, p) {
       font-size: 1.5vw;
