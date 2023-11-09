@@ -1,0 +1,90 @@
+
+
+
+/* EBO Spring 2023 */
+
+
+:is(.report-table,.report-chart) .title span{
+  display:block;
+  color: var(--fao-blue);
+  margin-bottom: 5px;
+}
+
+col{
+  font-size:clamp(9px,1.7vw,15px);
+}
+
+div.report-table-container{
+  overflow-x: auto;
+}
+
+/* heading styles separated from H# elements */
+.heading-1{ 
+   
+  font-size: 32px;
+  line-height: 40px; 
+}
+.heading-2{ 
+   
+  font-size: 26px;
+  line-height: 32px; 
+}
+.heading-3{ 
+   
+  font-size: 22px;
+  line-height: 24px; 
+}
+.heading-4{ 
+   
+  font-size: 20px;
+  line-height: 28px; 
+}
+.heading-5{ 
+   
+  font-size: 20px;
+  line-height: 28px; 
+}
+
+/* add spacing between heading and previous content */
+article > * + :is(h1,h2,h3,h4,h5) {
+  margin-top: 3     rem;
+}
+/* if a heading follows a heading, remove the extra spacing */
+:is(.heading-1,.heading-2,.heading-3,.heading-4,.heading-5) + :is(.heading-1,.heading-2,.heading-3,.heading-4,.heading-5){
+  margin-top:0;
+}
+
+table.report-table :is(th,td).header {
+  background-color: var(--fao_dark_blue);
+  /* --fao-dark-blue-rgb */
+  color: white;
+  font-weight: bold;
+}
+
+/* 10px is too much spacing for sub-lists */
+ul ul {
+  margin-top: 5px;
+}
+
+
+.bg-alt-blue, 
+  tr.bg-alt-blue > *{
+    background-color: #D4E4FC;
+  }
+
+col{
+  font-size:clamp(9px,1.7vw,15px);
+}
+
+div.report-table-container{
+  overflow-x: auto;
+}
+
+.sidebyside .heading-0,
+.sidebyside .heading-1,
+.sidebyside .heading-2,
+.sidebyside .heading-3,
+.sidebyside .heading-4,
+.sidebyside .heading-5 {
+  margin-top:0;
+}
