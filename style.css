@@ -705,6 +705,8 @@ div.report-table-container{
     width: 10vh;
     /*add animation to expand the input box */
     transition: width 0.4s ease-in-out;
+    /*make the input have rounded corners */
+    border-radius: 20px;
 }
 
 .search input[type="text"]{
@@ -715,9 +717,9 @@ div.report-table-container{
 
 .search input:focus{
     /*make the input box bigger when clicked */
-    width: 200px;
-    outline: none;
-    /*position the input box alligned with main-menu-links */
+    width: 30rem;
+    border: #1a2b4a;
+    /*make the main menu links disappear when the input box is clicked */
 }
 
 
@@ -1011,12 +1013,12 @@ div.report-table-container{
     padding-bottom: 1%;
 }
 
-.footer h3, p{
+.footer:is(h3, p){
     font-family: 'Open Sans', sans-serif;
     font-size: 13.5px;
 }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 1000px) and (max-width: 1250px) {
 
     .hero-img img{
         max-height: 80%;
@@ -1056,7 +1058,7 @@ div.report-table-container{
         padding: 0;
         margin: 0;
         margin-top: 5.5rem;
-        margin-bottom: 5rem;
+        margin-bottom: calc(5vw + 1.5rem);
     }
 
     .FAO-Title{
@@ -1120,7 +1122,7 @@ div.report-table-container{
     .hamburger-logo{
         display: flex;
         grid-column-start: first;
-        padding-left: 3%;
+        padding-left: 5%;
         margin-top: 5px;
     }
 
@@ -1234,7 +1236,7 @@ div.report-table-container{
         font-size: 2vw;
     }
 
-    .footer h3, p{
+    .footer:is(h3, p){
         font-size: clamp(6.6px, 1vw + .5rem, .8rem);
     }
 }
