@@ -1,7 +1,7 @@
 // INIT / / / / / / / / / / / / / / / / / / / / / / / / /
-addEventListener("DOMContentLoaded", (event) => {
+// addEventListener("DOMContentLoaded", (event) => {
 
-});
+// });
 
 
 
@@ -11,12 +11,16 @@ addEventListener("DOMContentLoaded", (event) => {
 let closeTOCOnClick = false;
 const tocElement = document.querySelector('.table-of-contents');
 const tocLinks = document.querySelectorAll('.table-of-contents li a');
+console.log(tocElement);
 tocLinks.forEach(e => {
   //todo: add more event types
   e.addEventListener('click', (event) => {
+    closeTOCOnClick = getComputedStyle(tocElement).getPropertyValue('--close-toc-on-click');
+    console.log(closeTOCOnClick);
     if(closeTOCOnClick){
     const detailsElement = tocElement.querySelector('details');
       detailsElement.removeAttribute('open');
+      console.log('close TOC')  ;
     }
   });
 });

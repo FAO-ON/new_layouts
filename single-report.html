@@ -8,15 +8,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ebo.css">
   <script defer src="toc.js"></script>
   <title>Economic and Budget Outlook, Spring 2023</title>
 </head>
 <body>
 
-  <!-- TODO: site-header + site-nav -->
-  <header class="site-header"></header>
-
-
+	<!-- <div style="background:red; padding-block:2px; text-align:right; max-width:30ch;">30ch</div>
+		<div style="background:pink; padding-block:2px; text-align:right; max-width:20rem;">20rem</div>
+		<div style="background:red; padding-block:2px; text-align:right; max-width:40ch;">40ch</div>
+		<div style="background:pink; padding-block:2px; text-align:right; max-width:30rem;">30rem</div>
+		<div style="background:pink; padding-block:2px; text-align:right; max-width:40rem;">40rem</div>
+		<div style="background:red; padding-block:2px; text-align:right; max-width:70ch;">70ch</div>
+		<div style="background:pink; padding-block:2px; text-align:right; max-width:50rem;">50rem</div>
+		<div style="background:pink; padding-block:2px; text-align:right; max-width:60rem;">60rem</div>
+		<div style="background:pink; padding-block:2px; text-align:right; max-width:70rem;">70rem</div> -->
+		
+		<!-- TODO: site-header + site-nav -->
+		<header class="site-header"></header>
 
   <!-- MAIN for non site-layout / all content -->
   <main class="single-report">
@@ -59,34 +68,32 @@
     <!-- MAYBE: just NAV? -->
     <!-- TODO: look into aria roles for toc/secondary nav -->
     
-    
-    <aside>      
-      <nav class="table-of-contents">
-        <details open>
-          <summary>
-            <h2>Table of Contents</h2>
-          </summary>
-          <ol>
-            <li><a href="#summary">1. Summary</a></li>
-            <li><a href="#debt">2. Budget and Debt Outlook</a></li>
-            <li><a href="#revenue">3. Revenue Outlook</a></li>
-            <li><a href="#spending">4. Program Spending Outlook</a></li>
-            <li><a href="#economic">5. Economic Outlook</a></li>
-            <li><a href="#risks">6. Risks to the Economic and Budget Outlook</a></li>
-            <li><a href="#appendix">7. Appendix</a></li>
-            <li><a href="#about">About this document</a></li>
-          </ol>
-        </details>
-      </nav>
-    </aside>
+		<aside class="table-of-contents">
+			<details open>
+				<summary>
+					<h2>Table of Contents</h2>
+				</summary>
+				<nav>
+					<ol>
+						<li><a href="#summary">1. Summary</a></li>
+						<li><a href="#debt">2. Budget and Debt Outlook</a></li>
+						<li><a href="#revenue">3. Revenue Outlook</a></li>
+						<li><a href="#spending">4. Program Spending Outlook</a></li>
+						<li><a href="#economic">5. Economic Outlook</a></li>
+						<li><a href="#risks">6. Risks to the Economic and Budget Outlook</a></li>
+						<li><a href="#appendix">7. Appendix</a></li>
+						<li><a href="#about">About this document</a></li>
+					</ol>
+				</nav>
+			</details>
+		</aside>
     
     
     <!-- ARTICLE for report content -->
     <article>
-
       <div class="updated-report-notice">
         <p>An update of this report is available <a href="#">here</a>.</p>
-        <a href="#" data-ribbon-text="NEW"><img src="https://fao-on.org/web/default/files/publications/EBO%20Spring%202023/EBO-SP2023-cover-EN.svg" alt=""></a>
+        <a href="#" class="new-ribbon" data-ribbon-text="NEW"><img src="https://fao-on.org/web/default/files/publications/EBO%20Spring%202023/EBO-SP2023-cover-EN.svg" alt=""></a>
       </div>
 <!-- 
       <div class="updated-report-notice-2">
@@ -2737,8 +2744,6 @@
 <p><a href="#_ftnref19" id="_ftn19" title="">[19]</a> The Province recently reached agreements with approximately 55,000 education workers who are members of the Canadian Union of Public Employees (CUPE) and approximately 7,000 education workers represented by the Ontario Council of Educational Workers (OCEW). The FAO estimates that these workers will receive an average annual wage increase of approximately 4.5 per cent per year for four years, which is above the long-term historical average of 2.2 per cent.</p>
 <p><a href="#_ftnref20" id="_ftn20" title="">[20]</a> Bill 124 refers to the <em>Protecting a Sustainable Public Sector for Future Generations Act, 2019</em>.</p>
 </div>
-
-      
     </article>
 
     <!-- MAYBE: move footnotes to MAIN > FOOTER? -->
