@@ -24,15 +24,15 @@ Stylesheet for new FAO redesign
     --sticky-toc-top: 1rem;
   
     /* theme colours */
-    --fao_blue: #0f60d5;
-    --fao_white: #ffffff;
-    --fao_dark_blue: #1a2b4a;
-    --fao_light_blue_1: #9ec2f5;
-    --fao_light_blue_2: #bad1f6;
-    --fao_light_blue_3: #d7e4fa;
-    --fao_light_blue_4: #f1f6fd;
-    --fao_green: #b2d235;
-    --fao_pink: #e23e94;
+    --fao-blue: #0f60d5;
+    --fao-white: #ffffff;
+    --fao-dark_blue: #1a2b4a;
+    --fao-light_blue_1: #9ec2f5;
+    --fao-light_blue_2: #bad1f6;
+    --fao-light_blue_3: #d7e4fa;
+    --fao-light_blue_4: #f1f6fd;
+    --fao-green: #b2d235;
+    --fao-pink: #e23e94;
     /* secondary / report colours */
   
   }
@@ -165,7 +165,7 @@ Stylesheet for new FAO redesign
     padding-inline-start: 0;
     list-style: none;
     font-size: 0.75rem;
-    color: var(--fao_blue);
+    color: var(--fao-blue);
   }
   
   .single-report .topic-links li {
@@ -203,7 +203,7 @@ Stylesheet for new FAO redesign
   
   .single-report .report-links,
   .single-report .report-links a{
-    color: var(--fao_blue);
+    color: var(--fao-blue);
     text-decoration: none;
     font-weight: bold;
   }
@@ -222,7 +222,7 @@ Stylesheet for new FAO redesign
   
   
   .single-report .report-cover {
-    border: 1px solid var(--fao_blue);
+    border: 1px solid var(--fao-blue);
     border-radius: 1rem;
     aspect-ratio: 1/1;
   }
@@ -250,7 +250,7 @@ Stylesheet for new FAO redesign
     top: var(--sticky-toc-top, 1rem);
     /* top: 1rem; */
     border-radius: 0.5rem;
-    background: var(--fao_light_blue_3);
+    background: var(--fao-light_blue_3);
     padding-block: 1rem;
   }
   .single-report .table-of-contents details {
@@ -271,18 +271,18 @@ Stylesheet for new FAO redesign
   
   .single-report .table-of-contents details a{
     display:block;
-    color: var(--fao_blue);
+    color: var(--fao-blue);
     padding-inline: 1rem;
     text-decoration: none;
   } 
   .single-report .table-of-contents details .highlight,
   .single-report .table-of-contents details a:is(:hover, :focus-visible) {
-    background: var(--fao_blue);
-    color: var(--fao_white);
+    background: var(--fao-blue);
+    color: var(--fao-white);
   } 
   
   .table-of-contents details summary {
-    background: var(--fao_light_blue_3);
+    background: var(--fao-light_blue_3);
     list-style: none;
     pointer-events: none;
   }
@@ -294,7 +294,7 @@ Stylesheet for new FAO redesign
   
   
   .table-of-contents :is(ol,ul) {
-    background: var(--fao_light_blue_3);
+    background: var(--fao-light_blue_3);
     list-style: none;
   }
   
@@ -705,168 +705,154 @@ Stylesheet for new FAO redesign
     border-top: 10px solid #3890FF;
 }
 
+
+
+
+
+
 .homepage-content{
-    display: grid;
-    max-width: 85rem;
-    grid-template-columns: [first] 1fr [second]1fr;
-    /*give some space between the columns */
-    /*center the content */
-    margin: auto;
-    /*move the content up */
-    margin-top: -1%;
-}
-
-
-.hp-fao-desc {
     display: flex;
     flex-direction: column;
-    grid-area: 1 / 1 / 2 / 2;
-    margin-top: 30%;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    position: relative;
-
+    gap: 1rem;
+    max-width: 85rem;
+    /*give some space between the columns */
+    /*center the content */
+    margin-inline: auto;
+    /*move the content up */
+    margin-top: -1%;
+    text-align: center;
+    padding-block: 1rem;
+    border-top: 2px solid var(--fao-light_blue_3);
+    border-bottom: 2px solid var(--fao-light_blue_3);
+    margin-bottom:1rem;
 }
 
 
+  
 .FAO-Title {
-    display: flex;
-    font-family: 'Gabarito', sans-serif;
-    font-size: 5em;
-    color: #3890FF;
-    font-weight: 100;
-    display: flex; /* Display the title and image side by side */
-    align-items: left; /* Vertically center the title and image */
-}
-
-
-
-.FAO-Title h1{
-    /*bring the title up */
-    margin-top: -25%;
-    /*reduce the line spacing */
-    line-height: 1.1;
-    padding-bottom: 2%;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 5rem;
+  color: #3890FF;
+  font-weight: 100;
+  /*bring the title up */
+  /* margin-top: -25%; */
+  /*reduce the line spacing */
+  line-height: 1.1;
+  text-align: center;
+  margin: 0;
 }
 
 .FAO-is{
-}
-  
-.FAO-is p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
-    font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-align: center;
 }
 
 .meet-the{
-    display: grid;
-    grid-template-columns: [first] 1fr [second] 1fr;
-    /*move down the text */
-    vertical-align: middle;
-    color: #3890FF;
-    font-weight: bold;
-    font-size: 2vh;
+  display: flex;
+  justify-content: center;
+  /*move down the text */
+  vertical-align: middle;
+  color: #3890FF;
+  font-weight: bold;
+  /* font-size: 2vh; */
+  text-align: center;
+  font-size: 1.5rem;
+  gap:1rem;
+  align-items: center;
 }
   
-.meet-the-text a{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    grid-column-start: first;
-    float:left;
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-    font-size: .8em;
+.meet-the a{
+  text-decoration: none;
 }
 
-.meet-the-img img{
-    grid-column-start: second;
-    float: left;
-    height: auto;
-    /*move the image to the middle of the text */
+.meet-the img{
+  width: auto;
+  height: 1lh;
+  /* vertical-align: middle; */
 }
 
-.hero-img{
-    display: flex;
-    justify-content: right;
-    margin-right: -3%;
-    margin-top: -5%;
-    grid-area: 1 / 2 / 2 / 3;
-}
 
-.hero-img img{
-    /*make it fit the grid */
-    max-width: 90%;
-    height: 90%;
-}
 
-.semi-circle{
-    position: relative; 
-    left: -5%;
-    transform: translate(-70%, -10%);
-    width: 10%;
-    height: 10%;
-    border-radius: 100px 100px 0 0; 
-    background-color: #EBF4FF; 
-    rotate: 90deg;
-}
+
+
 
 .hp-reports{
-    /*bring up the text */
-    margin-top: -6%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  max-width: 85rem;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  padding-inline: 1rem;
 }
 
 .hp-reports h2{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: 22.5px;
-    /*center text */
-    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
+.hp-reports :is(ol,ul) {
+  list-style: none;
+  padding:0;
+}
+
+.filter-reports {
+  padding-right: 1rem;
+  border-right: 2px solid var(--fao-light_blue_3);
+}
+
+.filter-reports li {
+  color: var(--fao-blue);
+}
+
+.filter-reports details {
+  border-bottom: 2px solid var(--fao-blue);
+}
+.filter-reports summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.filter-reports ol li {
+  padding: 0.5em;
+  margin-inline: 0.5em;
+  font-size: 0.8em;
+}
+.filter-reports ol li + li {
+  border-top: 1px solid #00000033;
+}
+
+.filter-reports ol li:hover {
+  color: var(--fao-dark_blue);
+  background-color: var(--fao-light_blue_3);
+}
+
+
 .latest-reports{
-    display: flex;
-    max-width: 85rem;
-    /*center the content */
-    margin: auto;
-
-
 }
 
 .latest-reports ol{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+  gap: 1rem;
 }
 
 .latest-reports li{
-    aspect-ratio: 0.8;
+  aspect-ratio: 0.8;
 }
 
-.latest-reports img{
-    max-width: 100%;
-    height: auto;
-}
+/* .latest-reports img{
+  max-width: 100%;
+  height: auto;
+} */
 
-.meet-the{
-    display:flex;
-    /*move down the text */
-    margin-top: 2%;
-    color: #3890FF;
-    font-weight: bold;
-    font-size: 22.5px;
-  }
-  
-  
-  .meet-the-img{
-    /*move the image up */
-    margin-top: -10px;
-    /*move the image to the right */
-    margin-left: 20px;
-  }
-  
   
   .topics{
     background-color: #EBF4FF;
@@ -965,10 +951,7 @@ Stylesheet for new FAO redesign
 
     }
 
-    .hp-reports{
-        /*push down the text */
-        margin-top: 2%;
-    }
+
     
 }
 
