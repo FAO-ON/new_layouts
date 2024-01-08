@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&display=swap" rel="stylesheet">
+  <title>Financial Accountability Office of Ontario</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html"><img src="imgs/FAO-Logo.png" alt="FAO" width = "346.25"
+        height="74.47"></a>
+    </div>
+    <nav class="navigation">
+      <div class="top">
+        <div class="contact">
+          <a href="about.html">Contact</a>
+        </div>
+        <div class="mpp-portal">
+          <a href="mpp-portal.html">MPP Portal</button>
+        </div>
+        <div class="socials">
+          <a href="https://x.com/InfoFAOO"><img src="imgs/X.png" alt="X" width="22" height="21"></a>
+          <a href="https://www.linkedin.com/company/financial-accountability-office-of-ontario/"><img src="imgs/Linkedin.png" alt="linkedin" width="24" height="24"></a>
+          <a href="https://www.instagram.com/infofao/"><img src="imgs/Instagram.png" alt="instagram" width="24" height="24"></a>
+          <a href="https://www.youtube.com/channel/UCZQXQY7t6t8Z1Q8Z4XZ6Y7Q"><img src="imgs/Youtube.png" alt="Youtube" width="27" height="20"></a>
+        </div>
+        <div class="fr">
+          <a href="">Français</a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="main-menu-links">
+          <a href="about.html" class="about">About<div class="triangle"></div></a>
+          <a href="reports.html" class="reports">Publications<div class="triangle"></div></a>
+          <a href="media.html" class="media">Media<div class="triangle"></div></a>
+        </div>
+        <div class="search">
+          <input onfocus="removeMainMenuLinks()" onblur="addMainMenuLinks()" type="text" placeholder="Search" size="5">
+          <button type="reset"><img src="imgs/magnifying.png" alt="Search" width="25"></button>
+        </div>
+      </div>
+    </nav>  
+  </div>
+  <div class="hamburger">
+    <div class="hamburger-logo">
+      <a href="homepage.html"><img src="imgs/FAO-Logo.png" alt="FAO" width = "0"
+        height="0"></a>
+    </div>
+    <div class="hamburger-button">
+      <button onclick="toggleMenu()"><img src="imgs/Hamburger-Menu.png" alt="hamburger" width="30" height="30"></button>
+    </div>
+  </div>
+  <div id="myLinks" style="display: none;">
+    <a href="about.html">About</a>
+    <a href="reports.html">Publications</a>
+    <a href="media.html">Media</a>
+  </div>
+
+
+
+  <div class="homepage-content">
+      <h1 class="FAO-Title">The Financial Accountability <br>Office of Ontario</h1>
+      <p class="FAO-is">The <b>trusted</b> source for <b>independent analysis</b> of Ontario's <br /> finances and trends in the provincial economy.</p>
+      <div class="meet-the">
+          <a href="about.html">Meet the FAO</a>
+          <a href="about.html"><img src="imgs/meet-the.png" alt="meet-the" width="70" height="70"></a>
+      </div>
+  </div>
+  
+
+  <div class="hp-reports">
+    <div class="filter-reports">
+      <h2>View Reports By</h2>
+      <ul>
+        <li>
+          <details>
+            <summary>Topic</summary>
+            <ol>
+              <li>Annual Reports</li>
+              <li>Budgets</li>
+              <li>Climate and Environment</li>
+              <li>COVID-19</li>
+              <li>Demographics</li>
+              <li>Economy</li>
+              <li>Education and Child Care</li>
+              <li>Employment and Labour Markets</li>
+              <li>Energy and Natural Resources</li>
+              <li>Expenditure Estimates</li>
+              <li>Government Spending</li>
+              <li>Health Care</li>
+              <li>Infrastructure and Transportation</li>
+              <li>Social Programs</li>
+              <li>Taxes and Other Revenue</li>
+              <li>Other</li>
+            </ol>
+          </details>
+        </li>        
+        <li>
+          <details>
+            <summary>Year</summary>
+            <ol>
+              <li>2024</li>
+              <li>2023</li>
+              <li>2022</li>
+              <li>2021</li>
+              <li>2020</li>
+              <li>2019</li>
+              <li>2018</li>
+              <li>2017</li>
+              <li>2016</li>
+              <li>2015</li>
+            </ol>
+          </details>
+        </li>
+
+        
+      </ul>
+    </div>
+    <div class="latest-reports">
+      <h2>Latest Reports</h2>
+      <ol>
+        <li><a href="single-report.html"><img src="imgs/Q4-2022-23-cover-EN.png" alt="Expenditure Monitor Q4"></a></li>
+        <li><a href="single-report.html"><img src="imgs/EBO.png" alt="Economic and Budget Outlook"></a></li>
+        <li><a href="single-report.html"><img src="imgs/Health Sector.png" alt="Health Sector"></a></li>
+      </ol>
+    </div>
+  </div>
+
+
+
+
+  <div class="subscribe">
+    <h2>Stay Connected</h2>
+    <p>Keep up-to-date with the latest news, reports, and commentaries from the FAO.</p>
+    <div class="subscribe-bar">
+      <input type="text" placeholder="Email Address">
+      <button type="submit">Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h3>Financial Accountability Office of Ontario © 2023</h3>
+    <p>Established by the <i>Financial Accountability Officer Act, 2013.</i></p>
+  </div>
+  
+
+</body>
+</html>
