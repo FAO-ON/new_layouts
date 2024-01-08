@@ -171,6 +171,19 @@ a.mpp-portal-nav-link:focus-visible {
 
 
 
+.mobile-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--bg-color);
+}
+
+.mobile-menu-close{
+  display: none;
+  background: var(--bg-color);
+}
+
 
 main {
 
@@ -387,14 +400,41 @@ main {
 
 /* mobile view */
 @media (width < 770px) {
-  /* switch header nav to menu */
-  .header-menu {
+
+  .mobile-menu{
+    /*modify height to fit content */
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    padding: 1rem;
+
+    border: none;
+    visibility: visible;
+  }
+
+  .mobile-menu-close{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  .mobile-menu-close img{
+    width: 1em;
+    max-height: 1em;
+  }
+
+  .header-menu{
     position: absolute;
     right:0;
     top:0;
     background: var(--bg-color);
     box-shadow: 0 0 0.5rem 0 #00000088;
     padding: 2rem;
+    visibility: hidden;
   }
   .header-menu nav ul {
     flex-direction: column;
