@@ -2,7 +2,7 @@
 // addEventListener("DOMContentLoaded", (event) => {
 
 // });
-
+console.log('toc.js loaded');
 
 
 // close TOC details on click

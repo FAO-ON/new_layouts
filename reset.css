@@ -10,6 +10,10 @@ Based on Andy Bell's "More Modern CSS Reset" https://andy-bell.co.uk/a-more-mode
 *::before,
 *::after {
   box-sizing: border-box;
+  /* font: inherit; */
+  font-style: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 html {
@@ -22,6 +26,7 @@ html {
 body, h1, h2, h3, h4, p,
 figure, blockquote, dl, dd {
   margin: 0;
+  padding: 0;
 }
 
 body {
