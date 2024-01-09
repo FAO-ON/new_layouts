@@ -582,6 +582,7 @@ main {
   /* report video summary */
   .single-report .report-cover {
     /* max-height: 25rem; */
+    width: 100%;
     max-width:  25rem;
   }
   /* report cover image */
