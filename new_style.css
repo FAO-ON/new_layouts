@@ -407,7 +407,6 @@ main {
     flex-direction: column;
     box-shadow: none;
     padding: 1rem;
-
     border: none;
     visibility: visible;
   }
@@ -416,7 +415,7 @@ main {
     display: flex;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10px;
     box-shadow: none;
     border: none;
     cursor: pointer;
