@@ -573,11 +573,20 @@ main {
     border-bottom: 2px solid var(--primary-color);
   }
   
-  
+  /* report cover */
   .single-report .report-cover {
     border: 1px solid var(--primary-color);
     border-radius: 1rem;
-    aspect-ratio: 1/1;
+    margin-inline: auto;
+  }
+  /* report video summary */
+  .single-report .report-cover {
+    /* max-height: 25rem; */
+    max-width:  25rem;
+  }
+  /* report cover image */
+  .single-report .report-cover {
+    
   }
   
     
@@ -650,11 +659,6 @@ main {
     list-style: none;
   }
 
-
-section {
-  /* outline: 1px dashed hotpink; */
-}
-
   
   /* switch to mobile */
   @media (width < 770px) {
@@ -666,7 +670,6 @@ section {
     .single-report header { grid-area: 1 / 1 / 2 / 2; }
     .single-report .report-cover { 
       grid-area: 2 / 1 / 3 / 2; 
-      display: none;
     }
     .single-report aside { grid-area: 3 / 1 / 4 / 2; }
     .single-report article { grid-area: 4 / 1 / 5 / 2; }
