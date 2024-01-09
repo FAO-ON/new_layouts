@@ -402,11 +402,12 @@ main {
 @media (width < 770px) {
 
   .mobile-menu{
-    /*modify height to fit content */
+    /*align with logo */
     display: flex;
     flex-direction: column;
     box-shadow: none;
     padding: 1rem;
+    padding-top: 1.2rem;
     border: none;
     visibility: visible;
   }
