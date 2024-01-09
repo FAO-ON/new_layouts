@@ -40,7 +40,7 @@ a:hover {
   /*  variables  */
   box-sizing: border-box;/* border-box needed for calculations */
   --outer-width: 100%;   /* max width for element */
-  --inner-width: 1100px;  /* max-width for content inside element */
+  --inner-width: 1250px;  /* max-width for content inside element */
   --min-padding: 1rem;       /* inline padding minimum for content */
 
   /* set max width of element */
@@ -477,8 +477,8 @@ main {
     /* grid-template-columns:  70ch 30ch; */
     /* grid-template-columns:  55ch 30ch;  */
     /* grid-template-columns:  minmax(55ch, 1fr) 30ch;  */
-    grid-template-columns:  1fr minmax(20ch,30ch); 
-    grid-template-columns:  1fr 300px; 
+    /* grid-template-columns:  1fr 380px;  */
+    grid-template-columns:  3fr minmax(20ch,1fr);
     gap: 2rem;
     margin-top: 2rem;
   }
