@@ -22,7 +22,7 @@ tocLinks.forEach(e => {
     if(isTOCMobile()){
       const detailsElement = tocElement.querySelector('details');
       detailsElement.removeAttribute('open');
-      console.log('close TOC');
+      // console.log('close TOC');
     }
   });
 });
@@ -37,12 +37,12 @@ window.addEventListener('resize', (event) => {
   prevWindowWidth = newWindowWidth;
   if(isTOCMobile()){
     //if TOC is in mobile mode, close it
-    console.log('mobile');
+    // console.log('mobile');
     const detailsElement = tocElement.querySelector('details');
     detailsElement.removeAttribute('open');
   }else{
     //if TOC is in dektop mode, open it
-    console.log('desktop');
+    // console.log('desktop');
     const detailsElement = tocElement.querySelector('details');
     detailsElement.setAttribute('open','true');
   }
@@ -80,12 +80,12 @@ let callback = (entries, observer) => {
     const tocLink = document.querySelector(`a[href="#${tocId}"]`);
     if (entry.isIntersecting) {
       tocLink.setAttribute('tocvisible','true');
-      console.log('visible',tocId);
+      // console.log('visible',tocId);
     }
     else{
       tocLink.removeAttribute('tocvisible');
       tocLink.removeAttribute('aria-current');
-      console.log('not visible',tocId);
+      // console.log('not visible',tocId);
     }
   });
   cleanupTocLinks();
@@ -112,12 +112,12 @@ tocSections.forEach( s => {
 //check all [tocvisible] links and set [aria-current] to latest one
 function cleanupTocLinks(){
   const visibleTocLinks = [...document.querySelectorAll('a[tocvisible]')];
-  console.log(visibleTocLinks);
+  // console.log(visibleTocLinks);
   const lastTocLink = visibleTocLinks.pop();
   lastTocLink.setAttribute('aria-current','true');
   visibleTocLinks.forEach( tocLink => {
     tocLink.removeAttribute('aria-current');
-    console.log('[ ]',tocLink.href)
+    // console.log('[ ]',tocLink.href)
   });
-  console.log('[x]',lastTocLink.href)
+  // console.log('[x]',lastTocLink.href)
 }
