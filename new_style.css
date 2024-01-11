@@ -172,9 +172,15 @@ a.mpp-portal-nav-link:focus-visible {
 
 
 
-main {
 
-}
+
+
+
+
+
+
+
+/* homepage */
 
 .homepage-about {
   padding-block: 3rem;
@@ -294,7 +300,8 @@ main {
 }
 
 .homepage-reports-results ol > * {
-  flex: 1 0 150px;
+  flex: 0 1 300px;
+  min-width: 150px;
 }
 
 .homepage-reports-results a{
@@ -310,6 +317,10 @@ main {
 
 .homepage-reports-results li * {
   border-radius: 0.5rem;
+}
+
+.homepage-reports-results li img {
+  object-contain: cover;
 }
 
 
@@ -563,16 +574,61 @@ main {
     top: 0;
   }
 
-  .single-report .header-tabs {
-    display: flex;
-    gap: 2em;
-    font-size: 0.75rem;
-    /* font-size: small; */
-    border-top: 1px solid black;
-    padding-top: 1rem;
-    border-bottom: 2px solid var(--primary-color);
+
+
+  /* tabbed sections */
+  .tabbed-sections {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
   }
   
+  .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6) {
+    grid-row: 1 / 2;
+  }
+  
+  .tabbed-sections > section {
+    display: none;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+  
+  
+  .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6):focus + section {
+    display:block;
+  }
+  
+
+  /* header-tabs */
+  .single-report .header-tabs {
+    font-size: 0.75rem;
+    border-top: 1px solid black;
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .single-report .header-tabs :is(.tab,h2,h3,h4,h5,h6) {
+    padding: 0.5em 1em;
+    margin-top: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+  }
+  .single-report .header-tabs :is(.tab,h2,h3,h4,h5,h6):is(:focus,:active,:target) {
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+  }
+  .single-report .header-tabs :is(.tab,h2,h3,h4,h5,h6):hover {
+    background: var(--secondary-color);
+    color: black;
+    text-decoration: none;
+  }
+  
+  .single-report .header-tabs section {
+    border-top: 2px solid var(--primary-color);
+    padding-block: 1em;
+  }
+
+
+
   /* report cover */
   .single-report .report-cover {
     border: 1px solid var(--primary-color);
@@ -636,11 +692,10 @@ main {
     padding-inline: 1rem;
     text-decoration: none;
   } 
-  .single-report .table-of-contents details .highlight,
+  .single-report .table-of-contents details [aria-current],
   .single-report .table-of-contents details a:is(:hover, :focus-visible) {
     background: var(--primary-color);
     color: var(--fao-white);
-    outline: 1px solid red;
   } 
   
   .table-of-contents details summary {
@@ -811,7 +866,7 @@ article ul ul {
 div.report-table-container{
   overflow-x: auto;
   width: 100%;
-  max-width: 1500px;
+  /* max-width: 1500px; */
 }
 
 .report-table caption {

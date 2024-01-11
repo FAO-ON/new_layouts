@@ -7,7 +7,15 @@ console.log('toc.js loaded');
 
 // close TOC details on click
 const tocElement = document.querySelector('.table-of-contents');
-const tocLinks = document.querySelectorAll('.table-of-contents li a');
+const tocLinks = [...document.querySelectorAll('.table-of-contents a[href^="#"]')];
+let tocSections = [];
+
+tocLinks.forEach(e => {
+  tocSections.push(document.querySelector('section:has(#' + e.href.split('#')[1] + ')'));
+  // e.href.split('#')[1]
+});
+// console.log(tocSections);
+
 tocLinks.forEach(e => {
   //todo: add more event types
   e.addEventListener('click', (event) => {
@@ -59,43 +67,57 @@ htmlElement.style.scrollPaddingTop = `${summaryElement.clientHeight}px`;
 
 
 // / / / / / / / / / / / / / / / / / / / / / / / / / /
-// from https://codepen.io/desirecampbell/pen/oNJrmdO
+// from https://codepen.io/desirecampbell/pen/abMZzmQ
 
-// get all headings
-const contentHeadings = document.querySelectorAll(':is(h1,h2,h3,h4,h5)');
-console.log(`${contentHeadings.length} headings found`);
-//get all links in the TOC
-//const tocLinks = document.querySelectorAll('nav :is(ul,ol) li a');
-// how far up the page does the next section have to be to be labeled as 'current section'
-const pagePercentage = 1; //50 = half way up page, 75 = almost to the top
 
-window.addEventListener('scroll', (event) => {
-  if (typeof(contentHeadings) != 'undefined' && contentHeadings != null && typeof(tocLinks) != 'undefined' && tocLinks != null) {
-    // remove all TOC highlights
-    tocLinks.forEach((link, index) => {
-      link.classList.remove("highlight");
-      console.log(`[-] removing highlight from ${link}`)
-    });
-    // iterate backwards through headings
-    const reverseContentHeadings = [...contentHeadings].toReversed();
-    let matchFound = false;
-    reverseContentHeadings.forEach(anchor => {
-      // IF you haven't found a match yet...
-      if(!matchFound){
-        // ...AND this heading is far enough up the page...
-        if((window.scrollY + (window.innerHeight * (100 - pagePercentage) / 100)) > anchor.offsetTop){
-          // ...AND there's a TOC link to this heading...
-          const link = document.querySelector('nav :is(ul,ol) li a[href="#' + anchor.id + '"]');
-          if(link){
-            // ... THEN highlight the TOC link and flag that we've found our match
-            link.classList.add('highlight');
-            console.log(`[+] highlighting ${link}`)
-            matchFound = true;
-          }
-        }
-      }
-    });
-  }
+
+
+//callback function that fires whenever a target moves into or out of view
+let callback = (entries, observer) => {
+  // console.log(entries);
+  entries.forEach((entry) => {
+    tocId = entry.target.querySelector(':is(h2,h3,h4,h5,h6)').id;
+    const tocLink = document.querySelector(`a[href="#${tocId}"]`);
+    if (entry.isIntersecting) {
+      tocLink.setAttribute('tocvisible','true');
+      console.log('visible',tocId);
+    }
+    else{
+      tocLink.removeAttribute('tocvisible');
+      tocLink.removeAttribute('aria-current');
+      console.log('not visible',tocId);
+    }
+  });
+  cleanupTocLinks();
+};
+
+//create options
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.0, //how much of the target needs to be visible (1 = 100%)
+};
+
+//create observer
+let observer = new IntersectionObserver(callback, options);
+
+//get all targets
+// const targets = [...document.querySelectorAll('section[id]')]
+//tell observer to observe each tareget
+tocSections.forEach( s => {
+  observer.observe(s);
 });
 
 
+//check all [tocvisible] links and set [aria-current] to latest one
+function cleanupTocLinks(){
+  const visibleTocLinks = [...document.querySelectorAll('a[tocvisible]')];
+  console.log(visibleTocLinks);
+  const lastTocLink = visibleTocLinks.pop();
+  lastTocLink.setAttribute('aria-current','true');
+  visibleTocLinks.forEach( tocLink => {
+    tocLink.removeAttribute('aria-current');
+    console.log('[ ]',tocLink.href)
+  });
+  console.log('[x]',lastTocLink.href)
+}
