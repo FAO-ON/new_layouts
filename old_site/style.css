@@ -503,8 +503,8 @@ Stylesheet for new FAO redesign
       grid-column-start: second;
   }
   
-  .hamburger{
-    visibility: hidden;
+  .mobile-menu{
+    display: none;
   }
   
   /* Position the top div's content to display side by side and to the far right of the page*/
