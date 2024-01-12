@@ -15,7 +15,7 @@ table.report-table {
   margin: 10px 0 24px 0;
   table-layout: fixed;
   /*defaults all columns to equal width*/
-  max-width: 100%;
+  width: 100%;
   /*needed for table-layout:fixed;*/
   font-size: clamp(9px,1.7vw,15px);
 }

@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="report-table.css">
   <link rel="stylesheet" href="new_style.css">
   
-  <script defer src="toc.js"></script>
   <script defer src="mobile.js"></script>
+  <script defer src="toc.js"></script>
+  <script defer src="report-chart-expand.js"></script>
   <title>Economic and Budget Outlook, Spring 2023</title>
 </head>
 <body>
@@ -94,11 +95,114 @@
 
 			<div class="header-tabs tabbed-sections">
 				<h3 tabindex="0">Report Info</h3>
-				<section id="report-info">INFO Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi dolorem, porro aliquid iure nisi cupiditate est alias sequi eos inventore modi quae quasi provident nobis magni hic quibusdam id accusantium. Eum enim ut quisquam fuga reprehenderit velit, dicta aspernatur accusamus eligendi voluptatum, vitae distinctio? Corporis dolorem maxime in, quam expedita alias rerum, voluptas dolore numquam blanditiis quae molestias sequi placeat dolorum vel ducimus assumenda tenetur accusantium doloremque dignissimos! Nam, placeat nemo et obcaecati eaque asperiores nesciunt facere. Dolorum minus possimus quasi earum suscipit quia ab laudantium aperiam voluptates, quos illum illo neque vitae id repellendus autem. Nam, harum reprehenderit?</section>
+				<section id="report-info">
+
+					<h4>Authors</h4>
+					<ul>
+						<li>
+							<span>Zohra Jamasi</span>
+							Principal, Economics and Fiscal Analysis
+						</li>
+						<li>
+							<span>Jay Park</span>
+							Senior Economist
+						</li>
+						<li>
+							<span>Nicolas Rhodes</span>
+							Principal, Economics and Fiscal Analysis
+						</li>
+						<li>
+							<span>Matthew Stephenson</span>
+							Manager, Financial Analysis
+						</li>
+					</ul>
+					
+					<h4>Under the direction of</h4>
+					
+					<ul>
+						<li>
+							<span>Paul Lewis</span>
+							Chief Economist and Deputy FAO
+						</li>
+						
+						<li>
+							<span>Edward Crummey</span>
+							Director, Economics and Fiscal Analysis
+						</li>
+						
+						<li>
+							<span>Luan Ngo</span>
+							Chief Financial Analyst
+						</li>
+					</ul>
+					
+					
+					<h4>Contributors</h4>
+					
+					<ul>
+						<li>
+							<span>Ben Segel-Brown</span>
+							Senior Financial Analysis 
+						</li>
+						
+						<li>
+							<span>Michelle Gordon</span>
+							Senior Financial Analysis
+						</li>
+						
+						<li>
+							<span>Matthew Gurnham</span>
+							Director, Financial Analysis
+						</li>
+						
+						<li>
+							<span>Ava Rahbari</span>
+							Financial Analysis
+						</li>
+					</ul>
+					
+					
+					<p>Established by the <i>Financial Accountability Officer Act, 2013</i>, the Financial Accountability Office (FAO) provides independent analysis on the state of the Province’s finances, trends in the provincial economy and related matters important to the Legislative Assembly of Ontario.</p>
+					
+					<p>The content of this report is based on information available to May 19, 2023. Background data used in this report are available upon request.</p>
+					
+					<p>In keeping with the FAO’s mandate to provide the Legislative Assembly of Ontario with independent economic and financial analysis, this report makes no policy recommendations.</p>
+					
+					
+					<h4>Copyright</h4>
+					<p>© King’s Printer for Ontario, 2023</p>
+
+				</section>
+
 				<h3 tabindex="0">Cite</h3>
-				<section id="report-cite">CITE Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro magnam fugiat! Voluptate maxime dolores tenetur soluta, aut aliquam distinctio suscipit odit numquam, reprehenderit corrupti nulla qui, ea repudiandae rerum.</section>
+				<section id="report-cite">
+					<span>APA</span>
+					<span class="cite-apa">Jamasi, Z., Park, J., Rhodes, N., & Stephenson, M. (2023, June 13). <i>Economic and Budget Outlook, Spring 2023</i>. Financial Accountability Office of Ontario (FAO). https://fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
+					
+					<span>MLA</span>
+					<span class="cite-mla">Jamasi, Zohra, et al. “Economic and Budget Outlook, Spring 2023.” <i>Financial Accountability Office of Ontario (FAO)</i>, Financial Accountability Office of Ontario, 13 June 2023, fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
+
+					<span>Chicago</span>
+					<span class="cite-chicago">Jamasi, Zohra, Jay Park, Nicolas Rhodes, and Matthew Stephenson. “Economic and Budget Outlook, Spring 2023.” Financial Accountability Office of Ontario (FAO), June 13, 2023. https://fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
+				</section>
+
 				<h3 tabindex="0">Share</h3>
-				<section id="report-share">SHARE Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident exercitationem ea laudantium non, quia similique quisquam, eaque sapiente consequuntur sit facilis vero saepe cum sint aliquam quaerat ad ipsum odio!</section>
+				<section id="report-share">
+					<div>
+						<input type="url" name="" id="" disabled value="https://fao-on.org/en/Blog/Publications/EBO-SP2023">
+						<button>Copy link</button>
+					</div>
+					<div>
+						<span>Share this report on social media</span>
+						<a href="#"><img src="imgs/X.png" alt=""></a>
+						<a href="#"><img src="imgs/Linkedin.png" alt=""></a>
+						<a href="#"><img src="imgs/Instagram.png" alt=""></a>
+					</div>
+					<div>
+						<span>Email this article to a friend</span>
+						<a href="#"><img src="imgs/email.png" alt=""></a>
+					</div>
+				</section>
 			</div>
       
     </header>
@@ -200,16 +304,90 @@
 	
 	<p>By 2025-26, the last year of the 2023 budget outlook, the government projects a $4.4 billion budget surplus. In contrast, the FAO expects Ontario to record a surplus of $10.6 billion.</p>
 	
+
+
 	<div class="report-chart" id="fig2-1-image">
-	<p class="title"><span>Figure 2.1</span> FAO projects growing budget surpluses over the outlook</p>
-	<img src="imgs/en/fig2-1.png" style="width: 100%; max-width: 100%;" />
-	<p class="note">Note: The budget balance from the 2023 Ontario Budget is shown after the reserve.</p>
-	
-	<p class="source">Source: Ontario Public Accounts, 2023 Ontario Budget and FAO</p>
-	
-	<p class="alt-text-link"><a href="#fig2-1">Accessible version</a></p>
+		<p class="title"><span>Figure 2.1</span> FAO projects growing budget surpluses over the outlook</p>
+		<img src="imgs/en/fig2-1.png" style="width: 100%; max-width: 100%;" />
+		<p class="note">Note: The budget balance from the 2023 Ontario Budget is shown after the reserve.</p>
+		<p class="source">Source: Ontario Public Accounts, 2023 Ontario Budget and FAO</p>
+		<details class="report-chart-alt">
+			<summary>Accessible version</summary>
+			<div class="report-table-container">
+				<table class="report-table" id="fig2-1">
+					<caption class="title"><span>Figure 2.1</span> FAO projects growing budget surpluses over the outlook</caption>
+					<colgroup>
+						<col style="width:10ch;" />
+						<col style="width:10ch;" />
+						<col style="width:10ch;" />
+						<col style="width:10ch;" />
+					</colgroup>
+					<tbody>
+						<tr class="header">
+							<th rowspan="2"></th>
+							<th colspan="3">Budget Balance ($ Billions)</th>
+						</tr>
+						<tr class="header">
+							<th>Historical</th>
+							<th>FAO</th>
+							<th>2023 Ontario Budget</th>
+						</tr>
+						<tr>
+							<td>2020-21</td>
+							<td>-16.4</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2021-22</td>
+							<td>2.1</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2022-23</td>
+							<td></td>
+							<td>0.5</td>
+							<td>-2.2</td>
+						</tr>
+						<tr>
+							<td>2023-24</td>
+							<td></td>
+							<td>3.0</td>
+							<td>-1.3</td>
+						</tr>
+						<tr>
+							<td>2024-25</td>
+							<td></td>
+							<td>7.4</td>
+							<td>0.2</td>
+						</tr>
+						<tr>
+							<td>2025-26</td>
+							<td></td>
+							<td>10.6</td>
+							<td>4.4</td>
+						</tr>
+						<tr>
+							<td>2026-27</td>
+							<td></td>
+							<td>14.7</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>2027-28</td>
+							<td></td>
+							<td>16.4</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</details>
 	</div>
 	
+
+
 	<p>However, if the government makes future policy announcements, such as new tax cuts, spending initiatives or a combination of both, the FAO&rsquo;s budget projection would deteriorate. The FAO&rsquo;s economic and budget outlook also faces significant risks &ndash; see Chapter 6 for a discussion.</p>
 	
 	<h3 class="heading-3">Budget surpluses would improve Ontario&rsquo;s fiscal sustainability indicators</h3>
@@ -223,8 +401,611 @@
 	<img src="imgs/en/fig2-2.png" style="width: 100%; max-width: 100%;" />
 	<p class="source">Source: Ontario Public Accounts, 2023 Ontario Budget and FAO</p>
 	
-	<p class="alt-text-link"><a href="#fig2-2">Accessible version</a></p>
 	</div>
+
+
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig2-2">
+		<caption class="title"><span>Figure 2.2</span> Ontario&rsquo;s fiscal sustainability indicators to improve and remain below government targets</caption>
+		
+		<colgroup>
+			<col style="width:20ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th colspan="2">Net Debt-to-GDP Ratio (Per Cent)</th>
+				<th>Historical</th>
+				<th>FAO</th>
+				<th>2023 Ontario Budget</th>
+			</tr>
+			<tr>
+				<td class="bg-white" rowspan="41">Historical</td>
+				<td>1981-82</td>
+				<td>10.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1982-83</td>
+				<td>12.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1983-84</td>
+				<td>12.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1984-85</td>
+				<td>12.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1985-86</td>
+				<td>14.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1986-87</td>
+				<td>14.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1987-88</td>
+				<td>14.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1988-89</td>
+				<td>13.6</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1989-90</td>
+				<td>12.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1990-91</td>
+				<td>13.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1991-92</td>
+				<td>17.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1992-93</td>
+				<td>21.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1993-94</td>
+				<td>26.6</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1994-95</td>
+				<td>28.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1995-96</td>
+				<td>30.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1996-97</td>
+				<td>31.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1997-98</td>
+				<td>30.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1998-99</td>
+				<td>29.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1999-00</td>
+				<td>32.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2000-01</td>
+				<td>29.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2001-02</td>
+				<td>28.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2002-03</td>
+				<td>26.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2003-04</td>
+				<td>27.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2004-05</td>
+				<td>26.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2005-06</td>
+				<td>27.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2006-07</td>
+				<td>27.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2007-08</td>
+				<td>26.6</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2008-09</td>
+				<td>27.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2009-10</td>
+				<td>32.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2010-11</td>
+				<td>34.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2011-12</td>
+				<td>36.6</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2012-13</td>
+				<td>38.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2013-14</td>
+				<td>39.7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2014-15</td>
+				<td>40.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2015-16</td>
+				<td>40.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2016-17</td>
+				<td>39.7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2017-18</td>
+				<td>39.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2018-19</td>
+				<td>39.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2019-20</td>
+				<td>39.6</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2020-21</td>
+				<td>43.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2021-22</td>
+				<td>39.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="border-top-dashed">
+				<td class="bg-alt-blue" rowspan="6">Projection</td>
+				<td>2022-23</td>
+				<td></td>
+				<td>37.3</td>
+				<td>37.8</td>
+			</tr>
+			<tr>
+				<td>2023-24</td>
+				<td></td>
+				<td>36.8</td>
+				<td>37.8</td>
+			</tr>
+			<tr>
+				<td>2024-25</td>
+				<td></td>
+				<td>36.2</td>
+				<td>37.7</td>
+			</tr>
+			<tr>
+				<td>2025-26</td>
+				<td></td>
+				<td>35.0</td>
+				<td>36.9</td>
+			</tr>
+			<tr>
+				<td>2026-27</td>
+				<td></td>
+				<td>33.4</td>
+				<td>-</td>
+			</tr>
+			<tr class="border-bottom">
+				<td>2027-28</td>
+				<td></td>
+				<td>31.8</td>
+				<td>-</td>
+			</tr>
+			<tr class="bg-white">
+				<td colspan="5"></td>
+			</tr>
+			<tr class="header">
+				<th colspan="2">Interest on Debt to Revenue (Per Cent)</th>
+				<th>Historical</th>
+				<th>FAO</th>
+				<th>2023 Ontario Budget</th>
+			</tr>
+			<tr>
+				<td class="bg-white" rowspan="41">Historical</td>
+				<td>1981-82</td>
+				<td>6.0</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1982-83</td>
+				<td>7.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1983-84</td>
+				<td>8.7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1984-85</td>
+				<td>9.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1985-86</td>
+				<td>9.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1986-87</td>
+				<td>9.7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1987-88</td>
+				<td>9.6</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1988-89</td>
+				<td>9.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1989-90</td>
+				<td>8.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1990-91</td>
+				<td>7.7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1991-92</td>
+				<td>8.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1992-93</td>
+				<td>10.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1993-94</td>
+				<td>13.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1994-95</td>
+				<td>14.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1995-96</td>
+				<td>14.6</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1996-97</td>
+				<td>14.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1997-98</td>
+				<td>14.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1998-99</td>
+				<td>14.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1999-00</td>
+				<td>15.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2000-01</td>
+				<td>15.0</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2001-02</td>
+				<td>14.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2002-03</td>
+				<td>12.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2003-04</td>
+				<td>12.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2004-05</td>
+				<td>11.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2005-06</td>
+				<td>10.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2006-07</td>
+				<td>9.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2007-08</td>
+				<td>8.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2008-09</td>
+				<td>9.2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2009-10</td>
+				<td>9.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2010-11</td>
+				<td>8.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2011-12</td>
+				<td>9.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2012-13</td>
+				<td>9.0</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2013-14</td>
+				<td>9.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2014-15</td>
+				<td>8.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2015-16</td>
+				<td>8.5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2016-17</td>
+				<td>8.3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2017-18</td>
+				<td>7.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2018-19</td>
+				<td>8.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2019-20</td>
+				<td>8.0</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2020-21</td>
+				<td>7.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2021-22</td>
+				<td>6.8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="border-top-dashed">
+				<td class="bg-alt-blue" rowspan="6">Projection</td>
+				<td>2022-23</td>
+				<td></td>
+				<td>6.6</td>
+				<td>6.7</td>
+			</tr>
+			<tr>
+				<td>2023-24</td>
+				<td></td>
+				<td>6.6</td>
+				<td>6.9</td>
+			</tr>
+			<tr>
+				<td>2024-25</td>
+				<td></td>
+				<td>6.4</td>
+				<td>6.8</td>
+			</tr>
+			<tr>
+				<td>2025-26</td>
+				<td></td>
+				<td>6.1</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>2026-27</td>
+				<td></td>
+				<td>5.8</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>2027-28</td>
+				<td></td>
+				<td>5.5</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	
+</details>
 	
 	</section>
 	
@@ -245,8 +1026,93 @@
 	<img src="imgs/en/fig3-1.png" style="width: 100%; max-width: 100%;" />
 	<p class="source">Source: Ontario Public Accounts, 2023 Ontario Budget and FAO</p>
 	
-	<p class="alt-text-link"><a href="#fig3-1">Accessible version</a></p>
 	</div>
+
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig3-1">
+		<caption class="title"><span>Figure 3.1</span>Revenue growth to moderate after post-pandemic surge</caption>
+		
+		<colgroup>
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th colspan="2" rowspan="2">Year</th>
+				<th colspan="3">Total Revenues ($ Billions)</th>
+			</tr>
+			<tr class="header">
+				<th>Historical</th>
+				<th>FAO</th>
+				<th>2023 Ontario Budget</th>
+			</tr>
+			<tr>
+				<td class="bg-white" rowspan="3">Historical</td>
+				<td>2019-20</td>
+				<td>156.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2020-21</td>
+				<td>164.9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2021-22</td>
+				<td>185.1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="border-top-dashed">
+				<td class="bg-alt-blue" rowspan="6">Projection</td>
+				<td>2022-23</td>
+				<td></td>
+				<td>197.1</td>
+				<td>200.4</td>
+			</tr>
+			<tr>
+				<td>2023-24</td>
+				<td></td>
+				<td>201.1</td>
+				<td>204.4</td>
+			</tr>
+			<tr>
+				<td>2024-25</td>
+				<td></td>
+				<td>210.7</td>
+				<td>213.1</td>
+			</tr>
+			<tr>
+				<td>2025-26</td>
+				<td></td>
+				<td>221.8</td>
+				<td>226.0</td>
+			</tr>
+			<tr>
+				<td>2026-27</td>
+				<td></td>
+				<td>231.1</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>2027-28</td>
+				<td></td>
+				<td>239.7</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	
+	</details>
+
 	
 	<p>The FAO&#39;s lower revenue outlook compared to the government&rsquo;s is due to different assumptions on how the relationships between tax revenue and economic drivers behave in the current high inflation economic environment. These assumptions largely impact personal income tax and corporations tax revenues.</p>
 	
@@ -262,9 +1128,58 @@
 		<img src="imgs/en/fig3-2.png" style="width: 100%; max-width: 100%;" />
 		<p class="note">Note: Shows growth in labour income and corporate profits in 2022.</p>
 		<p class="source">Source: 2023 Ontario Budget, Ontario Economic Accounts and FAO</p>
-		<p class="alt-text-link"><a href="#fig3-2">Accessible version</a></p>
+
 	</div>
-	
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig3-2">
+		<caption class="title"><span>Figure 3.2</span>FAO projects a more moderate relationship between tax revenue and economic drivers than the government in 2022-23</caption>
+		
+		<colgroup>
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th></th>
+				<th colspan="2">Change in 2022-23 (Per Cent)</th>
+			</tr>
+			<tr class="header">
+				<th class="left"></th>
+				<th>FAO</th>
+				<th>2023 Ontario Budget</th>
+			</tr>
+			<tr>
+				<td class="left">Personal Income Tax</td>
+				<td>7.7</td>
+				<td>13.0</td>
+			</tr>
+			<tr>
+				<td class="left">Labour Income</td>
+				<td>9.5</td>
+				<td>9.0</td>
+			</tr>
+			<tr>
+				<td class="left">Corporations Tax</td>
+				<td>6.6</td>
+				<td>10.7</td>
+			</tr>
+			<tr>
+				<td class="left">Corporate Profits</td>
+				<td>4.7</td>
+				<td>5.0</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</details>
+
+
+
+
+
 	<p>In the last two fiscal years, revenue growth was stronger than what both the FAO and the government expected.<a href="#_ftn7" id="_ftnref7" title="">[7]</a> This was driven in part by elevated inflation, which lifted revenues higher than what the underlying economic activity would suggest. The FAO&rsquo;s current outlook projects that some of this strength will continue into 2022-23, although to a lesser extent than the government&rsquo;s projection. If the inflationary impact on revenues is stronger than assumed by the FAO in 2022-23, this could boost revenues over the entire outlook. Alternatively, the inflationary impact on revenues could be weaker than expected in 2022-23, lowering the outlook.</p>
 	
 	</section>
@@ -286,9 +1201,91 @@
 	<img src="imgs/en/fig4-1.png" style="width: 100%; max-width: 100%;" />
 	<p class="source">Source: FAO analysis of the 2023 Ontario Budget and information provided by the Ministry of Finance.</p>
 	
-	<p class="alt-text-link"><a href="#fig4-1">Accessible version</a></p>
 	</div>
 	
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig4-1">
+		<caption class="title"><span>Figure 4.1</span> FAO&rsquo;s program spending projection is lower than the government&rsquo;s through 2025-26</caption>
+		
+		<colgroup>
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th colspan="2" rowspan="2">Year</th>
+				<th colspan="3">Program Spending ($ Billions)</th>
+			</tr>
+			<tr class="header">
+				<th>Historical</th>
+				<th>FAO</th>
+				<th>2023 Ontario Budget</th>
+			</tr>
+			<tr>
+				<td class="bg-white" rowspan="2">Historical</td>
+				<td>2020-21</td>
+				<td>169.0</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2021-22</td>
+				<td>170.4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="border-top-dashed">
+				<td class="bg-alt-blue" rowspan="6">Projection</td>
+				<td>2022-23</td>
+				<td></td>
+				<td>183.6</td>
+				<td>189.1</td>
+			</tr>
+			<tr>
+				<td>2023-24</td>
+				<td></td>
+				<td>184.8</td>
+				<td>190.6</td>
+			</tr>
+			<tr>
+				<td>2024-25</td>
+				<td></td>
+				<td>189.9</td>
+				<td>196.4</td>
+			</tr>
+			<tr>
+				<td>2025-26</td>
+				<td></td>
+				<td>197.7</td>
+				<td>202.5</td>
+			</tr>
+			<tr>
+				<td>2026-27</td>
+				<td></td>
+				<td>202.9</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>2027-28</td>
+				<td></td>
+				<td>210.1</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</details>
+
+
+
+
+
+
 	<h3 class="heading-3">Health and &lsquo;other programs&rsquo; sectors account for most of the excess funds</h3>
 	
 	<p>By sector, the FAO projects that there are excess funds in health (net $4.4 billion over four years), postsecondary education ($1.1 billion) and &lsquo;other programs&rsquo; ($17.9 billion). The significant excess funds in the &lsquo;other programs&rsquo; sector is largely due to the contingency fund, which is typically used to fund new programs, enhance existing programs or address spending pressures that materialize.<a href="#_ftn9" id="_ftnref9" title="">[9]</a> The FAO does not include the government&rsquo;s contingency fund in its program spending forecast as the purpose of the funds have not yet been announced.</p>
@@ -412,8 +1409,47 @@
 	
 	<p class="source">Source: International Monetary Fund.</p>
 	
-	<p class="alt-text-link"><a href="#fig5-1">Accessible version</a></p>
 	</div>
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig5-1">
+		<caption class="title"><span>Figure 5.1</span>Global economic growth projected to moderate</caption>
+		
+		<colgroup>
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th rowspan="2">Year</th>
+				<th colspan="3">Real GDP Growth (Per Cent)</th>
+			</tr>
+			<tr class="header">
+				<th>World</th>
+				<th>Advanced economies</th>
+				<th>Emerging market and developing economies</th>
+			</tr>
+			<tr>
+				<td>2012-2019</td>
+				<td>3.4</td>
+				<td>1.9</td>
+				<td>4.6</td>
+			</tr>
+			<tr>
+				<td>2023-2028</td>
+				<td>3.0</td>
+				<td>1.6</td>
+				<td>4.0</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+
+	</details>
+
 	</div>
 	
 	<h3 class="heading-3">Ontario outlook: inflation and economic growth to slow</h3>
@@ -432,8 +1468,44 @@
 	
 	<p class="source">Source: Statistics Canada and FAO.</p>
 	
-	<p class="alt-text-link"><a href="#fig5-2">Accessible version</a></p>
 	</div>
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	
+	<div class="report-table-container">
+	<table class="report-table" id="fig5-2">
+		<caption class="title"><span>Figure 5.2</span>Ontario&rsquo;s inflation rate projected to moderate gradually over the next two years</caption>
+		
+		<colgroup>
+			<col style="width:20ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th rowspan="2"></th>
+				<th>Historical</th>
+				<th colspan="3">Projection</th>
+			</tr>
+			<tr class="header">
+				<th>2022</th>
+				<th>2023</th>
+				<th>2024</th>
+				<th>2025-2027 Average</th>
+			</tr>
+			<tr>
+				<td>Annual CPI Inflation (Per Cent)</td>
+				<td>6.8</td>
+				<td>3.6</td>
+				<td>2.1</td>
+				<td>2.0</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</details>
 	</div>
 	
 	<div class="sidebyside">
@@ -452,8 +1524,63 @@
 	
 	<p class="source">Source: Statistics Canada and FAO.</p>
 	
-	<p class="alt-text-link"><a href="#fig5-3">Accessible version</a></p>
 	</div>
+
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig5-3">
+		<caption class="title"><span>Figure 5.3</span> Short-term interest rates to remain high in 2023 and 2024</caption>
+		
+		<colgroup>
+			<col style="width:20ch;" />
+			<col style="width:6ch;" />
+			<col style="width:6ch;" />
+			<col style="width:6ch;" />
+			<col style="width:6ch;" />
+			<col style="width:6ch;" />
+			<col style="width:6ch;" />
+			<col style="width:6ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th class="left" rowspan="2">(Per Cent)</th>
+				<th colspan="2">Historical</th>
+				<th colspan="5">Projection</th>
+			</tr>
+			<tr class="header">
+				<th>2021</th>
+				<th>2022</th>
+				<th>2023</th>
+				<th>2024</th>
+				<th>2025</th>
+				<th>2026</th>
+				<th>2027</th>
+			</tr>
+			<tr>
+				<td class="left">3-month Treasury Bill Yield</td>
+				<td>0.1</td>
+				<td>2.2</td>
+				<td>4.4</td>
+				<td>3.4</td>
+				<td>2.5</td>
+				<td>2.4</td>
+				<td>2.4</td>
+			</tr>
+			<tr>
+				<td class="left">10-year Government of Canada Bond Yield</td>
+				<td>1.4</td>
+				<td>2.8</td>
+				<td>3.0</td>
+				<td>3.0</td>
+				<td>3.1</td>
+				<td>3.2</td>
+				<td>3.2</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</details>
 	</div>
 	
 	<div class="sidebyside">
@@ -470,8 +1597,52 @@
 	
 	<p class="source">Source: Ontario Economic Accounts and FAO.</p>
 	
-	<p class="alt-text-link"><a href="#fig5-4">Accessible version</a></p>
 	</div>
+
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig5-4">
+		<caption class="title"><span>Figure 5.4</span> Ontario&rsquo;s economic growth to slow in 2023</caption>
+		
+		<colgroup>
+			<col style="width:20ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th class="left">Ontario Real GDP Growth<br />
+				(Per Cent)</th>
+				<th>2021</th>
+				<th>2022</th>
+				<th>2023</th>
+				<th>2024</th>
+				<th>2025-2027 Average</th>
+			</tr>
+			<tr>
+				<td class="left">Historical</td>
+				<td>5.2</td>
+				<td>3.7</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="left">FAO</td>
+				<td></td>
+				<td></td>
+				<td>0.8</td>
+				<td>1.5</td>
+				<td>2.0</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</details>
 	</div>
 	
 	<div class="sidebyside">
@@ -492,8 +1663,51 @@
 	
 	<p class="source">Source: Statistics Canada and FAO.</p>
 	
-	<p class="alt-text-link"><a href="#fig5-5">Accessible version</a></p>
 	</div>
+
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig5-5">
+		<caption class="title"><span>Figure 5.5</span> Unemployment rate expected to rise in 2024</caption>
+		
+		<colgroup>
+			<col style="width:20ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th rowspan="2">Per Cent</th>
+				<th>Historical</th>
+				<th colspan="3">FAO</th>
+			</tr>
+			<tr class="header">
+				<th>2022</th>
+				<th>2023</th>
+				<th>2024</th>
+				<th>2025-27 Average</th>
+			</tr>
+			<tr>
+				<td>Employment Growth</td>
+				<td>4.6</td>
+				<td>1.7</td>
+				<td>0.8</td>
+				<td>1.2</td>
+			</tr>
+			<tr>
+				<td>Unemployment Rate</td>
+				<td>5.6</td>
+				<td>5.7</td>
+				<td>6.3</td>
+				<td>6.1</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</details>
 	</div>
 	
 	<div class="sidebyside">
@@ -512,8 +1726,50 @@
 	
 	<p class="source">Source: Ontario Economic Accounts and FAO.</p>
 	
-	<p class="alt-text-link"><a href="#fig5-6">Accessible version</a></p>
 	</div>
+
+	<details class="report-chart-alt">
+		<summary>Accessible version</summary>
+	<div class="report-table-container">
+	<table class="report-table" id="fig5-6">
+		<caption class="title"><span>Figure 5.6</span> Ontario&rsquo;s nominal GDP growth to moderate in 2023 and 2024</caption>
+		
+		<colgroup>
+			<col style="width:10ch;" />
+			<col style="width:10ch;" />
+			<col style="width:20ch;" />
+		</colgroup>
+		<tbody>
+			<tr class="header">
+				<th colspan="2">Year</th>
+				<th>Nominal GDP growth (Per Cent)</th>
+			</tr>
+			<tr>
+				<td rowspan="2">Historical</td>
+				<td>2021</td>
+				<td>10.3</td>
+			</tr>
+			<tr>
+				<td>2022</td>
+				<td>9.2</td>
+			</tr>
+			<tr class="border-top-dashed">
+				<td class="bg-alt-blue" rowspan="3">Projection</td>
+				<td>2023</td>
+				<td>3.1</td>
+			</tr>
+			<tr>
+				<td>2024</td>
+				<td>3.5</td>
+			</tr>
+			<tr>
+				<td>2025-27 Average</td>
+				<td>4.0</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</details>
 	</div>
 	
 	</section>
@@ -1653,9 +2909,14 @@
 		</tbody>
 	</table>
 	</div>
+
+</section>
+
+
+
 	<!-- ABOUT -->
 	
-	<h3 class="heading-3" id="about">About this document</h3>
+	<!-- <h3 class="heading-3" id="about">About this document</h3>
 	
 	<p>Established by the <em>Financial Accountability Officer Act, 2013</em>, the Financial Accountability Office (FAO) provides independent analysis on the state of the Province&rsquo;s finances, trends in the provincial economy and related matters important to the Legislative Assembly of Ontario.</p>
 	
@@ -1663,1130 +2924,40 @@
 	
 	<p>The content of this report is based on information available to May 19, 2023. Background data used in this report are available upon request.</p>
 	
-	<p>In keeping with the FAO&rsquo;s mandate to provide the Legislative Assembly of Ontario with independent economic and financial analysis, this report makes no policy recommendations.</p>
+	<p>In keeping with the FAO&rsquo;s mandate to provide the Legislative Assembly of Ontario with independent economic and financial analysis, this report makes no policy recommendations.</p> -->
+
+
+
 	<!-- ALT TEXT -->
 	
-	</section>
 	
 	
 	<section>
 	<h2 class="heading-3" id="alt">Graphical Descriptions</h2>
 	
-	<div class="report-table-container">
-	<table class="report-table" id="fig2-1">
-		<caption class="title"><span>Figure 2.1</span> FAO projects growing budget surpluses over the outlook</caption>
-		<caption class="alt-text-link"><a href="#fig2-1-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th rowspan="2"></th>
-				<th colspan="3">Budget Balance ($ Billions)</th>
-			</tr>
-			<tr class="header">
-				<th>Historical</th>
-				<th>FAO</th>
-				<th>2023 Ontario Budget</th>
-			</tr>
-			<tr>
-				<td>2020-21</td>
-				<td>-16.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2021-22</td>
-				<td>2.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2022-23</td>
-				<td></td>
-				<td>0.5</td>
-				<td>-2.2</td>
-			</tr>
-			<tr>
-				<td>2023-24</td>
-				<td></td>
-				<td>3.0</td>
-				<td>-1.3</td>
-			</tr>
-			<tr>
-				<td>2024-25</td>
-				<td></td>
-				<td>7.4</td>
-				<td>0.2</td>
-			</tr>
-			<tr>
-				<td>2025-26</td>
-				<td></td>
-				<td>10.6</td>
-				<td>4.4</td>
-			</tr>
-			<tr>
-				<td>2026-27</td>
-				<td></td>
-				<td>14.7</td>
-				<td>-</td>
-			</tr>
-			<tr>
-				<td>2027-28</td>
-				<td></td>
-				<td>16.4</td>
-				<td>-</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
+
+
 	
-	<div class="report-table-container">
-	<table class="report-table" id="fig2-2">
-		<caption class="title"><span>Figure 2.2</span> Ontario&rsquo;s fiscal sustainability indicators to improve and remain below government targets</caption>
-		<caption class="alt-text-link"><a href="#fig2-2-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:20ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th colspan="2">Net Debt-to-GDP Ratio (Per Cent)</th>
-				<th>Historical</th>
-				<th>FAO</th>
-				<th>2023 Ontario Budget</th>
-			</tr>
-			<tr>
-				<td class="bg-white" rowspan="41">Historical</td>
-				<td>1981-82</td>
-				<td>10.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1982-83</td>
-				<td>12.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1983-84</td>
-				<td>12.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1984-85</td>
-				<td>12.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1985-86</td>
-				<td>14.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1986-87</td>
-				<td>14.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1987-88</td>
-				<td>14.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1988-89</td>
-				<td>13.6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1989-90</td>
-				<td>12.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1990-91</td>
-				<td>13.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1991-92</td>
-				<td>17.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1992-93</td>
-				<td>21.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1993-94</td>
-				<td>26.6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1994-95</td>
-				<td>28.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1995-96</td>
-				<td>30.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1996-97</td>
-				<td>31.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1997-98</td>
-				<td>30.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1998-99</td>
-				<td>29.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1999-00</td>
-				<td>32.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2000-01</td>
-				<td>29.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2001-02</td>
-				<td>28.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2002-03</td>
-				<td>26.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2003-04</td>
-				<td>27.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2004-05</td>
-				<td>26.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2005-06</td>
-				<td>27.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2006-07</td>
-				<td>27.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2007-08</td>
-				<td>26.6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2008-09</td>
-				<td>27.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2009-10</td>
-				<td>32.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2010-11</td>
-				<td>34.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2011-12</td>
-				<td>36.6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2012-13</td>
-				<td>38.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2013-14</td>
-				<td>39.7</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2014-15</td>
-				<td>40.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2015-16</td>
-				<td>40.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2016-17</td>
-				<td>39.7</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2017-18</td>
-				<td>39.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2018-19</td>
-				<td>39.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2019-20</td>
-				<td>39.6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2020-21</td>
-				<td>43.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2021-22</td>
-				<td>39.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="border-top-dashed">
-				<td class="bg-alt-blue" rowspan="6">Projection</td>
-				<td>2022-23</td>
-				<td></td>
-				<td>37.3</td>
-				<td>37.8</td>
-			</tr>
-			<tr>
-				<td>2023-24</td>
-				<td></td>
-				<td>36.8</td>
-				<td>37.8</td>
-			</tr>
-			<tr>
-				<td>2024-25</td>
-				<td></td>
-				<td>36.2</td>
-				<td>37.7</td>
-			</tr>
-			<tr>
-				<td>2025-26</td>
-				<td></td>
-				<td>35.0</td>
-				<td>36.9</td>
-			</tr>
-			<tr>
-				<td>2026-27</td>
-				<td></td>
-				<td>33.4</td>
-				<td>-</td>
-			</tr>
-			<tr class="border-bottom">
-				<td>2027-28</td>
-				<td></td>
-				<td>31.8</td>
-				<td>-</td>
-			</tr>
-			<tr class="bg-white">
-				<td colspan="5"></td>
-			</tr>
-			<tr class="header">
-				<th colspan="2">Interest on Debt to Revenue (Per Cent)</th>
-				<th>Historical</th>
-				<th>FAO</th>
-				<th>2023 Ontario Budget</th>
-			</tr>
-			<tr>
-				<td class="bg-white" rowspan="41">Historical</td>
-				<td>1981-82</td>
-				<td>6.0</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1982-83</td>
-				<td>7.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1983-84</td>
-				<td>8.7</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1984-85</td>
-				<td>9.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1985-86</td>
-				<td>9.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1986-87</td>
-				<td>9.7</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1987-88</td>
-				<td>9.6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1988-89</td>
-				<td>9.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1989-90</td>
-				<td>8.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1990-91</td>
-				<td>7.7</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1991-92</td>
-				<td>8.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1992-93</td>
-				<td>10.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1993-94</td>
-				<td>13.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1994-95</td>
-				<td>14.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1995-96</td>
-				<td>14.6</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1996-97</td>
-				<td>14.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1997-98</td>
-				<td>14.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1998-99</td>
-				<td>14.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1999-00</td>
-				<td>15.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2000-01</td>
-				<td>15.0</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2001-02</td>
-				<td>14.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2002-03</td>
-				<td>12.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2003-04</td>
-				<td>12.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2004-05</td>
-				<td>11.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2005-06</td>
-				<td>10.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2006-07</td>
-				<td>9.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2007-08</td>
-				<td>8.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2008-09</td>
-				<td>9.2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2009-10</td>
-				<td>9.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2010-11</td>
-				<td>8.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2011-12</td>
-				<td>9.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2012-13</td>
-				<td>9.0</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2013-14</td>
-				<td>9.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2014-15</td>
-				<td>8.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2015-16</td>
-				<td>8.5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2016-17</td>
-				<td>8.3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2017-18</td>
-				<td>7.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2018-19</td>
-				<td>8.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2019-20</td>
-				<td>8.0</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2020-21</td>
-				<td>7.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2021-22</td>
-				<td>6.8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="border-top-dashed">
-				<td class="bg-alt-blue" rowspan="6">Projection</td>
-				<td>2022-23</td>
-				<td></td>
-				<td>6.6</td>
-				<td>6.7</td>
-			</tr>
-			<tr>
-				<td>2023-24</td>
-				<td></td>
-				<td>6.6</td>
-				<td>6.9</td>
-			</tr>
-			<tr>
-				<td>2024-25</td>
-				<td></td>
-				<td>6.4</td>
-				<td>6.8</td>
-			</tr>
-			<tr>
-				<td>2025-26</td>
-				<td></td>
-				<td>6.1</td>
-				<td>-</td>
-			</tr>
-			<tr>
-				<td>2026-27</td>
-				<td></td>
-				<td>5.8</td>
-				<td>-</td>
-			</tr>
-			<tr>
-				<td>2027-28</td>
-				<td></td>
-				<td>5.5</td>
-				<td>-</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
+
+
+
+
 	
-	<div class="report-table-container">
-	<table class="report-table" id="fig3-1">
-		<caption class="title"><span>Figure 3.1</span>Revenue growth to moderate after post-pandemic surge</caption>
-		<caption class="alt-text-link"><a href="#fig3-1-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th colspan="2" rowspan="2">Year</th>
-				<th colspan="3">Total Revenues ($ Billions)</th>
-			</tr>
-			<tr class="header">
-				<th>Historical</th>
-				<th>FAO</th>
-				<th>2023 Ontario Budget</th>
-			</tr>
-			<tr>
-				<td class="bg-white" rowspan="3">Historical</td>
-				<td>2019-20</td>
-				<td>156.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2020-21</td>
-				<td>164.9</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2021-22</td>
-				<td>185.1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="border-top-dashed">
-				<td class="bg-alt-blue" rowspan="6">Projection</td>
-				<td>2022-23</td>
-				<td></td>
-				<td>197.1</td>
-				<td>200.4</td>
-			</tr>
-			<tr>
-				<td>2023-24</td>
-				<td></td>
-				<td>201.1</td>
-				<td>204.4</td>
-			</tr>
-			<tr>
-				<td>2024-25</td>
-				<td></td>
-				<td>210.7</td>
-				<td>213.1</td>
-			</tr>
-			<tr>
-				<td>2025-26</td>
-				<td></td>
-				<td>221.8</td>
-				<td>226.0</td>
-			</tr>
-			<tr>
-				<td>2026-27</td>
-				<td></td>
-				<td>231.1</td>
-				<td>-</td>
-			</tr>
-			<tr>
-				<td>2027-28</td>
-				<td></td>
-				<td>239.7</td>
-				<td>-</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	
-	<div class="report-table-container">
-	<table class="report-table" id="fig3-2">
-		<caption class="title"><span>Figure 3.2</span>FAO projects a more moderate relationship between tax revenue and economic drivers than the government in 2022-23</caption>
-		<caption class="alt-text-link"><a href="#fig3-2-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th></th>
-				<th colspan="2">Change in 2022-23 (Per Cent)</th>
-			</tr>
-			<tr class="header">
-				<th class="left"></th>
-				<th>FAO</th>
-				<th>2023 Ontario Budget</th>
-			</tr>
-			<tr>
-				<td class="left">Personal Income Tax</td>
-				<td>7.7</td>
-				<td>13.0</td>
-			</tr>
-			<tr>
-				<td class="left">Labour Income</td>
-				<td>9.5</td>
-				<td>9.0</td>
-			</tr>
-			<tr>
-				<td class="left">Corporations Tax</td>
-				<td>6.6</td>
-				<td>10.7</td>
-			</tr>
-			<tr>
-				<td class="left">Corporate Profits</td>
-				<td>4.7</td>
-				<td>5.0</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	
-	<div class="report-table-container">
-	<table class="report-table" id="fig4-1">
-		<caption class="title"><span>Figure 4.1</span> FAO&rsquo;s program spending projection is lower than the government&rsquo;s through 2025-26</caption>
-		<caption class="alt-text-link"><a href="#fig4-1-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th colspan="2" rowspan="2">Year</th>
-				<th colspan="3">Program Spending ($ Billions)</th>
-			</tr>
-			<tr class="header">
-				<th>Historical</th>
-				<th>FAO</th>
-				<th>2023 Ontario Budget</th>
-			</tr>
-			<tr>
-				<td class="bg-white" rowspan="2">Historical</td>
-				<td>2020-21</td>
-				<td>169.0</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>2021-22</td>
-				<td>170.4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="border-top-dashed">
-				<td class="bg-alt-blue" rowspan="6">Projection</td>
-				<td>2022-23</td>
-				<td></td>
-				<td>183.6</td>
-				<td>189.1</td>
-			</tr>
-			<tr>
-				<td>2023-24</td>
-				<td></td>
-				<td>184.8</td>
-				<td>190.6</td>
-			</tr>
-			<tr>
-				<td>2024-25</td>
-				<td></td>
-				<td>189.9</td>
-				<td>196.4</td>
-			</tr>
-			<tr>
-				<td>2025-26</td>
-				<td></td>
-				<td>197.7</td>
-				<td>202.5</td>
-			</tr>
-			<tr>
-				<td>2026-27</td>
-				<td></td>
-				<td>202.9</td>
-				<td>-</td>
-			</tr>
-			<tr>
-				<td>2027-28</td>
-				<td></td>
-				<td>210.1</td>
-				<td>-</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	
-	<div class="report-table-container">
-	<table class="report-table" id="fig5-1">
-		<caption class="title"><span>Figure 5.1</span>Global economic growth projected to moderate</caption>
-		<caption class="alt-text-link"><a href="#fig5-1-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th rowspan="2">Year</th>
-				<th colspan="3">Real GDP Growth (Per Cent)</th>
-			</tr>
-			<tr class="header">
-				<th>World</th>
-				<th>Advanced economies</th>
-				<th>Emerging market and developing economies</th>
-			</tr>
-			<tr>
-				<td>2012-2019</td>
-				<td>3.4</td>
-				<td>1.9</td>
-				<td>4.6</td>
-			</tr>
-			<tr>
-				<td>2023-2028</td>
-				<td>3.0</td>
-				<td>1.6</td>
-				<td>4.0</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	
-	<div class="report-table-container">
-	<table class="report-table" id="fig5-2">
-		<caption class="title"><span>Figure 5.2</span>Ontario&rsquo;s inflation rate projected to moderate gradually over the next two years</caption>
-		<caption class="alt-text-link"><a href="#fig5-2-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:20ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th rowspan="2"></th>
-				<th>Historical</th>
-				<th colspan="3">Projection</th>
-			</tr>
-			<tr class="header">
-				<th>2022</th>
-				<th>2023</th>
-				<th>2024</th>
-				<th>2025-2027 Average</th>
-			</tr>
-			<tr>
-				<td>Annual CPI Inflation (Per Cent)</td>
-				<td>6.8</td>
-				<td>3.6</td>
-				<td>2.1</td>
-				<td>2.0</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	
-	<div class="report-table-container">
-	<table class="report-table" id="fig5-3">
-		<caption class="title"><span>Figure 5.3</span> Short-term interest rates to remain high in 2023 and 2024</caption>
-		<caption class="alt-text-link"><a href="#fig5-3-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:20ch;" />
-			<col style="width:6ch;" />
-			<col style="width:6ch;" />
-			<col style="width:6ch;" />
-			<col style="width:6ch;" />
-			<col style="width:6ch;" />
-			<col style="width:6ch;" />
-			<col style="width:6ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th class="left" rowspan="2">(Per Cent)</th>
-				<th colspan="2">Historical</th>
-				<th colspan="5">Projection</th>
-			</tr>
-			<tr class="header">
-				<th>2021</th>
-				<th>2022</th>
-				<th>2023</th>
-				<th>2024</th>
-				<th>2025</th>
-				<th>2026</th>
-				<th>2027</th>
-			</tr>
-			<tr>
-				<td class="left">3-month Treasury Bill Yield</td>
-				<td>0.1</td>
-				<td>2.2</td>
-				<td>4.4</td>
-				<td>3.4</td>
-				<td>2.5</td>
-				<td>2.4</td>
-				<td>2.4</td>
-			</tr>
-			<tr>
-				<td class="left">10-year Government of Canada Bond Yield</td>
-				<td>1.4</td>
-				<td>2.8</td>
-				<td>3.0</td>
-				<td>3.0</td>
-				<td>3.1</td>
-				<td>3.2</td>
-				<td>3.2</td>
-			</tr>
-		</tbody>
-	</table>
-	
-	<div>
-	<div class="report-table-container">
-	<table class="report-table" id="fig5-4">
-		<caption class="title"><span>Figure 5.4</span> Ontario&rsquo;s economic growth to slow in 2023</caption>
-		<caption class="alt-text-link"><a href="#fig5-4-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:20ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th class="left">Ontario Real GDP Growth<br />
-				(Per Cent)</th>
-				<th>2021</th>
-				<th>2022</th>
-				<th>2023</th>
-				<th>2024</th>
-				<th>2025-2027 Average</th>
-			</tr>
-			<tr>
-				<td class="left">Historical</td>
-				<td>5.2</td>
-				<td>3.7</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td class="left">FAO</td>
-				<td></td>
-				<td></td>
-				<td>0.8</td>
-				<td>1.5</td>
-				<td>2.0</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	
-	<div class="report-table-container">
-	<table class="report-table" id="fig5-5">
-		<caption class="title"><span>Figure 5.5</span> Unemployment rate expected to rise in 2024</caption>
-		<caption class="alt-text-link"><a href="#fig5-5-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:20ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th rowspan="2">Per Cent</th>
-				<th>Historical</th>
-				<th colspan="3">FAO</th>
-			</tr>
-			<tr class="header">
-				<th>2022</th>
-				<th>2023</th>
-				<th>2024</th>
-				<th>2025-27 Average</th>
-			</tr>
-			<tr>
-				<td>Employment Growth</td>
-				<td>4.6</td>
-				<td>1.7</td>
-				<td>0.8</td>
-				<td>1.2</td>
-			</tr>
-			<tr>
-				<td>Unemployment Rate</td>
-				<td>5.6</td>
-				<td>5.7</td>
-				<td>6.3</td>
-				<td>6.1</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	
-	<div class="report-table-container">
-	<table class="report-table" id="fig5-6">
-		<caption class="title"><span>Figure 5.6</span> Ontario&rsquo;s nominal GDP growth to moderate in 2023 and 2024</caption>
-		<caption class="alt-text-link"><a href="#fig5-6-image">Return to image</a></caption>
-		<colgroup>
-			<col style="width:10ch;" />
-			<col style="width:10ch;" />
-			<col style="width:20ch;" />
-		</colgroup>
-		<tbody>
-			<tr class="header">
-				<th colspan="2">Year</th>
-				<th>Nominal GDP growth (Per Cent)</th>
-			</tr>
-			<tr>
-				<td rowspan="2">Historical</td>
-				<td>2021</td>
-				<td>10.3</td>
-			</tr>
-			<tr>
-				<td>2022</td>
-				<td>9.2</td>
-			</tr>
-			<tr class="border-top-dashed">
-				<td class="bg-alt-blue" rowspan="3">Projection</td>
-				<td>2023</td>
-				<td>3.1</td>
-			</tr>
-			<tr>
-				<td>2024</td>
-				<td>3.5</td>
-			</tr>
-			<tr>
-				<td>2025-27 Average</td>
-				<td>4.0</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- FOOTNOTES -->
 	
 	</section>
