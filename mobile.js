@@ -8,7 +8,7 @@ var menu = document.getElementsByClassName("header-menu")[0];
 var menuButton = document.getElementsByClassName("mobile-menu")[0];
 var closemenuButton = document.getElementsByClassName("mobile-menu-close")[0];
 
-
+/* Toggle Disabled
 function toggleMenu() {
 //change the menu visbility to visible if it is hidden
     if (menu.style.visibility === "visible") {
@@ -34,6 +34,7 @@ function closeMenu() {
         //console.log("Changed to visible")
     }
 }
+*/
 
 function isMobile() {
     var flag = getComputedStyle(menu).getPropertyValue('--isMobile');
