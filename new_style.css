@@ -634,7 +634,11 @@ a.mpp-portal-nav-link:focus-visible {
   /* tabbed sections */
   .tabbed-sections {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    /* grid-template-columns: repeat(5,1fr); */
+    /* grid-template-columns: repeat(5,auto); */
+    /* grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) ); */
+    grid-template-columns: repeat( auto-fill, minmax(10ch ,auto) );
+    width: 100%;
   }
   
   .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6) {
@@ -648,15 +652,18 @@ a.mpp-portal-nav-link:focus-visible {
   }
   
   
-  .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6):focus + section {
+  .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6):focus + section,
+  .tabbed-sections > section.open {
     display:block;
   }
+
 
 
   /* header-tabs */
   .single-report .header-tabs {
     border-top: 1px solid black;
     border-bottom: 2px solid var(--primary-color);
+    gap: 0 0.5em;
   }
 
   .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6) {
@@ -667,6 +674,7 @@ a.mpp-portal-nav-link:focus-visible {
     border-radius: 0.5rem 0.5rem 0 0;
 
   }
+  .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6).active,
   .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6):is(:focus,:active,:target) {
     background: var(--primary-color);
     color: white;
@@ -1034,7 +1042,7 @@ tr.bg-alt-blue > *{
 }
 /* ensure correct order of content */
 .report-chart .title { grid-row: 1 / 2; }
-.report-chart img    { grid-row: 2 / 3; }
+.report-chart > img  { grid-row: 2 / 3; }
 
 
 /* collapsable alt text */
@@ -1100,6 +1108,10 @@ tr.bg-alt-blue > *{
 
 .expanded-image {
   display: grid;
+  /* specifiy first two rows */
+  grid-template-rows: auto 1fr;
+  /* set default size for other rows */
+  grid-auto-rows: auto;
   position: fixed;
   top: 50%;
   /* transform: translateY(-50%); */
@@ -1116,12 +1128,12 @@ tr.bg-alt-blue > *{
   border-radius: 0.5rem;
 }
 
-.expanded-image img {
-  /* max-height:100%;
-  max-width: 40vw; */
-  /* height: 100%; */
-  object-fit: contain;
+.expanded-image > img {
+  min-width: 0;
   min-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .expanded-image details {
