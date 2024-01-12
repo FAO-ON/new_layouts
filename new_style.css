@@ -584,7 +584,7 @@ a.mpp-portal-nav-link:focus-visible {
   
   .single-report .topic-links a {
     color: currentColor;
-    text-decoration: none;
+    /* text-decoration: none; */
     font-weight: bold;
   }
   
@@ -613,7 +613,7 @@ a.mpp-portal-nav-link:focus-visible {
   .single-report .report-links,
   .single-report .report-links a{
     color: var(--primary-color);
-    text-decoration: none;
+    /* text-decoration: none; */
     font-weight: bold;
   }
   
@@ -637,7 +637,7 @@ a.mpp-portal-nav-link:focus-visible {
     /* grid-template-columns: repeat(5,1fr); */
     /* grid-template-columns: repeat(5,auto); */
     /* grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) ); */
-    grid-template-columns: repeat( auto-fill, minmax(10ch ,auto) );
+    grid-template-columns: repeat( auto-fill, minmax(200px,1fr) );
     width: 100%;
   }
   
@@ -672,8 +672,21 @@ a.mpp-portal-nav-link:focus-visible {
     padding: 0.5em 1em;
     margin-top: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
-
   }
+
+  .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6) img {
+    display: inline-block;
+    height: 1lh;
+    vertical-align: top;
+    margin-right: 0.5em;
+  }
+
+
+  .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6).active .icon,
+  .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6):is(:focus,:active,:target) .icon {
+    filter: brightness(9999) contrast(9999);
+  }
+
   .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6).active,
   .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6):is(:focus,:active,:target) {
     background: var(--primary-color);
@@ -684,6 +697,9 @@ a.mpp-portal-nav-link:focus-visible {
     background: var(--secondary-color);
     color: black;
     text-decoration: none;
+  }
+  .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6):hover .icon {
+    filter: brightness(1) contrast(1);
   }
   
   .single-report .header-tabs > section {
