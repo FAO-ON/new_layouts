@@ -169,7 +169,7 @@ a:hover {
 
 
 #secondary-navigation img {
-  height: 0.5lh;
+  height: 0.75lh;
 }
 
 a.mpp-portal-nav-link {
@@ -187,13 +187,13 @@ a.mpp-portal-nav-link:focus-visible {
 }
 
 .site-header nav a:has(img) {
-  display: block;
-  border-bottom: 1px solid transparent;
-  /* border-bottom: 1px solid currentColor; */
-  padding-block: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 .site-header nav a:has(img):hover {
-  border-color: currentColor;
+  /* background-color: currentColor; */
 }
 
 
