@@ -11,7 +11,7 @@
   --fao-green: #b2d235;
   --fao-pink: #e23e94;
 
-  --primary-color: #518ef7;
+  --primary-color: #3072E4;
   --secondary-color: var(--fao-light_blue_3);
   --text-color: black;
   --bg-color: white;
@@ -222,7 +222,7 @@ a.mpp-portal-nav-link:focus-visible {
 
 
 
-
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* homepage */
 
 .homepage-about {
@@ -235,7 +235,7 @@ a.mpp-portal-nav-link:focus-visible {
 }
 
 .homepage-about h1 {
-  font-size: 3rem;
+  font-size: 3.3rem;
   line-height: 1.1;
   font-weight: bold;
   color: var(--primary-color)
@@ -266,7 +266,7 @@ a.mpp-portal-nav-link:focus-visible {
 .homepage-reports {
   display: grid;
   position:relative;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 250px 1fr;
   gap: 2rem;
   margin-bottom: 1rem;
   /* border-top: 1px solid var(--primary-color); */
@@ -340,12 +340,12 @@ a.mpp-portal-nav-link:focus-visible {
 .homepage-reports-results ol{
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   max-width: 100%;
 }
 
 .homepage-reports-results ol li {
-  flex: 0 1 300px;
+  flex: 0 1 270px;
   min-width: 150px;
 }
 
@@ -529,25 +529,15 @@ a.mpp-portal-nav-link:focus-visible {
       border-left: none;
       max-width: 100%;
       overflow-x: auto;
-      /* border-top: 1px solid var(--primary-color); */
-      /* margin-right: -1rem; */
     }
 
     .homepage-reports-results ol {
-      display: flex;
-      gap: 1rem;
-      /* max-width: 100%; */
       width: calc(100% + 10rem);
       overflow-x: auto;
       padding: 0.5rem;
-      /* margin:0; */
-      /* margin-left: -2rem; */
-      /* margin-right: -1rem; */
     }
     .homepage-reports-results ol li {
       flex: 0 0 60vw;
-      /* width: 60vw; */
-      /* min-width: 60vw; */
     }
     .homepage-reports-results ol li:first-child{
       /* margin-left: 1.5rem; */
@@ -607,7 +597,7 @@ a.mpp-portal-nav-link:focus-visible {
 
 
 
-  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
   /* single-report.html */
   
   .single-report {
