@@ -74,6 +74,7 @@ a:hover {
   grid-template-rows: auto auto; */
   display: flex;
   gap: 0;
+
 }
 
 .site-header::after {
@@ -101,6 +102,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  z-index: 99;
 }
 
 /*create a flag to check if mobile menu is open */
@@ -202,11 +204,14 @@ a.mpp-portal-nav-link:focus-visible {
   right: 0;
   top: 0;
   background: var(--bg-color);
+  z-index: 99;
+
 }
 
 .mobile-menu-close{
   display: none;
-  background: var(--bg-color);
+      z-index: 99;
+      background: var(--bg-color);
 }
 
 
@@ -978,7 +983,7 @@ a.mpp-portal-nav-link:focus-visible {
 
 
 
-.report-notice {
+a.report-notice {
   display: block;
   background: var(--secondary-color);
   color: var(--primary-color);
@@ -1177,7 +1182,7 @@ tr.bg-alt-blue > *{
 }
 
 .expanded-image :is(.expand-button,.share-button) img {
-  height: 2em;
+  /* height: 2em; */
 }
 
 
