@@ -1129,10 +1129,16 @@ div.report-table-container{
   text-align: left;
 }
 
+:is(div.report-chart, table.report-table) .title {
+  padding-block: 0;
+}
+
 :is(.report-table,.report-chart) .title span{
   display: block;
   color: var(--primary-color);
   margin-bottom: 5px;
+  padding: 0;
+  line-height: 2.5em;
 }
 
 col{
@@ -1210,16 +1216,20 @@ tr.bg-alt-blue > *{
   border: none;
   /* padding: 0.5em; */
   margin: 0;
+  padding:0;
   background: none;
   /* outline: 1px dashed blue; */
   border-radius: 0.25em;
   font-size: 1rem;
   min-width: 24px;
   min-height: 24px;
-  width: max-content;
-  height: max-content;
+  /* width: max-content; */
+  /* height: max-content; */
+  width: 2em;
+  height: 2em;
   aspect-ratio: 1;
   cursor: pointer;
+  /* outline: 2px dashed red; */
 }
 :is(.expand-button,.share-button):is(:hover,:focus-visible){
   background: var(--primary-color);
