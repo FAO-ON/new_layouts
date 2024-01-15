@@ -1219,6 +1219,7 @@ tr.bg-alt-blue > *{
   width: max-content;
   height: max-content;
   aspect-ratio: 1;
+  cursor: pointer;
 }
 :is(.expand-button,.share-button):is(:hover,:focus-visible){
   background: var(--primary-color);
