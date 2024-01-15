@@ -703,22 +703,27 @@ a.mpp-portal-nav-link:focus-visible {
 
   /* tabbed sections */
   .tabbed-sections {
-    display: grid;
+    /* display: grid; */
     /* grid-template-columns: repeat(5,1fr); */
     /* grid-template-columns: repeat(5,auto); */
     /* grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) ); */
-    grid-template-columns: repeat( auto-fill, minmax(200px,1fr) );
+    /* grid-template-columns: repeat( auto-fill, minmax(200px,1fr) ); */
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
   
   .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6) {
-    grid-row: 1 / 2;
+    /* grid-row: 1 / 2; */
+    order: 1;
   }
   
   .tabbed-sections > section {
     display: none;
-    grid-row: 2 / 3;
-    grid-column: 1 / -1;
+    /* grid-row: 2 / 3; */
+    /* grid-column: 1 / -1; */
+    order: 2;
+    width: 100%;
   }
   
   
@@ -737,7 +742,7 @@ a.mpp-portal-nav-link:focus-visible {
   }
 
   .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6) {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     padding: 0.5em 1em;
     margin-top: 1rem;
@@ -1187,7 +1192,7 @@ tr.bg-alt-blue > *{
 
 
 .expand-button {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 1 / 2 / 2 / 3;
   width: max-content;
   height: max-content;
 }
@@ -1210,7 +1215,7 @@ tr.bg-alt-blue > *{
   background: #ffffff;
   /* box-shadow: 0 0.5rem 1rem 0.5rem #00000088; */
   box-shadow: 0 0 0 100vmax #00000088;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -1229,7 +1234,7 @@ tr.bg-alt-blue > *{
 
 /* share chart images */
 .share-button {
-  grid-area: 2 / 1 / 3 / 2;
+  grid-area: 1 / 1 / 2 / 2;
   width: max-content;
   height: max-content;
   margin-left:auto;
