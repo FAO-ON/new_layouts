@@ -4,7 +4,7 @@ const chartImages = document.querySelectorAll('.report-chart img');
 chartImages.forEach((img) => {
   const expandButton = document.createElement('button');
   const buttonImage = document.createElement('img');
-  const imgSrcExpand = 'imgs/expand.svg';
+  const imgSrcExpand = 'imgs/icons/icon-expand.svg';
   const imgSrcClose = 'imgs/close.svg';
   buttonImage.src = imgSrcExpand;
   buttonImage.alt = 'Expand chart image';
@@ -42,7 +42,7 @@ console.log('report-chart-share.js loaded');
 chartImages.forEach((img) => {
   const shareButton = document.createElement('button');
   const buttonImage = document.createElement('img');
-  const imgSrcShare = 'imgs/share.svg';
+  const imgSrcShare = 'imgs/icons/icon-share.svg';
   buttonImage.src = imgSrcShare;
   buttonImage.alt = 'Share chart image';
   // shareButton.innerHTML = 'Share';
