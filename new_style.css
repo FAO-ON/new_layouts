@@ -16,6 +16,7 @@
   --text-color: black;
   --bg-color: white;
 
+  /* no-container containers */
   --outer-width: 100%;    /* max width for element */
   --inner-width: 1250px;  /* max-width for content inside element */
   --min-padding: 1rem;    /* inline padding minimum for content */
@@ -40,12 +41,12 @@ a:hover {
 
 /* sizing */
 
-.site-header, .site-footer, .homepage-main section, .limit-width {
+.site-header, .site-footer, 
+.homepage-main section, 
+.about-main section, 
+.limit-width {
   /*  variables  */
   box-sizing: border-box;/* border-box needed for calculations */
-
-
-
 
   /* set max width of element */
   max-width: var(--outer-width);
@@ -1238,3 +1239,55 @@ tr.bg-alt-blue > *{
 
 
 
+
+
+
+
+
+
+
+/* about.html */
+
+.about-header {
+  /* --inner-width:; */
+}
+.about-header h1 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+  margin-inline: auto;
+  max-width: max-content;
+  padding-block: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 2rem;
+}
+.about-header p {
+  max-width: 55ch;
+  text-align: center;
+  margin-inline: auto;
+}
+
+
+.about-page-links ul {
+  display: grid;
+  /* grid-template-columns: repeat(6,1fr); */
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  justify-items: center;
+  gap: 1rem;
+
+  padding-block: 4rem;
+
+  list-style-type: none;
+}
+
+.about-page-links a {
+  justify-items: center;
+  display:grid;
+}
+
+
+
+.about-leg-image {
+  width: 50%;
+  margin-inline: auto;
+}
