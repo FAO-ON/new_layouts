@@ -242,6 +242,8 @@ a.mpp-portal-nav-link:focus-visible {
 }
 .homepage-about p {
   font-size: 1rem;
+  margin-inline:auto;
+  max-width: 50ch;
 }
 .homepage-about .meet-the-fao{
   color: var(--primary-color);
@@ -363,7 +365,7 @@ a.mpp-portal-nav-link:focus-visible {
 }
 
 .homepage-reports-results li img {
-  object-fit:contain;
+  width: 100%;
 }
 
 
@@ -809,19 +811,64 @@ a.mpp-portal-nav-link:focus-visible {
   #report-cite {
   }
 
-  #report-cite span {
+  #report-cite > div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  #report-cite > div span {
     display: block;
     font-weight: bold;
+    /* grid-row: ; */
+    grid-column: 1 / -1;
   }
 
   #report-cite .cite-apa, 
   #report-cite .cite-mla, 
   #report-cite .cite-chicago {
+    grid-column: 1 / 2;
+    grid-row: 2/ 3;
     margin-top: 0;
     font-weight: normal;
-    padding-left: 4ch;
+    padding: 0.5em;
+    padding-left: calc(4ch + 0.5em);
     text-indent: -4ch;
   }
+
+  #report-cite button {
+    background: none;
+    border: none;
+    padding: 0.5em;
+    margin: 0;
+    width: 3em;
+    cursor: pointer;
+    grid-row: 2/ 3;
+    grid-column: 2 / -1;
+  }
+
+  /* hover styles  */
+  #report-cite span:is(:hover,:focus-visible):has( + button),
+  #report-cite span:is(:hover,:focus-visible) + button,
+  #report-cite button:is(:hover,:focus-visible),
+  #report-cite span:has( + button:is(:hover,:focus-visible)) {
+    background-color: var(--secondary-color);
+  }
+
+  #report-cite .report-cite-message{
+    display: flex;
+    color: var(--secondary-color);
+    background: #00000088;
+    text-align: center;
+    /* padding: 1em; */
+    font-size: 2em;
+    font-weight: bold;
+    grid-row: 2/3;
+    grid-column: 1 / -1;    
+    align-items: center;
+    justify-content: center;
+  }
+
+
 
   /* report-share */
   #report-share {
