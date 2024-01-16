@@ -77,7 +77,7 @@ a:hover {
 
 }
 
-.site-header::after {
+/* .site-header::after {
   content: '';
   display: block;
   position: absolute;
@@ -89,7 +89,7 @@ a:hover {
   width: calc(100% - 2 * var(--min-padding));
   margin-inline: auto;
   background: var(--primary-color);
-}
+} */
 
 
 .site-header .header-logo {
