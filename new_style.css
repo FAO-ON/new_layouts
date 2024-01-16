@@ -954,6 +954,7 @@ a.mpp-portal-nav-link:focus-visible {
     margin: 0;
   }
   
+  
   .single-report .table-of-contents details a{
     display:block;
     color: var(--primary-color);
@@ -971,7 +972,9 @@ a.mpp-portal-nav-link:focus-visible {
     list-style: none;
     pointer-events: none;
   }
-  
+  .table-of-contents details summary::-webkit-details-marker {
+    display: none;
+  }
   
   .table-of-contents summary h2 {
     display: inline;
