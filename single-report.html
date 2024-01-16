@@ -14,49 +14,51 @@
   <script defer src="toc.js"></script>
   <script defer src="report-chart-expand.js"></script>
   <script defer src="tabbed-sections.js"></script>
+  <script defer src="report-cite.js"></script>
   <title>Economic and Budget Outlook, Spring 2023</title>
 </head>
 <body>
 
   
 
-<header class="site-header">
-  <a href="/new_layouts/index.html" class="header-logo"><img src="imgs/FAO-Logo.png" alt="FAO homepage"></a>
+  <header class="site-header">
+    <a href="index.html" class="header-logo"><img src="imgs/FAO-Logo.png" alt="FAO homepage"></a>
+  
+    <div class="header-menu">
+      <nav id="secondary-navigation">
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="mpp-portal-nav-link">MPP Portal</a></li>
+          <li><a href="#"><img src="imgs/icons/icon-x.svg" alt="FAO on twitter"></a></li>
+          <li><a href="#"><img src="imgs/icons/icon-linkedin.svg" alt="FAO on linkedin"></a></li>
+          <li><a href="#"><img src="imgs/icons/icon-IG.svg" alt="FAO on instagram"></a></li>
+          <li><a href="#"><img src="imgs/icons/icon-youtube.svg" alt="FAO on youtube"></a></li>
+          <li><a href="#">fr/en</a></li>
+        </ul>
+      </nav>
+      
+      <nav id="primary-navigation">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Publications</a></li>
+          <li><a href="#">Media</a></li>
+          <li class="primary-navigation-search">
+            <input type="search" name="" id="" placeholder="Search...">
+            <button>
+              <img src="imgs/icons/icon-search.svg" alt="Submit search">
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button onclick="toggleMenu()" class="mobile-menu">
+      <img src="imgs/Hamburger-Menu.png" alt="Open menu" width="30px" height="30px">
+    </button>
+    <button onclick="closeMenu()" class="mobile-menu-close">
+      <img src="imgs/CloseMenu.png" alt="Close menu" width="30px" height="30px">
+    </button>
+  </header>
 
-  <div class="header-menu">
-    <nav id="secondary-navigation">
-      <ul>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#" class="mpp-portal-nav-link">MPP Portal</a></li>
-        <li><a href="#"><img src="imgs/X.png" alt="FAO on twitter"></a></li>
-        <li><a href="#"><img src="imgs/Linkedin.png" alt="FAO on linkedin"></a></li>
-        <li><a href="#"><img src="imgs/Instagram.png" alt="FAO on instagram"></a></li>
-        <li><a href="#"><img src="imgs/Youtube.png" alt="FAO on youtube"></a></li>
-        <li><a href="#">fr/en</a></li>
-      </ul>
-    </nav>
-    
-    <nav id="primary-navigation">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="#">Media</a></li>
-        <li class="primary-navigation-search">
-          <input type="search" name="" id="" placeholder="Search...">
-          <button>
-            <img src="imgs/magnifying.png" alt="Submit search">
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <button onclick="toggleMenu()" class="mobile-menu">
-    <img src="imgs/Hamburger-Menu.png" alt="Open menu" width="30px" height="30px">
-  </button>
-  <button onclick="closeMenu()" class="mobile-menu-close">
-    <img src="imgs/CloseMenu.png" alt="Close menu" width="30px" height="30px">
-  </button>
-</header>
 
   
 
@@ -177,31 +179,38 @@
 
 				<h3 tabindex="0"><img src="imgs/icons/icon-cite.svg" class="icon">Cite</h3>
 				<section id="report-cite">
-					<span>APA</span>
-					<span class="cite-apa">Jamasi, Z., Park, J., Rhodes, N., & Stephenson, M. (2023, June 13). <i>Economic and Budget Outlook, Spring 2023</i>. Financial Accountability Office of Ontario (FAO). https://fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
-					
-					<span>MLA</span>
-					<span class="cite-mla">Jamasi, Zohra, et al. “Economic and Budget Outlook, Spring 2023.” <i>Financial Accountability Office of Ontario (FAO)</i>, Financial Accountability Office of Ontario, 13 June 2023, fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
-
-					<span>Chicago</span>
-					<span class="cite-chicago">Jamasi, Zohra, Jay Park, Nicolas Rhodes, and Matthew Stephenson. “Economic and Budget Outlook, Spring 2023.” Financial Accountability Office of Ontario (FAO), June 13, 2023. https://fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
+					<div>
+						<span>APA</span>
+						<span class="cite-text" id="cite-apa">Jamasi, Z., Park, J., Rhodes, N., & Stephenson, M. (2023, June 13). <i>Economic and Budget Outlook, Spring 2023</i>. Financial Accountability Office of Ontario (FAO). https://fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
+						<button class="copy-button" data-copytarget="cite-apa"><img src="imgs/icons/icon-copy.svg" alt="Copy citation to clipboard"></button>
+					</div>
+					<div>
+						<span>MLA</span>
+						<span class="cite-text" id="cite-mla">Jamasi, Zohra, et al. “Economic and Budget Outlook, Spring 2023.” <i>Financial Accountability Office of Ontario (FAO)</i>, Financial Accountability Office of Ontario, 13 June 2023, fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
+						<button class="copy-button" data-copytarget="cite-mla"><img src="imgs/icons/icon-copy.svg" alt="Copy citation to clipboard"></button>
+					</div>
+					<div>
+						<span>Chicago</span>
+						<span class="cite-text" id="cite-chicago">Jamasi, Zohra, Jay Park, Nicolas Rhodes, and Matthew Stephenson. “Economic and Budget Outlook, Spring 2023.” Financial Accountability Office of Ontario (FAO), June 13, 2023. https://fao-on.org/en/Blog/Publications/EBO-SP2023.</span>
+						<button class="copy-button" data-copytarget="cite-chicago"><img src="imgs/icons/icon-copy.svg" alt="Copy citation to clipboard"></button>
+					</div>
 				</section>
 
 				<h3 tabindex="0"><img src="imgs/icons/icon-share.svg" class="icon">Share</h3>
 				<section id="report-share">
 					<div>
-						<input type="url" name="" id="" disabled value="https://fao-on.org/en/Blog/Publications/EBO-SP2023">
-						<button>Copy link</button>
+						<input type="url" name="" id="report-share-url" disabled value="https://fao-on.org/en/Blog/Publications/EBO-SP2023">
+						<button class="copy-button" data-copytarget="report-share-url"><img src="imgs/icons/icon-copy.svg" alt="Copy link to clipboard"></button>
 					</div>
 					<div>
 						<span>Share this report on social media</span>
-						<a href="#"><img src="imgs/X.png" alt=""></a>
-						<a href="#"><img src="imgs/Linkedin.png" alt=""></a>
-						<a href="#"><img src="imgs/Instagram.png" alt=""></a>
+						<a href="#"><img src="imgs/icons/icon-x.svg" alt=""></a>
+						<a href="#"><img src="imgs/icons/icon-linkedin.svg" alt=""></a>
+						<a href="#"><img src="imgs/icons/icon-IG.svg" alt=""></a>
 					</div>
 					<div>
 						<span>Email this article to a friend</span>
-						<a href="#"><img src="imgs/email.png" alt=""></a>
+						<a href="#"><img src="imgs/icons/icon-email.svg" alt=""></a>
 					</div>
 				</section>
 			</div>

@@ -11,7 +11,7 @@
   --fao-green: #b2d235;
   --fao-pink: #e23e94;
 
-  --primary-color: #518ef7;
+  --primary-color: #3072E4;
   --secondary-color: var(--fao-light_blue_3);
   --text-color: black;
   --bg-color: white;
@@ -170,7 +170,7 @@ a:hover {
 
 
 #secondary-navigation img {
-  height: 0.5lh;
+  height: 0.75lh;
 }
 
 a.mpp-portal-nav-link {
@@ -188,13 +188,13 @@ a.mpp-portal-nav-link:focus-visible {
 }
 
 .site-header nav a:has(img) {
-  display: block;
-  border-bottom: 1px solid transparent;
-  /* border-bottom: 1px solid currentColor; */
-  padding-block: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 .site-header nav a:has(img):hover {
-  border-color: currentColor;
+  /* background-color: currentColor; */
 }
 
 
@@ -223,7 +223,7 @@ a.mpp-portal-nav-link:focus-visible {
 
 
 
-
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* homepage */
 
 .homepage-about {
@@ -236,13 +236,15 @@ a.mpp-portal-nav-link:focus-visible {
 }
 
 .homepage-about h1 {
-  font-size: 3rem;
+  font-size: 3.3rem;
   line-height: 1.1;
   font-weight: bold;
   color: var(--primary-color)
 }
 .homepage-about p {
   font-size: 1rem;
+  margin-inline:auto;
+  max-width: 50ch;
 }
 .homepage-about .meet-the-fao{
   color: var(--primary-color);
@@ -265,7 +267,7 @@ a.mpp-portal-nav-link:focus-visible {
 .homepage-reports {
   display: grid;
   position:relative;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 250px 1fr;
   gap: 2rem;
   margin-bottom: 1rem;
   /* border-top: 1px solid var(--primary-color); */
@@ -339,12 +341,12 @@ a.mpp-portal-nav-link:focus-visible {
 .homepage-reports-results ol{
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   max-width: 100%;
 }
 
 .homepage-reports-results ol li {
-  flex: 0 1 300px;
+  flex: 0 1 270px;
   min-width: 150px;
 }
 
@@ -364,7 +366,7 @@ a.mpp-portal-nav-link:focus-visible {
 }
 
 .homepage-reports-results li img {
-  object-fit:contain;
+  width: 100%;
 }
 
 
@@ -528,25 +530,15 @@ a.mpp-portal-nav-link:focus-visible {
       border-left: none;
       max-width: 100%;
       overflow-x: auto;
-      /* border-top: 1px solid var(--primary-color); */
-      /* margin-right: -1rem; */
     }
 
     .homepage-reports-results ol {
-      display: flex;
-      gap: 1rem;
-      /* max-width: 100%; */
       width: calc(100% + 10rem);
       overflow-x: auto;
       padding: 0.5rem;
-      /* margin:0; */
-      /* margin-left: -2rem; */
-      /* margin-right: -1rem; */
     }
     .homepage-reports-results ol li {
       flex: 0 0 60vw;
-      /* width: 60vw; */
-      /* min-width: 60vw; */
     }
     .homepage-reports-results ol li:first-child{
       /* margin-left: 1.5rem; */
@@ -606,7 +598,7 @@ a.mpp-portal-nav-link:focus-visible {
 
 
 
-  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
   /* single-report.html */
   
   .single-report {
@@ -704,22 +696,27 @@ a.mpp-portal-nav-link:focus-visible {
 
   /* tabbed sections */
   .tabbed-sections {
-    display: grid;
+    /* display: grid; */
     /* grid-template-columns: repeat(5,1fr); */
     /* grid-template-columns: repeat(5,auto); */
     /* grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) ); */
-    grid-template-columns: repeat( auto-fill, minmax(200px,1fr) );
+    /* grid-template-columns: repeat( auto-fill, minmax(200px,1fr) ); */
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
   
   .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6) {
-    grid-row: 1 / 2;
+    /* grid-row: 1 / 2; */
+    order: 1;
   }
   
   .tabbed-sections > section {
     display: none;
-    grid-row: 2 / 3;
-    grid-column: 1 / -1;
+    /* grid-row: 2 / 3; */
+    /* grid-column: 1 / -1; */
+    order: 2;
+    width: 100%;
   }
   
   
@@ -738,7 +735,7 @@ a.mpp-portal-nav-link:focus-visible {
   }
 
   .single-report .header-tabs > :is(.tab,h2,h3,h4,h5,h6) {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     padding: 0.5em 1em;
     margin-top: 1rem;
@@ -805,19 +802,74 @@ a.mpp-portal-nav-link:focus-visible {
   #report-cite {
   }
 
-  #report-cite span {
-    display: block;
-    font-weight: bold;
+  #report-cite > div {
+    display: grid;
+    grid-template-columns: 1fr auto;
   }
 
-  #report-cite .cite-apa, 
-  #report-cite .cite-mla, 
-  #report-cite .cite-chicago {
+  #report-cite > div span {
+    display: block;
+    font-weight: bold;
+    /* grid-row: ; */
+    grid-column: 1 / -1;
+  }
+
+  #report-cite .cite-text {
+    grid-column: 1 / 2;
+    grid-row: 2/ 3;
     margin-top: 0;
     font-weight: normal;
-    padding-left: 4ch;
+    padding: 0.5em;
+    padding-left: calc(4ch + 0.5em);
     text-indent: -4ch;
   }
+
+  .copy-button {
+    background: none;
+    border: none;
+    padding: 0.5em;
+    margin: 0;
+    width: 3em;
+    cursor: pointer;
+    grid-row: 2/ 3;
+    grid-column: 2 / -1;
+    position: relative;
+  }
+
+  .copy-button.copied::after {
+    content: 'Copied!';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-weight: bold;
+    background-color: #ffffff88;
+  }
+
+  /* hover styles  */
+  #report-cite span:is(:hover,:focus-visible):has( + button),
+  #report-cite span:is(:hover,:focus-visible) + button,
+  #report-cite button:is(:hover,:focus-visible),
+  #report-cite span:has( + button:is(:hover,:focus-visible)) {
+    background-color: var(--secondary-color);
+  }
+
+  #report-cite .report-cite-message{
+    display: flex;
+    color: var(--secondary-color);
+    background: #00000088;
+    text-align: center;
+    /* padding: 1em; */
+    font-size: 2em;
+    font-weight: bold;
+    grid-row: 2/3;
+    grid-column: 1 / -1;    
+    align-items: center;
+    justify-content: center;
+  }
+
+
 
   /* report-share */
   #report-share {
@@ -839,8 +891,10 @@ a.mpp-portal-nav-link:focus-visible {
     flex: 0 0 auto;
   }
 
-  #report-share img{
-    height: 1em;
+  #report-share a{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
   }
 
 
@@ -901,6 +955,7 @@ a.mpp-portal-nav-link:focus-visible {
     margin: 0;
   }
   
+  
   .single-report .table-of-contents details a{
     display:block;
     color: var(--primary-color);
@@ -918,7 +973,9 @@ a.mpp-portal-nav-link:focus-visible {
     list-style: none;
     pointer-events: none;
   }
-  
+  .table-of-contents details summary::-webkit-details-marker {
+    display: none;
+  }
   
   .table-of-contents summary h2 {
     display: inline;
@@ -1088,10 +1145,16 @@ div.report-table-container{
   text-align: left;
 }
 
+:is(div.report-chart, table.report-table) .title {
+  padding-block: 0;
+}
+
 :is(.report-table,.report-chart) .title span{
   display: block;
   color: var(--primary-color);
   margin-bottom: 5px;
+  padding: 0;
+  line-height: 2.5em;
 }
 
 col{
@@ -1167,15 +1230,28 @@ tr.bg-alt-blue > *{
 .expand-button,
 .share-button {
   border: none;
-  padding: 0.5em;
+  /* padding: 0.5em; */
   margin: 0;
+  padding:0;
   background: none;
   /* outline: 1px dashed blue; */
   border-radius: 0.25em;
   font-size: 1rem;
+  min-width: 24px;
+  min-height: 24px;
+  /* width: max-content; */
+  /* height: max-content; */
+  width: 2em;
+  height: 2em;
+  aspect-ratio: 1;
+  cursor: pointer;
+  /* outline: 2px dashed red; */
 }
 :is(.expand-button,.share-button):is(:hover,:focus-visible){
-  background: var(--secondary-color);
+  background: var(--primary-color);
+}
+:is(.expand-button,.share-button):is(:hover,:focus-visible) img{
+    filter: brightness(9999) contrast(9999);
 }
 
 :is(.expand-button,.share-button) img {
@@ -1188,9 +1264,7 @@ tr.bg-alt-blue > *{
 
 
 .expand-button {
-  grid-area: 2 / 2 / 3 / 3;
-  width: max-content;
-  height: max-content;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .expanded-image {
@@ -1211,7 +1285,7 @@ tr.bg-alt-blue > *{
   background: #ffffff;
   /* box-shadow: 0 0.5rem 1rem 0.5rem #00000088; */
   box-shadow: 0 0 0 100vmax #00000088;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -1230,11 +1304,9 @@ tr.bg-alt-blue > *{
 
 /* share chart images */
 .share-button {
-  grid-area: 2 / 1 / 3 / 2;
-  width: max-content;
-  height: max-content;
+  grid-area: 1 / 1 / 2 / 2;
   margin-left:auto;
-  margin-right: 1em;
+  margin-right: 0.25em;
 }
 
 
