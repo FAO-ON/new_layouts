@@ -226,6 +226,10 @@ a.mpp-portal-nav-link:focus-visible {
 /* homepage */
 
 .homepage-about {
+  --outer-width: var(--inner-width);
+  border: 1px solid var(--primary-color);
+  border-left-width: 0;
+  border-right-width: 0;
   padding-block: 3rem;
   text-align: center;
 }
@@ -273,19 +277,6 @@ a.mpp-portal-nav-link:focus-visible {
   padding-block: 2rem;
 }
 
-.homepage-reports::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  max-width: var(--inner-width);
-  width: calc(100% - 2 * var(--min-padding));
-  margin-inline: auto;
-  background: var(--primary-color);
-}
 
 .homepage-reports h2{
   font-family: 'Open Sans', sans-serif;
