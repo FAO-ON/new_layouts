@@ -1260,6 +1260,7 @@ tr.bg-alt-blue > *{
   padding-block: 2rem;
   border-bottom: 2px solid var(--primary-color);
   margin-bottom: 2rem;
+  text-align: center;
 }
 .about-header p {
   max-width: 55ch;
@@ -1311,6 +1312,7 @@ tr.bg-alt-blue > *{
 
 
 .about-leg-image {
-  width: clamp(300px,50%,600px);
+  /* width: clamp(300px,50%,600px); */
+  max-width: 55ch;
   margin-inline: auto;
 }
