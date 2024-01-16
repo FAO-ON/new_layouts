@@ -813,9 +813,7 @@ a.mpp-portal-nav-link:focus-visible {
     grid-column: 1 / -1;
   }
 
-  #report-cite .cite-apa, 
-  #report-cite .cite-mla, 
-  #report-cite .cite-chicago {
+  #report-cite .cite-text {
     grid-column: 1 / 2;
     grid-row: 2/ 3;
     margin-top: 0;
@@ -825,7 +823,7 @@ a.mpp-portal-nav-link:focus-visible {
     text-indent: -4ch;
   }
 
-  #report-cite button {
+  .copy-button {
     background: none;
     border: none;
     padding: 0.5em;
@@ -834,6 +832,18 @@ a.mpp-portal-nav-link:focus-visible {
     cursor: pointer;
     grid-row: 2/ 3;
     grid-column: 2 / -1;
+    position: relative;
+  }
+
+  .copy-button.copied::after {
+    content: 'Copied!';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-weight: bold;
+    background-color: #ffffff88;
   }
 
   /* hover styles  */
@@ -880,8 +890,10 @@ a.mpp-portal-nav-link:focus-visible {
     flex: 0 0 auto;
   }
 
-  #report-share img{
-    height: 1em;
+  #report-share a{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
   }
 
 

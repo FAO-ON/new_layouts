@@ -33,3 +33,5 @@ tabs.forEach(tab => tab.addEventListener('click', function() {
     // console.log('added open to',document.querySelector('.tabbed-sections > :is(.tab,h2,h3,h4,h5,h6):focus + section'));
   }
 }));
+
+
