@@ -1379,16 +1379,26 @@ tr.bg-alt-blue > *{
   padding: 1rem 1rem;
   border-radius: 1rem;
 }
-.about-page-links a:is(:hover,:focus-visible) {
+
+/* .about-page-links a:is(:hover,:focus-visible) {
   color: white;
   background: var(--primary-color);
 }
-
 .about-page-links a:is(:hover,:focus-visible) img {
   filter: brightness(9999) contrast(9999);
+} */
+
+.about-page-links a:is(:hover,:focus-visible) {
+  background: var(--secondary-color);
 }
 
-
+.about-page-links a:active{
+  color: white;
+  background: var(--primary-color);
+}
+.about-page-links a:active img {
+  filter: brightness(9999) contrast(9999);
+}
 
 
 
