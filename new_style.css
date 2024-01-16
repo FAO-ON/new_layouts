@@ -699,6 +699,7 @@ a.mpp-portal-nav-link:focus-visible {
   .tabbed-sections > :is(.tab,h2,h3,h4,h5,h6) {
     /* grid-row: 1 / 2; */
     order: 1;
+    cursor: pointer;
   }
   
   .tabbed-sections > section {
