@@ -44,6 +44,7 @@ a:hover {
 .site-header, .site-footer, 
 .homepage-main section, 
 .about-main section, 
+.media-main section,
 .limit-width {
   /*  variables  */
   box-sizing: border-box;/* border-box needed for calculations */
@@ -1407,3 +1408,149 @@ tr.bg-alt-blue > *{
   max-width: 55ch;
   margin-inline: auto;
 }
+
+
+
+/* media.html */
+
+.media-content{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  /*margin-top: 1rem;*/
+}
+
+.media-content :is(h2){
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.media-content :is(h3, h4, h5, h6){
+  font-size: 1rem;
+  line-height: 1.1;
+  /*padding: 0.5rem 0;*/
+  color: var(--primary-color);
+}
+
+
+
+.media-release-preview{
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr;
+  /*insert into the first column*/
+  grid-column: 1;
+  /*insert into the first row*/
+  grid-row: 1;
+  /*margin: 0 0 1rem 0;*/
+  grid-gap: 1rem;
+}
+
+
+.media-release-preview div{
+  /*border: red 1px solid;*/
+}
+
+.media-inquiries{
+  grid-column: 2;
+  grid-row: 1;
+ /*margin: 0 0 1rem 0;*/
+}
+
+
+
+.latest-media-release{
+  display: grid;
+  grid-template-rows: 40px 2fr 1fr;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--fao-light_blue_4);
+  padding: 1rem;
+  /*div should have rounded corners*/
+  border-radius: .5rem;
+}
+
+.latest-media-release > *{
+  grid: 1 / 1;
+}
+
+/*get the p element for latest-media-release and featured-release*/
+.latest-media-release p, .featured-release p{
+  /*center to the middle of the grid*/
+  align-self: center;
+  font-size: .75rem;
+  color: var(--fao-gray)
+}
+
+.latest-media-release h1{
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.featured-releases{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1rem;
+
+}
+
+.featured-release{
+  display: grid;
+  grid-template-rows: 40px 2fr 1fr;
+  /*create a fixed height for the div*/
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
+
+  
+  background-color: var(--fao-light_blue_4);
+  border-radius: .5rem;
+}
+.featured-release > *{
+  grid: 1 / 1;
+}
+
+
+
+/*all the h3 h4 h5 h6 elements inside the featured-release div*/
+
+
+
+.media-links ul{
+  /*from about.html styling */
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  /* grid-template-columns: repeat(auto-fit,1fr); */
+  /* justify-items: center; */
+  gap: 1rem;
+
+  padding:0;
+  margin:0;
+  padding-block: 4rem;
+
+  list-style-type: none;
+}
+
+.media-links a {
+  justify-items: center;
+  display: grid;
+  text-align: center;
+  color: var(--primary-color);
+  height: 100%;
+  max-width: 80%;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+/*media query, hide contact and 
+
+
