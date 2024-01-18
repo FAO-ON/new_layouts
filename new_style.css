@@ -1420,9 +1420,9 @@ tr.bg-alt-blue > *{
 .media-content{
   /*border: red 1px solid;*/
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   /*margin-top: 1rem;*/
 }
 
