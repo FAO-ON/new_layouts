@@ -1423,6 +1423,7 @@ tr.bg-alt-blue > *{
   grid-template-columns: 2.5fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 2rem;
+  padding: 0 !important;
   /*margin-top: 1rem;*/
 }
 
@@ -1457,6 +1458,7 @@ tr.bg-alt-blue > *{
   grid-row: 1;
   /*margin: 0 0 1rem 0;*/
   grid-gap: 1rem;
+  margin: 0;
 }
 
 
@@ -1559,18 +1561,26 @@ tr.bg-alt-blue > *{
   grid: 1 / 1;
 }
 
+.latest-media-release:is(:hover, :focus-visible), .featured-releases li > div:is(:hover, :focus-visible){
+  background-color: var(--fao-light_blue_3);
+}
+
+.latest-media-release:is(:active), .featured-releases li > div:is(:active){
+  color: white;
+  background: var(--primary-color);
+  filter: brightness(9999) contrast(9999);
+}
 
 
 
 
-.media-links ul{
-  /*from about.html styling */
+
+.media-links ul {
   display: grid;
   grid-template-columns: repeat(6,1fr);
   /* grid-template-columns: repeat(auto-fit,1fr); */
   /* justify-items: center; */
   gap: 1rem;
-
   padding:0;
   margin:0;
   padding-block: 4rem;
@@ -1578,17 +1588,25 @@ tr.bg-alt-blue > *{
   list-style-type: none;
 }
 
-.media-links a {
+.media-links a{
   justify-items: center;
   display: grid;
   text-align: center;
   color: var(--primary-color);
   height: 100%;
   max-width: 100%;
-  padding: 1rem 1rem;
   border-radius: 1rem;
   font-weight: bold;
 }
+
+.media-links img{
+
+}
+
+
+
+/*we want each media-links img to retain the same size while the grid changes*/
+
 
 /*media query */
 
@@ -1598,6 +1616,7 @@ tr.bg-alt-blue > *{
     /*two rows instead of two columns*/
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    overflow-x: clip;
   }
   .media-release-preview{
     grid-template-columns: 1fr;
@@ -1613,10 +1632,11 @@ tr.bg-alt-blue > *{
   }
 
 
+
   .featured-releases ul {
     display: flex;
     height: auto;
-    width: calc(100% + 10rem);
+    width: 100%;
     overflow-x: auto;
     padding: 0;
   }
