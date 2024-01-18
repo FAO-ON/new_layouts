@@ -79,6 +79,8 @@ a:hover {
 
 }
 
+
+/*
 .site-header::after {
   content: '';
   display: block;
@@ -88,10 +90,11 @@ a:hover {
   right: 0;
   height: 1px;
   max-width: var(--inner-width);
-  width: calc(100% - 2 * var(--min-padding));
   margin-inline: auto;
   background: var(--primary-color);
 }
+*/
+
 
 
 .site-header .header-logo {
@@ -1411,14 +1414,20 @@ tr.bg-alt-blue > *{
 
 
 
-/* media.html */
+/********************** media.html ************************/
+
 
 .media-content{
+  /*border: red 1px solid;*/
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 1rem;
   /*margin-top: 1rem;*/
+}
+
+.media-main a{
+  color: var(--primary-color);
 }
 
 .media-content :is(h2){
@@ -1427,9 +1436,11 @@ tr.bg-alt-blue > *{
   font-weight: bold;
 }
 
-.media-content :is(h3, h4, h5, h6){
+.media-content :is(h3){
   font-size: 1rem;
-  line-height: 1.1;
+  line-height: 1.2;
+  padding: 0.5rem 0;
+  font-family: 'Open Sans', sans-serif;
   /*padding: 0.5rem 0;*/
   color: var(--primary-color);
 }
@@ -1438,7 +1449,7 @@ tr.bg-alt-blue > *{
 
 .media-release-preview{
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2.2fr 1fr;
   grid-template-columns: 1fr;
   /*insert into the first column*/
   grid-column: 1;
@@ -1453,21 +1464,42 @@ tr.bg-alt-blue > *{
   /*border: red 1px solid;*/
 }
 
+/*media inquireis*/
+
+
 .media-inquiries{
   grid-column: 2;
   grid-row: 1;
- /*margin: 0 0 1rem 0;*/
 }
 
+.media-inquiries > h2:first-of-type{
+  font-weight: normal;
+}
+
+.media-inquiries a{
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.media-inquiries > h2:first-of-type:before{
+  /*short blue line*/
+  content: '';
+  width: calc(10ch + 1rem);
+  height: 2px;
+  background: var(--primary-color);
+  display: block;
+  margin-bottom: 1rem;
+
+}
 
 
 .latest-media-release{
   display: grid;
-  grid-template-rows: 40px 2fr 1fr;
+  grid-template-rows: 40px 1fr 40px;
   grid-column: 1;
   grid-row: 1;
   background-color: var(--fao-light_blue_4);
-  padding: 1rem;
+  padding: 2rem 1rem;
   /*div should have rounded corners*/
   border-radius: .5rem;
 }
@@ -1479,38 +1511,47 @@ tr.bg-alt-blue > *{
 /*get the p element for latest-media-release and featured-release*/
 .latest-media-release p, .featured-release p{
   /*center to the middle of the grid*/
-  align-self: center;
+  align-self: end;
   font-size: .75rem;
-  color: var(--fao-gray)
 }
+
 
 .latest-media-release h1{
   font-size: 3rem;
   line-height: 1.1;
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: var(--primary-color);
 }
 
-.featured-releases{
-  display: flex;
-  flex-direction: row;
+.featured-releases ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
   gap: 1rem;
   grid-column: 1;
   grid-row: 2;
-  padding: 1rem;
-
+  margin: 0 0 1rem 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
 }
+
+.featured-releases li{
+  /*border: red 1px solid;*/
+  padding: 0;
+  margin: 0;
+}
+
+
 
 .featured-release{
   display: grid;
-  grid-template-rows: 40px 2fr 1fr;
+  grid-template-rows: 2rem 1fr 20px;
   /*create a fixed height for the div*/
   height: 100%;
   width: 100%;
   padding: 1rem;
   margin: 0;
-
-  
   background-color: var(--fao-light_blue_4);
   border-radius: .5rem;
 }
@@ -1519,8 +1560,6 @@ tr.bg-alt-blue > *{
 }
 
 
-
-/*all the h3 h4 h5 h6 elements inside the featured-release div*/
 
 
 
@@ -1545,12 +1584,55 @@ tr.bg-alt-blue > *{
   text-align: center;
   color: var(--primary-color);
   height: 100%;
-  max-width: 80%;
+  max-width: 100%;
   padding: 1rem 1rem;
   border-radius: 1rem;
   font-weight: bold;
 }
 
-/*media query, hide contact and 
+/*media query */
+
+@media(width < 770px){
+  /*make the media-release-preview grid one column with equal width 1fr 1fr*/
+  .media-content{
+    /*two rows instead of two columns*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .media-release-preview{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .media-inquiries{
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+
+  .featured-releases ul {
+    display: flex;
+    height: auto;
+    width: calc(100% + 10rem);
+    overflow-x: auto;
+    padding: 0;
+  }
+  .featured-releases ul li {
+    flex: 0 0 60vw;
+  }
+  .featured-release{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1rem 1fr 1rem;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1.5rem 1rem;
+  }
+  .media-links ul {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
 
 
