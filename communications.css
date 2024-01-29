@@ -39,6 +39,9 @@ last updated: 19 January 2024
   padding: 1rem;
   border-radius: 0.5rem;
   
+  background-color: #EDF4FE;
+}
+.card:hover {
   background-color: var(--secondary-color);
 }
 /* card content type */
@@ -104,16 +107,33 @@ last updated: 19 January 2024
 
 
 
-
-aside {
+/* media inquiries */
+.media-inquiries > * {
+  display: block;
+  max-width:max-content;
 }
-
+.media-inquiries > :nth-child(1) {
+  border-top: 2px solid var(--primary-color);
+  padding-top: 0.5em;
+}
+.media-inquiries > :nth-child(2) {
+  margin-top: 1em;
+  font-weight: bold;
+}
+.media-inquiries > :nth-child(3) { }
+.media-inquiries > :nth-child(4) { }
+.media-inquiries > :nth-child(5) {
+  font-weight: bold;
+}
 
 
 
 /* media-links */
 .media-links {
   grid-column: 1 / -1;
+
+  border-top: 2px solid var(--secondary-color);
+  /* border-top: 1px solid var(--primary-color); */
 
 }
 
@@ -127,7 +147,7 @@ aside {
 
   padding:0;
   margin:0;
-  padding-block: 4rem;
+  padding-block: 1rem;
 
   list-style-type: none;
 }
@@ -148,14 +168,6 @@ aside {
   padding: 1rem;
   border-radius: 1rem;
 }
-
-/* .media-links a:is(:hover,:focus-visible) {
-  color: white;
-  background: var(--primary-color);
-}
-.media-links a:is(:hover,:focus-visible) img {
-  filter: brightness(9999) contrast(9999);
-} */
 
 .media-links a:is(:hover,:focus-visible) {
   background: var(--secondary-color);
