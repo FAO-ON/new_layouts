@@ -1,6 +1,6 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 filename: reset.css
-last updated: 25 October 2023
+last updated: 19 January 2023
 
 Stylesheet for new FAO redesign. Resets/normalizes browser styles.
 Based on Andy Bell's "More Modern CSS Reset" https://andy-bell.co.uk/a-more-modern-css-reset/
@@ -47,10 +47,10 @@ Based on Andy Bell's "More Modern CSS Reset" https://andy-bell.co.uk/a-more-mode
    margin-block: 0;
  }
  
- a:not([class]) {
+ /* a:not([class]) {
    text-decoration-skip-ink: auto;
    color: currentColor;
- }
+ } */
  
  img,
  picture {

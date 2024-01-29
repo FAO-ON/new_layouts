@@ -1,0 +1,256 @@
+
+.media-content{
+  /*border: red 1px solid;*/
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem 2rem;
+  --min-padding: 0;
+  /*margin-top: 1rem;*/
+}
+
+/*Probably a more efficent way to target this too */
+.media-main a{
+  color: var(--primary-color);
+}
+
+.media-content :is(h2){
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.media-content :is(h3){
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 0.5rem 0;
+  font-family: 'Open Sans', sans-serif;
+  /*padding: 0.5rem 0;*/
+  color: var(--primary-color);
+}
+
+
+
+.media-release-preview{
+  display: grid;
+  grid-template-rows: 2.2fr 1fr;
+  grid-template-columns: 1fr;
+  /*insert into the first column*/
+  grid-column: 1;
+  /*insert into the first row*/
+  grid-row: 1;
+  /*margin: 0 0 1rem 0;*/
+  grid-gap: 1rem;
+  margin: 0;
+}
+
+
+.media-release-preview div{
+  /*border: red 1px solid;*/
+}
+
+/*media inquireis*/
+
+
+.media-inquiries{
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+}
+
+.media-inquiries > h2:first-of-type{
+  font-weight: normal;
+}
+
+.media-inquiries a{
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.media-inquiries > h2:first-of-type:before{
+  /*short blue line*/
+  content: '';
+  width: calc(10ch + 1rem);
+  height: 2px;
+  background: var(--primary-color);
+  display: block;
+  margin-bottom: 1rem;
+
+}
+
+
+.latest-media-release{
+  display: grid;
+  grid-template-rows: 40px 1fr 40px;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--fao-light_blue_4);
+  padding: 2rem 1rem;
+  /*div should have rounded corners*/
+  border-radius: .5rem;
+}
+
+.latest-media-release > *{
+  grid: 1 / 1;
+}
+
+/*get the p element for latest-media-release and featured-release*/
+.latest-media-release p, .featured-release p{
+  /*center to the middle of the grid*/
+  align-self: end;
+  font-size: .75rem;
+}
+
+
+.latest-media-release h1{
+  font-size: 3rem;
+  line-height: 1.1;
+  /*font-weight: bold;*/
+  color: var(--primary-color);
+}
+
+.featured-releases ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.featured-releases li{
+  /*border: red 1px solid;*/
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.featured-release{
+  display: grid;
+  grid-template-rows: 2rem 1fr 20px;
+  /*create a fixed height for the div*/
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--fao-light_blue_4);
+  border-radius: .5rem;
+}
+.featured-release > *{
+  grid: 1 / 1;
+}
+
+.latest-media-release:is(:hover, :focus-visible), .featured-releases li > div:is(:hover, :focus-visible){
+  background-color: var(--fao-light_blue_3);
+}
+
+.latest-media-release:is(:active), .featured-releases li > div:is(:active){
+  color: white;
+  background: var(--primary-color);
+  filter: brightness(9999) contrast(9999);
+}
+
+
+.media-links{
+  --min-padding: 0;
+}
+
+.media-links ul {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 1rem;
+  
+  padding:0;
+  margin:0;
+  padding-block: 4rem;
+  
+  list-style-type: none;
+}
+
+.media-links a {
+  display: grid;
+  /* grid-template-rows: auto 1fr; */
+  justify-items: center;
+  text-align: start;
+  text-align: center;
+  color: var(--primary-color);
+  height: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* .media-links img{
+  aspect-ratio: 1;
+} */
+
+.media-links a:is(:hover,:focus-visible) {
+  background: var(--secondary-color);
+}
+
+.media-links a:active{
+  color: white;
+  background: var(--primary-color);
+}
+.media-links a:active img {
+  filter: brightness(9999) contrast(9999);
+}
+
+
+
+
+/*we want each media-links img to retain the same size while the grid changes*/
+
+
+/*media query */
+
+@media(width < 770px){
+  /*make the media-release-preview grid one column with equal width 1fr 1fr*/
+  .media-content{
+    /*two rows instead of two columns*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow-x: clip;
+  }
+  .media-release-preview{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .media-inquiries{
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  .featured-releases ul {
+    display: flex;
+    height: 250px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0;
+  }
+  .featured-releases ul li {
+    flex: 0 0 60vw;
+  }
+  .featured-release{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1rem 1fr 1rem;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1.5rem 1rem;
+  }
+  .media-links ul {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
