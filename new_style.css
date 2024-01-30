@@ -59,10 +59,11 @@ a:hover {
 /* sizing */
 
 .site-header, 
-.site-footer, 
+.site-footer,
 .homepage-main section, 
 .about-main section, 
 .media-main,
+.report-archive-main,
 .limit-width {
   /*  variables  */
   box-sizing: border-box;/* border-box needed for calculations */
