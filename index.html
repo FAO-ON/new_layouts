@@ -17,6 +17,9 @@
   <script defer src="mobile.js"></script>
 	<!-- import page-specific scripts -->
 
+  <!-- testing new nav styles -->
+	<link rel="stylesheet" href="new-nav.css">
+
 </head>
 <body>
 
@@ -43,26 +46,66 @@
       <nav id="secondary-navigation">
         <ul>
           <li class="secondary-navigation-contact"><a href="#">Contact</a></li>
-          <li class="secondary-navigation-mpp-portal"><a href="#" class="mpp-portal-nav-link">MPP Portal</a></li>
           <li class="secondary-navigation-twitter"><a href="#"><img src="imgs/icons/icon-x.svg" alt="FAO on twitter"></a></li>
           <li class="secondary-navigation-linkedin"><a href="#"><img src="imgs/icons/icon-linkedin.svg" alt="FAO on linkedin"></a></li>
           <li class="secondary-navigation-instagram"><a href="#"><img src="imgs/icons/icon-IG.svg" alt="FAO on instagram"></a></li>
-          <li class="secondary-navigation-youtube"><a href="#"><img src="imgs/icons/icon-youtube.svg" alt="FAO on youtube"></a></li>
           <li class="secondary-navigation-language"><a href="#">fr/en</a></li>
         </ul>
       </nav>
       
       <nav id="primary-navigation">
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Reports</a></li>
-          <li><a href="media.html">Communications</a></li>
-          <li class="primary-navigation-search">
-            <input type="search" name="" id="" placeholder="Search...">
-            <button>
-              <img src="imgs/icons/icon-search.svg" alt="Submit search">
-            </button>
+          <li><a href="about.html">About</a>
+            <ul class="sub-menu">
+              <li><a href="about.html">About the FAO</a></li>
+              <li><a href="about.html">Mandate</a></li>
+              <li><a href="about.html">Our Team</a></li>
+              <li><a href="about.html">Careers</a></li>
+              <li><a href="about.html">Contact</a></li>
+            </ul>
           </li>
+          <li><a href="#">Reports</a>
+            <ul class="sub-menu">
+              <li><a href="reports.html">All Reports</a></li>
+              <li><a href="reports.html">Topics</a>
+              <ul class="sub-menu">
+
+                <li><a href="reports.html">Annual Reports</a></li>
+                <li><a href="reports.html">Budgets</a></li>
+                <li><a href="reports.html">Climate and Environment</a></li>
+                <li><a href="reports.html">COVID-19</a></li>
+                <li><a href="reports.html">Demographics</a></li>
+                <li><a href="reports.html">Economy</a></li>
+                <li><a href="reports.html">Education and Child Care</a></li>
+                <li><a href="reports.html">Employment and Labour Markets</a></li>
+                <li><a href="reports.html">Energy and Natural Resources</a></li>
+                <li><a href="reports.html">Expenditure Estimates</a></li>
+                <li><a href="reports.html">Government Spending</a></li>
+                <li><a href="reports.html">Health Care</a></li>
+                <li><a href="reports.html">Infrastructure and Transportation</a></li>
+                <li><a href="reports.html">Social Programs</a></li>
+                <li><a href="reports.html">Taxes and Other Revenue</a></li>
+                <li><a href="reports.html">Other</a></li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="media.html">Other Resources</a>
+            <ul class="sub-menu">
+              <li><a href="media.html">Climate Change</a></li>
+              <li><a href="media.html">Lerning Modules</a></li>
+              <li><a href="media.html">Presentations</a></li>
+              <li><a href="media.html">Videos</a></li>
+            </ul>
+          </li>
+          <li><a href="media.html">Communications</a>
+            <ul class="sub-menu">
+              <li><a href="media.html">News</a></li>
+              <li><a href="media.html">Newsletters</a></li>
+              <li><a href="media.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+          <li class="primary-navigation-search"><input type="search" name="" id="" placeholder="Search..."><button><img src="imgs/icons/icon-search.svg" alt="Submit search"></button></li>
         </ul>
       </nav>
 

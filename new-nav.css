@@ -1,0 +1,71 @@
+#primary-navigation ul,
+#primary-navigation ol {
+  margin:0;
+  padding:0;
+}
+
+/* plain dropdown menus */
+#primary-navigation li{
+  position: relative;
+}
+
+#primary-navigation .sub-menu{
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  
+  /* position top sub-menu below parent */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  max-width: 20em;
+  width: max-content;
+
+  background: var(--secondary-color);
+  border-top: 1px solid var(--primary-color);
+  box-shadow: 0 2px 2px 0 #00000033,0 10px 20px 0 #00000033;
+  
+  /* ensure menu is above searchbar */
+  z-index: 1;
+}
+
+/* when hovering LI show its first sub-menu */
+#primary-navigation li:hover > .sub-menu {
+  display: flex;
+}
+
+#primary-navigation .sub-menu a {
+  padding: 0.25em 0.5em;
+  display: block;
+}
+
+#primary-navigation .sub-menu a:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* position sub-sub-menus to the right of parent */
+#primary-navigation .sub-menu li .sub-menu {
+  top: 0;
+  left: 100%;
+}
+
+#primary-navigation .sub-menu li:has( > .sub-menu) > a::after {
+  content: '▼';
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 0.5em;
+}
+
+
+
+
+/* sub menu bar */
+
+
+/* large visual menu bars */
+
+
