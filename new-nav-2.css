@@ -5,25 +5,26 @@
 }
 
 /* plain dropdown menus */
-#primary-navigation li{
+.site-header{
   position: relative;
 }
 
-#primary-navigation .sub-menu{
+#primary-navigation ul li > .sub-menu{
   display: none;
   /* display: flex; */
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0;
+  /* flex-direction: column; */
+  /* align-items: stretch; */
+  gap: 1em;
+  justify-content: center;
   
   /* position top sub-menu below parent */
   position: absolute;
-  top: 100%;
+  /* inset: 0; */
+  top: 5em;
   left: 0;
-  min-width: 100%;
-  max-width: 20em;
-  width: max-content;
-
+  right:0;
+  /* width: 100vw */
+;
   background: var(--secondary-color);
   border-top: 1px solid var(--primary-color);
   box-shadow: 0 2px 2px 0 #00000033,0 10px 20px 0 #00000033;
@@ -64,6 +65,10 @@
 
 
 /* sub menu bar */
+
+
+
+
 
 
 /* large visual menu bars */
